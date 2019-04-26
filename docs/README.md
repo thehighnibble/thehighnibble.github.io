@@ -5,7 +5,7 @@ heroText: " "
 tagline: " "
 actionText: IMSAI 8080 Replica details →
 actionLink: /imsai8080/
-footer: The High Nibble @TheHighNibble │ Copyright © 2017-present David McNaughton 
+footer: The High Nibble @TheHighNibble │ Copyright © David McNaughton 2017-present
 ---
 <br/>
 <br/>
