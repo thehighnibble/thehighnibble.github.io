@@ -5,9 +5,9 @@ sidebar: auto
 
 ## Overview
 
-I've been workling on building an IMSAI 8080 CP-A Front Panel replica since May 2017.
+I've been working on building an IMSAI 8080 CP-A Front Panel replica since May 2017.
 
-I first ported Udo Munk's [z80pack](http://bit.ly/Z80pack) V1.36-dev, specifically the **imsaisim** machine, to the [**ESP32**](https://www.espressif.com/en/products/hardware/development-boards) micro-controller targetting the ESP32-PICO-KIT
+I first ported Udo Munk's [z80pack](http://bit.ly/Z80pack) V1.36-dev, specifically the **imsaisim** machine, to the [**ESP32**](https://www.espressif.com/en/products/hardware/development-boards) micro-controller targeting the ESP32-PICO-KIT
 
 These devices have a dual-core CPU @ 240MHz, 520KB SRAM, 4MB Flash RAM (storage) and builtin WiFi, USB connector for serial UART and programming.
 
@@ -78,7 +78,7 @@ Here are some screen shots of the VIO: and DZLR: made with the  screen-shot feat
 ![vio](./VIO_screenshot.png)
 ![dazzler](./DZLR_screenshot.png)
 
-The desktop GUI is developed to work with the latest version of the Google Chrome browser (Official Build). If it works with other browsers that's fortunate but not tested. Its currently looks to work with FireFox (not extensively tested), but I regualrly have problems working with Safari.
+The desktop GUI is developed to work with the latest version of the Google Chrome browser (Official Build). If it works with other browsers that's fortunate but not tested. Its currently looks to work with FireFox (not extensively tested), but I regularly have problems working with Safari.
 
 ## Availability
 
