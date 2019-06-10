@@ -18,13 +18,9 @@ To this I have added
 - MAX232 style RS-232 driver and DB-9M sockets for serial UART
 - Full size, fully functional replica of the IMSAI CP-A front panel with all LEDs and switches (for scale: the green cutting mat is A3)
 
-![IMSAI 8080 CP-A](./CPA_1024.jpg)
+![IMSAI 8080 CP-A](./CPA_1024.png)
 
-The version shown here is my pre-kit prototype, some differences with the kit will be
-
-- blue colours will be deeper, not the sky-blue shown here
-- the black facia will be matte, not textured
-- the LEDs won't be so bright, I ordered the wrong LEDs for this build
+If you've seen the original IMSAI 8080, I hope you'll agree that the toggle switches are a great match to the original colours. The case colour is the best I can source in blue acrylic but I think many people will choose to spray paint it for a better match to the original.
 
 Sometimes I use the USB based serial UART for TTY: (under CP/M) but most of the time I connect over WiFi using a browser to launch the desktop GUI that this port of the **imsaisim** can serve using an embedded web server.
 
@@ -82,13 +78,13 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 ## Availability
 
-The components for the first batch of IMSAI 8080 replicas have been ordered. Based on lead times I expect the first kits to ship in June 2019.
+The first batch of IMSAI 8080 replicas are shipping in June 2019.
 
 ### Expression of interest
 
 I am accepting expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
 
-Once kits are ready to ship I will contact you to confirm your order.
+Once new kits are ready to ship I will contact you to confirm your order.
 
 ## News & Updates
 
@@ -106,9 +102,14 @@ You can stay up-to-date with news about additions to this site, or new YouTube v
 </div>
 <br/>
 
+## Forum
+
+The [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp) has been set up in Google Groups. It is open to everyone to read the posts but you must apply to join the group if you wish to post.
+
+
 ## Specifications
 
-### Dimensions
+### Dimensions (built)
 
 17 1/8" x 7" x 2 11/16"
 
@@ -116,6 +117,34 @@ You can stay up-to-date with news about additions to this site, or new YouTube v
 
 (width x height x depth)
 
+### Weight (built)
+
+3.48 lbs
+
+1.575 kg
+
 ### Power
 
-5VDC @ 300 mA (max.) - micro-USB connector
+5VDC @ 500 mA (max., < 100mA typical) - USB micro-B plug required
+
+### Dimensions (boxed/shipped)
+
+18 1/3" x 7 1/2" x 3"
+
+465mm x 190mm x 75mm
+
+(width x height x depth)
+
+### Weight (boxed/shipped)
+
+less than 4.4 lbs
+
+less than 2 kg
+
+## Coming Soon
+
+### Bill-of-Materials
+
+### Recommended tools for assembly
+
+### Step-by-step assembly guide

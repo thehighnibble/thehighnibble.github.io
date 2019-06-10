@@ -5,7 +5,7 @@ heroText: " "
 tagline: " "
 actionText: IMSAI 8080 Replica details →
 actionLink: /imsai8080/
-footer: The High Nibble @TheHighNibble │ Copyright © David McNaughton 2017-present
+footer: The High Nibble @TheHighNibble  │  Copyright © The High Nibble Pty Ltd   2017-present  |  ACN 633 867 268
 ---
 <br/>
 <br/>

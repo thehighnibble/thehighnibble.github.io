@@ -7,7 +7,8 @@ module.exports = {
       lastUpdated: 'Last Updated',
       nav: [
         { text: 'Home', link: '/' },
-        { text: 'IMSAI 8080', link: '/imsai8080/' }
+        { text: 'IMSAI 8080', link: '/imsai8080/' },
+        { text: 'Forum', link: 'http://bit.ly/IMSAI8080esp' }
       ]
     }
   }
