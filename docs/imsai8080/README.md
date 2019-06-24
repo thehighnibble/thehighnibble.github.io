@@ -78,7 +78,7 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 ## Availability
 
-The first batch of IMSAI 8080 replicas are shipping in June 2019.
+The first batch of IMSAI 8080 replicas shipped in June 2019. There is a second batch planed for July 2019.
 
 ### Expression of interest
 
@@ -141,10 +141,12 @@ less than 4.4 lbs
 
 less than 2 kg
 
+## [Bill-of-Materials (Draft)](bom/)
+
+## [Recommended tools for assembly (Draft)](tools/)
+
+## [Step-by-step assembly guide (Draft)](assembly/)
+
 ## Coming Soon
 
-### Bill-of-Materials
-
-### Recommended tools for assembly
-
-### Step-by-step assembly guide
+### Enhancements and Add-ons (wish list)

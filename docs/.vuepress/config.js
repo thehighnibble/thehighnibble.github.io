@@ -10,5 +10,11 @@ module.exports = {
         { text: 'IMSAI 8080', link: '/imsai8080/' },
         { text: 'Forum', link: 'http://bit.ly/IMSAI8080esp' }
       ]
+      // ,
+      // sidebarDepth: 2,
+      // sidebar: [
+      //   '/imsai8080/',
+      //   '/imsai8080/bom/'
+      // ]
     }
   }
