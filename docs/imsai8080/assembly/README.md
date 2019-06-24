@@ -57,18 +57,18 @@ Please unpack the entire kit and perform a stock take of what you have received 
 :::
 
 ::: warning
-If you believe you are missing any components when you compare you kit contents with the [Bill-of-Materials](../bom/) please contact me directly by email to [info@thehighnibble.com](mailto:info@thehighnibble.com).
+If you believe you are missing any components when you compare the kit contents with the [Bill-of-Materials](../bom/) please contact me directly by email to [info@thehighnibble.com](mailto:info@thehighnibble.com).
 
 Please respect that this kit is a hobby project made by an individual maker and not a mass produced product from a manufacturer. While every care was taken to pack each kit correctly, mistakes make have occurred.
 :::
 
 ::: danger DAMAGE
-If your kit arrives in a damaged state, or if upon opening the kit you find any of the contents to be damaged, please take photographs of the damage and include them in your email.
+If your kit arrived in a damaged state, or if upon opening the kit you find any of the contents to be damaged, please take photographs of the damage and include them in your email.
 :::
 
 ::: tip
 I will happily work with you directly, via email, to resolve the issues with your incomplete or damaged kit.
-This may require mailing replacements parts to you and that will take time, so please have patience.
+This may require mailing replacement parts to you and that will take time, so please have patience.
 :::
 
 ## PCB & Soldering
@@ -167,7 +167,7 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 :::
 
 ::: danger
-**ICs are polarized/directional and must and must be inserted in the correct orientation.** ICs should be inserted to align the crescent/indent at one end with the corresponding mark in the silk screen. If you have soldered in the **16 pin DIP Sockets** with the indicated orientation, this will make the job easier.
+**ICs are polarized/directional and must be inserted in the correct orientation.** ICs should be inserted to align the crescent/indent at one end with the corresponding mark in the silk screen. If you have soldered in the **16 pin DIP Sockets** with the indicated orientation, this will make the job easier.
 :::
 
 | Step | Parts | Location | Notes |
