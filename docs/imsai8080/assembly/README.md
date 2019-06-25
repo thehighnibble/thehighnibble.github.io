@@ -176,7 +176,7 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 | 24. | 74HC74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
 | 25. | MAX3232 | `U11` back | `U11` is oriented with the crescent/indent to the **left** when looking at the **back** of the PCB. |
 
-## Testing
+## Testing I
 
 ::: tip
 At this point you can operate the IMSAI 8080esp without having the rocker/toggle switches mounted.
@@ -195,12 +195,97 @@ You can use the virtual `CPA:` device to toggle the `RUN/STOP` switch.
 :::
 
 ::: warning
-While you can operate the IMSAI 8080esp at this point, it will no do much for you without some further configuration. The default configuration is like an empty machine with no ROM only RAM, and you don't have a full frontpanel to play with. Damn!
-Configuration is (or will be covered elsewhere).
+While you can operate the IMSAI 8080esp at this point, it will not do much for you without some further configuration. The default configuration is like an empty machine with no ROM only RAM, and you don't have a full frontpanel to play with. Damn!
+Configuration is (or will be) covered elsewhere.
 :::
-
-## To Be Continued... 
 
 ::: tip
 Time for a cup of tea if you've gotten this far.
 :::
+
+## Rocker/Toggle Switches
+
+::: tip
+To correctly locate and align the rocker switches before soldering, the frontpanel should be partially assembled according to the following instructions.
+:::
+
+::: tip
+Many of the sheets of acrylic have a protective backing cover (plastic or paper) to protect them from scratching during cutting and transportation. This should be removed before you use them in the assembly of the kit.
+:::
+
+::: tip
+When assembling all or part of the frontpanel it is sometimes necessary to flip the assembly. To avoid having the M4 socket screws fall out you can use masking tape to hold them in place, or use a cardboard sheet from the packaging to cover the socket screws while flipping the assembly (see video).
+:::
+
+::: warning
+When screwing the M4 Nylon Nuts and the M4 Socket Screws together only ever make them **finger tight** to avoid stripping the thread from the M4 Nylon Nuts.
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 26. | M4x30mm Hex Socket Screw (x8) | 3mm Black acrylic LED/switch masking plate | Insert the 8 `M4 socket screws` into each of the 8 round holes in the large `3mm Black acrylic LED/switch masking plate` |
+| 27. | Spacer 9mm Nylon (x8) | | Thread a `9mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
+| 28. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `9mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
+| 29. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the frontpanel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
+
+:::  tip
+You should now have a sandwich with the PCB at the back and the 3mm Black acrylic LED/switch masking plate at the front, separated by the 9mm spacers and held together with the M4 socket screws and nuts.
+:::
+
+::: tip
+As you insert each rocker switch into the PCB, there should be a slight press-to-fit resistance from the pins as they push into the through-holes in the PCB. This will help hold the switch in position prior to soldering.
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 27a. | Blue Rocker (On-On) (x4)| `SA12-SA15` | **Don't solder them yet** |
+| 28a. | Red Rocker (On-On) (x4)| `SA8-SA11` | **Don't solder them yet** |
+| 29a. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA8-SA15` | Place the small acrylic alignment guide over the ends of the whole set of 8 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
+
+#### Steps 27-29 can now be repeated for the second group of (On-On) switches.
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 27b. | Blue Rocker (On-On) (x4)| `SA4-SA7` | |
+| 28b. | Red Rocker (On-On) (x4)| `SA0-SA3` |  |
+| 29b. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA0-SA7` | |
+
+::: warning
+The order of the momentary switches is different. They alternate blue/red from left to right with the red power switch in the right-most position. I have seen different configurations and I guess it comes down to personal choice. I imagine you can swap the plastic toggle actuators but I have tried this myself.
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 30. | Blue Rocker (Mom-off-Mom) (x3)| `S6, S4, S2` | **Don't solder them yet** |
+| 31. | Red Rocker (Mom-off-Mom) (x2)| `S5, S3` | **Don't solder them yet** |
+| 31. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `S2-S6` | Place the small acrylic alignment guide over the ends of the whole set of 5 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
+| 32. | Red Power Switch (On-On) | `S1` | Solder it in place. |
+
+## Testing II
+
+::: tip
+At this point the IMSAI 8080esp should be fully operational.
+See [Testing I](#testing-i) for a general outline of getting it started.
+
+You should exercise all the switches and make sure they are operating correctly (details to follow)
+:::
+
+::: warning
+While you can operate the IMSAI 8080esp at this point, it will not boot a disk without further configuration. The default configuration is like an empty machine with no ROM only RAM. You can, however, now enter programs through the frontpanel switches and run them.
+:::
+
+::: tip
+Time for another cup of tea if you've gotten this far.
+:::
+
+## Full Front Panel Stack
+
+TBA
+
+## The Lid
+
+TBA
+
+## Celebrating
+
+TBA
