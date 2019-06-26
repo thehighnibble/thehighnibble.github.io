@@ -32,17 +32,17 @@ Once you are connected to the Wi-Fi network, start a Chrome browser and enter th
 
 ## Startup configuration (Non-Volatile Storage, NVS)
 
-The startup configuration is changed via the toggle switches on the front panel.
+The startup configuration is modified via the toggle switches on the front panel.
 
-To enter startup configuration mode follow the sequence:
+To enter *startup configuration mode*, follow the sequence:
 
-- ensure the ESP32 is connected to a USB power source, the red LED on the ESP32 board should be illuminated
-- turn the power switch on the front panel off, `PWR OFF`, the down position
-- hold the `EXAMINE` toggle in the **Examine**, up position
-- press the `Reset` switch while holding the `EXAMINE` toggle up
-- release the `EXAMINE` toggle
+1. ensure the ESP32 is connected to a USB power source, the red LED on the ESP32 board should be illuminated
+2. turn the front panel power switch **off**, `PWR OFF`, the down position
+3. hold the `EXAMINE` toggle in the **Examine**, up position
+4. press the `Reset` switch while holding the `EXAMINE` toggle up
+5. release the `EXAMINE` toggle
 
-The IMSAI 8080esp should now be in startup configuration mode. This is indicted by a running LED pattern (right to left) on the 4 LEDS at the right hand side of the front panel (`HOLD`, `WAIT`, `RUN`, `INTERRUPTS ENABLED`).
+The IMSAI 8080esp should now be in *startup configuration mode*. This is indicted by a running LED pattern (right to left) on the 4 LEDS at the right hand side of the front panel (`HOLD`, `WAIT`, `RUN`, `INTERRUPTS ENABLED`).
 
 ![IMSAI 8080 CP-A](../CPA_1024.png)
 
@@ -54,8 +54,7 @@ There are 2 `Reset` switches available that both do the same thing:
 :::
 
 
-::: tip
-**Booting into MSBASIC 1.4 (8K)**
+::: tip Booting into MSBASIC 1.4 (8K)
 To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 Mhz, the following startup configuration value can be used.
 
 - Binary: 0000 0100 0000 0000
@@ -68,8 +67,7 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8
 4. Reboot the IMSAI 8080esp by pressing a `Reset` switch
 :::
 
-::: tip
-**Booting into XYBASIC**
+::: tip Booting into XYBASIC
 To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z80 mode @ 4 Mhz, the following startup configuration value can be used.
 
 - Binary: 0000 0101 0101 0000
@@ -82,8 +80,7 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z8
 4. Reboot the IMSAI 8080esp by pressing a `Reset` switch
 :::
 
-::: tip
-**Booting into CP/M 2.2**
+::: tip Booting into CP/M 2.2
 
 To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in Z80 mode @ 4 Mhz, the following startup configuration value can be used. You can mount the `cpm_22.dsk` disk image in drive `DSK:A:` via the *Desktop UI*.
 
@@ -110,11 +107,11 @@ To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in 
 | 11 | NVS_BANK_ROM | `-r` | Enable **MPU-B(A)** style Banked ROM/RAM functionality, 1 = `-r`. Only compatible with MPU-A ROM images. |
 | 12-15 | | | Reserved for future use |
 
-To set the startup configuration mode bits follow the sequence:
+To set the startup configuration mode value, follow the sequence:
 
-- To **set** a bit, put the corresponding **Address** toggle switch in the **up** position.
-- To **clear** a bit, put the corresponding **Address** toggle switch in the **down** position.
-- Raise the `DEPOSIT` toggle to the **Deposit**, up position to store the entered startup configuration value.
+1. To **set** a bit, put the corresponding **Address** toggle switch in the **up** position.
+2. To **clear** a bit, put the corresponding **Address** toggle switch in the **down** position.
+3. Raise the `DEPOSIT` toggle to the **Deposit**, up position to store the entered startup configuration value.
 
 ::: warning
 The IMSAI 8080esp must be rebooted for the new configuration to take effect. This can be done by pressing a `Reset` switch.
