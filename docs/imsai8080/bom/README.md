@@ -76,9 +76,9 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
-| ![Spacer 6mm](./parts/Spacer_6mm.png) | 8 | | <h4>Spacer 6mm Nylon</h4> |
-| ![Spacer 9mm](./parts/Spacer_9mm.png) | 8 | | <h4>Spacer 9mm Nylon</h4> |
 | ![M4x30 Hex Socket Screw](./parts/M4x30_Hex_Socket_Screw.png) | 8 | | <h4>M4x30mm Hex Socket Screw</h4> |
+| ![Spacer 9mm](./parts/Spacer_9mm.png) | 8 | | <h4>Spacer 9mm Nylon</h4>  The 9mm spacers fit on the `M4x30mm Hex Socket Screws` **in front of** the PCB, between the PCB and the `3mm Black acrylic LED/switch masking plate` |
+| ![Spacer 6mm](./parts/Spacer_6mm.png) | 8 | | <h4>Spacer 6mm Nylon</h4> The 6mm spacers fit on the `M4x30mm Hex Socket Screws` **behind** the PCB, between the PCB and the `3mm Clear acrylic back cover` |
 | ![M4 Hex Nut Nylon](./parts/M4_Hex_Nut_Nylon.png) | 8 | | <h4>M4 Hex Nut Nylon</h4> |
 | ![M3x12 Machine Screw](./parts/M3x12_Machine_Screw.png) | 4 | | <h4>M3x12mm Black Machine Screw</h4> |
 | ![M3 Nut](./parts/M3_Nut.png) | 4 | | <h4>M3 Nut</h4> |

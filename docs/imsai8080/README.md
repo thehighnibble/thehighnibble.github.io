@@ -147,6 +147,8 @@ less than 2 kg
 
 ## [Step-by-step assembly guide (Draft)](assembly/)
 
+## [Configuration (draft)](configure/)
+
 ## Coming Soon
 
 ### Enhancements and Add-ons (wish list)
