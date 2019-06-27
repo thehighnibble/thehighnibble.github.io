@@ -226,7 +226,7 @@ When screwing the M4 Nylon Nuts and the M4 Socket Screws together only ever make
 | 26. | M4x30mm Hex Socket Screw (x8) | 3mm Black acrylic LED/switch masking plate | Insert the 8 `M4 socket screws` into each of the 8 round holes in the large `3mm Black acrylic LED/switch masking plate` |
 | 27. | Spacer 9mm Nylon (x8) | | Thread a `9mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
 | 28. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `9mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
-| 29. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the frontpanel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
+| 29. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the front panel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
 
 :::  tip
 You should now have a sandwich with the PCB at the back and the 3mm Black acrylic LED/switch masking plate at the front, separated by the 9mm spacers and held together with the M4 socket screws and nuts.
@@ -251,7 +251,7 @@ As you insert each rocker switch into the PCB, there should be a slight press-to
 | 29b. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA0-SA7` | |
 
 ::: warning
-The order of the momentary switches is different. They alternate blue/red from left to right with the red power switch in the right-most position. I have seen different configurations and I guess it comes down to personal choice. I imagine you can swap the plastic toggle actuators but I have tried this myself.
+The order of the momentary switches is different. They alternate blue/red from left to right with the red power switch in the right-most position. I have seen different configurations and I guess it comes down to personal choice. I imagine you can swap the plastic toggle actuators but I have not tried this myself.
 :::
 
 | Step | Parts | Location | Notes |
@@ -271,7 +271,7 @@ You should exercise all the switches and make sure they are operating correctly 
 :::
 
 ::: warning
-While you can operate the IMSAI 8080esp at this point, it will not boot a disk without further configuration. The default configuration is like an empty machine with no ROM only RAM. You can, however, now enter programs through the frontpanel switches and run them.
+While you can operate the IMSAI 8080esp at this point, it will not boot a disk without further configuration. The default configuration is like an empty machine with no ROM only RAM. You can, however, now enter programs through the front panel switches and run them.
 :::
 
 ::: tip
@@ -280,12 +280,73 @@ Time for another cup of tea if you've gotten this far.
 
 ## Full Front Panel Stack
 
-TBA
+::: warning
+Having successfully gotten this far, the next section can go very smoothly if you take care or it can become very fiddly and frustrating if you rush or end up separating the `PCB` and the `3mm Black acrylic LED/switch masking plate`
+:::
+
+::: tip
+1. Remove the `M4 Nuts` (8) without letting the `M4 Socket Screws` (8) drop out of place, tape may help.
+2. Place the `PCB` down on a surface with the `3mm Black acrylic LED/switch masking plate` facing up, the `M4 Socket Screws` will need to slide up to let the `PCB` sit down flat on the surface.
+3. Carefully remove the `M4 Socket Screws` (8) without disturbing the `3mm Black acrylic LED/switch masking plate`, the `PCB` **and especially don't allow the `9mm Spacers` to move out of place**.
+4. Leave this assembly undisturbed while you put the remaining front panel acrylic together
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 33. | M4x30mm Hex Socket Screw (x8) | 6mm Clear acrylic front cover | Insert the 8 `M4 socket screws` into each of the 8 round holes in the thick `6mm Clear acrylic front cover`. Tape over the heads to hold them in place. |
+| 34. | 1.5mm White text/decals through Black facia | | Align the `Text Facia` over the `M4 socket screws` and slide it down to meet the clear acrylic |
+| 35. | 0.8mm Red transparent filter | | Align the `Red transparent filter` over the `M4 socket screws` and slide it down to meet the `Text Facia` |
+
+::: tip
+1. Take this whole assembly and flip it over, with the clear acrylic and the `Text Facia` facing up.
+2. Lower this into place, guiding the `M4 socket screws` through the holes in the other assembly you previously set aside (black acrylic, 9mm spacers and PCB)
+3. Making sure the `M4 socket screws` wont fall out (tape again), flip this whole assembly over, placing the front panel face down on a surface.
+:::
+
+::: warning
+If by this point, any of the `9mm Spacers` have slipped out of position, you can withdraw the corresponding `M4 socket screw` and use tweezers to correctly  locate the `9mm Spacer` before reinserting the `M4 socket screw`
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 36. | Spacer 6mm Nylon (x8) | | Thread a `6mm spacer` over each of the 8 `M4 socket screws` behind the `PCB` |
+| 37. | 3mm Clear acrylic back cover | | Align the `3mm Clear acrylic back cover` over the `M4 socket screws` and slide it down to meet the `3mm Spacers` |
+| 38. | M4 Hex Nut Nylon (x8) | | Push a  `M4 Nut` into each hexagonal cutout in the `3mm Clear acrylic back cover` behind each of the 8 `M4 socket screws`, tape them into position so that they don't fall out while tightening the  `M4 socket screws` |
+
+::: tip
+1. Holding the whole assembly firmly together (again tape may help) stand it up on one long edge.
+2. Screw each of the 8 `M4 socket screws` firmly into their corresponding `M4 Nut`, take care not to over-tighten and strip the thread in the `M4 Nut`.
+:::
+
+::: tip 
+Almost done!
+
+Who would have thought you'd have a working replica of an IMSAI 8080 in around just 40 simple steps :-)
+
+Probably time for another cup of tea, but in my case, I think I'd choose something stronger.
+:::
 
 ## The Lid
 
-TBA
+::: tip 
+The lid can wait, its time to play!
+:::
 
 ## Celebrating
 
-TBA
+::: tip
+Once that last "cup-of-tea" has had the desired calming effect...
+
+The most appropriate way to celebrate is to toggle in and run your first program.
+
+1. Remember to once again plug in the `ESP32-PICO-KIT` and insert the `microSD Card`
+2. Connect the `ESP32-PICO-KIT` to a USB power source with a USB micro-B cable
+3. Go and download/open your copy of the [IMSAI 8080 Microcomputer System User Manual](http://bit.ly/2UoKnSR) (also included in the manual folder on the microSD card)
+4. Find page 34 in the manual and start from the heading **SYSTEM FUNCTIONAL TEST**
+
+Enjoy!
+:::
+
+::: tip
+To do anything more than toggle programs into a machine with no stored programs in ROM, you will need to understand how to [Configure your IMSAI8080esp](../configure/) to load ROM images on startup, connect to Wi-Fi to access the Desktop UI, etc...
+:::
