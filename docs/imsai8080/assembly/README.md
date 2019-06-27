@@ -332,6 +332,11 @@ Probably time for another cup of tea, but in my case, I think I'd choose somethi
 The lid can wait, its time to play!
 :::
 
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 39. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue acrylic lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue acrylic lid` and screw a `M3 Nut` on the end of each `M3 Screw`. |
+| 40. | 3mm Blue acrylic lid | | Place the `Blue acrylic lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
+
 ## Celebrating
 
 ::: tip
