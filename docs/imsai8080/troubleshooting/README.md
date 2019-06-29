@@ -26,8 +26,7 @@ The simplest way to see these messages is to
 
 If you see only:
 
-```
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+<pre><code>rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 flash read err, 1000
 ets_main.c 371
 ets Jun  8 2016 00:22:57
@@ -36,7 +35,7 @@ rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
 flash read err, 1000
 ets_main.c 371
 ets Jun  8 2016 00:22:57
-```
+</code></pre>
 
 Then that's my fault, and I've shipped you an ESP32-PICO-KIT module without the IMSAI 8080esp firmware flashed. This does **not** require a return and re-mail. But it will require you to follow a number of steps involving installing some tools from the `esp-idf` to flash the firmware yourself. A detailed guide for this unlikely outcome will follow.
 
@@ -53,8 +52,7 @@ Some errors cause the ESP32 to continuously reboot and so the error will be repe
 
 If you see something similar to:
 
-```{14}
-Rebooting...
+<pre><code>Rebooting...
 ets Jun  8 2016 00:22:57
 
 rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
@@ -66,23 +64,22 @@ load:0x3fff001c,len:4276
 load:0x40078000,len:9948
 load:0x40080400,len:6464
 entry 0x400806cc
-I (269) psram: This chip is ESP32-PICO
-E (269) cpu_start: Failed to init external RAM, needed for external .bss segment
+<span style="color: #00FF00;">I (269) psram: This chip is ESP32-PICO</span>
+<span style="color: #FF0000;">E (269) cpu_start: Failed to init external RAM, needed for external .bss segment</span>
 abort() was called at PC 0x400817e4 on core 0
-```
+</code></pre>
 
 Then your soldering of the PSRAM has been unsuccessful. You should rework all the solder joints of the PSRAM SOP-8 package, check that you have `C1` and `R14` correctly installed and that you have added the extra 2 sets of 3 male header pins to the ESP32-PICO-KIT board as per the [assembly instructions](../assembly/#esp32-microcontroller-psram-micro-sd-card-socket)
 
 If you see something similar to:
 
-```{4}
-I (832) cpu_start: Pro cpu start user code
+<pre><code><span style="color: #00FF00;">I (832) cpu_start: Pro cpu start user code
 I (178) cpu_start: Starting scheduler on PRO CPU.
 I (0) cpu_start: Starting scheduler on APP CPU.
-E (224) nvs: Error (UNKNOWN ERROR) opening NVS handle!
+<span style="color: #FF0000;">E (224) nvs: Error (UNKNOWN ERROR) opening NVS handle!</span>
 I (224) esp32_boot: Log Level set to NONE
 I (834) phy: phy_version: 4100, 6fa5e27, Jan 25 2019, 17:02:06, 0, 0
-```
+</span></code></pre>
 
 **This is completely normal at this stage**
 
