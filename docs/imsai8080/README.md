@@ -149,6 +149,8 @@ less than 2 kg
 
 ## [Configuration (draft)](configure/)
 
+## [Troubleshooting (draft)](troubleshooting/)
+
 ## Coming Soon
 
 ### Enhancements and Add-ons (wish list)
