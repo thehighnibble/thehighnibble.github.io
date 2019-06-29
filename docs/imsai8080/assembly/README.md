@@ -173,8 +173,8 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 24. | 74HC595 (x6) | `U1-U6` front | `U1-U6` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
-| 24. | 74HC74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
-| 25. | MAX3232 | `U11` back | `U11` is oriented with the crescent/indent to the **left** when looking at the **back** of the PCB. |
+| 25. | 74HC74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
+| 26. | MAX3232 | `U11` back | `U11` is oriented with the crescent/indent to the **left** when looking at the **back** of the PCB. |
 
 ## Testing I
 
@@ -223,10 +223,10 @@ When screwing the M4 Nylon Nuts and the M4 Socket Screws together only ever make
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 26. | M4x30mm Hex Socket Screw (x8) | 3mm Black acrylic LED/switch masking plate | Insert the 8 `M4 socket screws` into each of the 8 round holes in the large `3mm Black acrylic LED/switch masking plate` |
-| 27. | Spacer 9mm Nylon (x8) | | Thread a `9mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
-| 28. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `9mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
-| 29. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the front panel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
+| 27. | M4x30mm Hex Socket Screw (x8) | 3mm Black acrylic LED/switch masking plate | Insert the 8 `M4 socket screws` into each of the 8 round holes in the large `3mm Black acrylic LED/switch masking plate` |
+| 28. | Spacer 9mm Nylon (x8) | | Thread a `9mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
+| 29. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `9mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
+| 30. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the front panel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
 
 :::  tip
 You should now have a sandwich with the PCB at the back and the 3mm Black acrylic LED/switch masking plate at the front, separated by the 9mm spacers and held together with the M4 socket screws and nuts.
@@ -238,17 +238,17 @@ As you insert each rocker switch into the PCB, there should be a slight press-to
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 27a. | Blue Rocker (On-On) (x4)| `SA12-SA15` | **Don't solder them yet** |
-| 28a. | Red Rocker (On-On) (x4)| `SA8-SA11` | **Don't solder them yet** |
-| 29a. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA8-SA15` | Place the small acrylic alignment guide over the ends of the whole set of 8 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
+| 31a. | Blue Rocker (On-On) (x4)| `SA12-SA15` | **Don't solder them yet** |
+| 32a. | Red Rocker (On-On) (x4)| `SA8-SA11` | **Don't solder them yet** |
+| 33a. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA8-SA15` | Place the small acrylic alignment guide over the ends of the whole set of 8 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
 
 #### Steps 27-29 can now be repeated for the second group of (On-On) switches.
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 27b. | Blue Rocker (On-On) (x4)| `SA4-SA7` | |
-| 28b. | Red Rocker (On-On) (x4)| `SA0-SA3` |  |
-| 29b. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA0-SA7` | |
+| 31b. | Blue Rocker (On-On) (x4)| `SA4-SA7` | |
+| 32b. | Red Rocker (On-On) (x4)| `SA0-SA3` |  |
+| 33b. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA0-SA7` | |
 
 ::: warning
 The order of the momentary switches is different. They alternate blue/red from left to right with the red power switch in the right-most position. I have seen different configurations and I guess it comes down to personal choice. I imagine you can swap the plastic toggle actuators but I have not tried this myself.
@@ -256,10 +256,10 @@ The order of the momentary switches is different. They alternate blue/red from l
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 30. | Blue Rocker (Mom-off-Mom) (x3)| `S6, S4, S2` | **Don't solder them yet** |
-| 31. | Red Rocker (Mom-off-Mom) (x2)| `S5, S3` | **Don't solder them yet** |
-| 31. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `S2-S6` | Place the small acrylic alignment guide over the ends of the whole set of 5 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
-| 32. | Red Power Switch (On-On) | `S1` | Solder it in place. |
+| 34. | Blue Rocker (Mom-off-Mom) (x3)| `S6, S4, S2` | **Don't solder them yet** |
+| 35. | Red Rocker (Mom-off-Mom) (x2)| `S5, S3` | **Don't solder them yet** |
+| 36. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `S2-S6` | Place the small acrylic alignment guide over the ends of the whole set of 5 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
+| 37. | Red Power Switch (On-On) | `S1` | Solder it in place. |
 
 ## Testing II
 
@@ -293,9 +293,9 @@ Having successfully gotten this far, the next section can go very smoothly if yo
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 33. | M4x30mm Hex Socket Screw (x8) | 6mm Clear acrylic front cover | Insert the 8 `M4 socket screws` into each of the 8 round holes in the thick `6mm Clear acrylic front cover`. Tape over the heads to hold them in place. |
-| 34. | 1.5mm White text/decals through Black facia | | Align the `Text Facia` over the `M4 socket screws` and slide it down to meet the clear acrylic |
-| 35. | 0.8mm Red transparent filter | | Align the `Red transparent filter` over the `M4 socket screws` and slide it down to meet the `Text Facia` |
+| 38. | M4x30mm Hex Socket Screw (x8) | 6mm Clear acrylic front cover | Insert the 8 `M4 socket screws` into each of the 8 round holes in the thick `6mm Clear acrylic front cover`. Tape over the heads to hold them in place. |
+| 39. | 1.5mm White text/decals through Black facia | | Align the `Text Facia` over the `M4 socket screws` and slide it down to meet the clear acrylic |
+| 40. | 0.8mm Red transparent filter | | Align the `Red transparent filter` over the `M4 socket screws` and slide it down to meet the `Text Facia` |
 
 ::: tip
 1. Take this whole assembly and flip it over, with the clear acrylic and the `Text Facia` facing up.
@@ -309,9 +309,9 @@ If by this point, any of the `9mm Spacers` have slipped out of position, you can
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 36. | Spacer 6mm Nylon (x8) | | Thread a `6mm spacer` over each of the 8 `M4 socket screws` behind the `PCB` |
-| 37. | 3mm Clear acrylic back cover | | Align the `3mm Clear acrylic back cover` over the `M4 socket screws` and slide it down to meet the `3mm Spacers` |
-| 38. | M4 Hex Nut Nylon (x8) | | Push a  `M4 Nut` into each hexagonal cutout in the `3mm Clear acrylic back cover` behind each of the 8 `M4 socket screws`, tape them into position so that they don't fall out while tightening the  `M4 socket screws` |
+| 41. | Spacer 6mm Nylon (x8) | | Thread a `6mm spacer` over each of the 8 `M4 socket screws` behind the `PCB` |
+| 42. | 3mm Clear acrylic back cover | | Align the `3mm Clear acrylic back cover` over the `M4 socket screws` and slide it down to meet the `3mm Spacers` |
+| 43. | M4 Hex Nut Nylon (x8) | | Push a  `M4 Nut` into each hexagonal cutout in the `3mm Clear acrylic back cover` behind each of the 8 `M4 socket screws`, tape them into position so that they don't fall out while tightening the  `M4 socket screws` |
 
 ::: tip
 1. Holding the whole assembly firmly together (again tape may help) stand it up on one long edge.
@@ -326,6 +326,18 @@ Who would have thought you'd have a working replica of an IMSAI 8080 in around j
 Probably time for another cup of tea, but in my case, I think I'd choose something stronger.
 :::
 
+## Switch Surround
+
+::: tip 
+Don't try to operate your IMSAI 8080esp for long periods of time without this component in place. It looks so good, you're missing out if you don't have it in place :-).
+:::
+
+| Step | Parts | Location | Notes |
+| ---: | ----- | -------- | ----- |
+| 44. | 120mm x 25mm Black Velcro adhesive backed hook & loop tape |  | Cut both the `hook and loop tape` into **2** x 60mm lengths. Cut each 60mm piece **lengthways in half** to produce **4** x 60mm x 12.5mm strips of `hook and loop tape` |
+| 45. | 60mm x 12.5mm Black Velcro adhesive backed hook & loop tape (x4) | 6mm Charcoal grey hammer tone painted acrylic switch surround |  Stick each strip of `hook and loop tape` to the back of the `switch surround` vertically , aligned behind the fingers extending upwards along the `switch surround` |
+| 46. | 6mm Charcoal grey hammer tone painted acrylic switch surround | |  Remove the paper backing from the `hook and loop tape` and press the `switch surround` into place under the `toggle switches` on the assembly you completed after Step 43. |
+
 ## The Lid
 
 ::: tip 
@@ -334,8 +346,8 @@ The lid can wait, its time to play!
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 39. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue acrylic lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue acrylic lid` and screw a `M3 Nut` on the end of each `M3 Screw`. |
-| 40. | 3mm Blue acrylic lid | | Place the `Blue acrylic lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
+| 47. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue acrylic lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue acrylic lid` and screw a `M3 Nut` on the end of each `M3 Screw`. |
+| 48. | 3mm Blue acrylic lid | | Place the `Blue acrylic lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
 
 ## Celebrating
 
