@@ -44,6 +44,10 @@ To enter *startup configuration mode*, follow the sequence:
 
 The IMSAI 8080esp should now be in *startup configuration mode*. This is indicted by a running LED pattern (right to left) on the 4 LEDS at the right hand side of the front panel (`HOLD`, `WAIT`, `RUN`, `INTERRUPTS ENABLED`).
 
+::: tip
+The current *startup configuration value* is displayed on the Address Bus LEDs (bits 0-15) when you enter *startup configuration mode*.
+:::
+
 ![IMSAI 8080 CP-A](../CPA_1024.png)
 
 ::: tip 
@@ -53,6 +57,9 @@ There are 2 `Reset` switches available that both do the same thing:
 - The small tactile switch on the ESP32 board marked `EN`
 :::
 
+::: warning
+When you **Desposit** a new *startup configuration value*, all the bits of the current value are overwritten. If your objective is to **modify** the existing value changing only a few of the bits, you must toggle in all the bits of the existing value indicated by the Address Bus LEDs and then switch the bits you want to configure differently, before you **Deposit** this new value.
+:::
 
 ::: tip Booting into MSBASIC 1.4 (8K)
 To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 Mhz, the following startup configuration value can be used.
