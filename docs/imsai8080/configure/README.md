@@ -238,7 +238,7 @@ The *Network configuration* entries should be familiar and mostly self explanato
 
 Note: the TZ variable cannot use values like *Sydney/Australia* but must use explicitly defined timezone strings, as with the value shown (TBA)
 
-The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
+The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). There can be a maximum of 7, `ROM1` to `ROM7`. Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
 
 ## System.conf file
 
