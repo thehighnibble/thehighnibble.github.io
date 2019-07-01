@@ -134,7 +134,51 @@ For further details about the *Equivalent Flag* refer to the **Z80PACK** documen
 
 ## Serial Communications (RS232, USB)
 
-TBA
+The **IMSAI 8080esp** is configured with a single simulated **SIO** UART (TTY:). When the machine boots, the **SIO** UART is routed to the physical UART on the `ESP32-PICO-KIT`.
+
+This enables you to use any software on the IMSAI 8080 that communicates via the SIO (TTY:) using a terminal or terminal emulator depending your method of connection.
+
+The only supported speed with the current firmware is 115200 baud @ 8N1
+
+::: tip
+Both the *ESP32 console log* and the IMSAI 8080 **SIO** (TTY:) will be directed to the serial UART. If you set the `NVS_LOG_LEVEL` to `INFO` (3) this will likely send console log messages during normal use of the machine. It is recommended to set the `NVS_LOG_LEVEL` to a lower level during normal operation.
+:::
+
+::: warning
+If you start the **Desktop UI** from a web browser and the *TTY: virtual device* is connected (default behavior) then the simulated SIO UART (TTY:) is disconnected from the physical UART on the `ESP32-PICO-KIT` and instead re-routed to the *TTY: virtual device* on the Desktop UI. If the *TTY: virtual device* is disconnected, then the SIO UART is re-routed back to the physical UART on the `ESP32-PICO-KIT`, ie. only one of these two destinations can be connected at a time.
+
+**Note: the *ESP32 console log* is always sent to the physical UART and is never redirected.**
+:::
+
+### Serial UART over USB
+
+The `ESP32-PICO-KIT` supports serial communications from the UART over USB. It uses a *Silicon Labs CP210x USB to UART bridge*
+
+1. connect the `ESPP32-PICO-KIT` to a PC using a suitable USB cable
+2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the `ESP32-PICO-KIT` on
+   - Windows will be a COMx: port
+   - OSX will be /dev/tty.SLAB_USBtoUART
+   - Linux will be /dev/tty.USB0 (or similar, TBA)
+
+::: tip
+If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT when connected, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge*.
+
+Drivers are available direct from the manufacturer at [https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+:::
+
+Additional information is available from the Espressif (manufacturer of the `ESP32-PICO-KIT`) web site at [https://docs.espressif.com/projects/esp-idf/en/latest/get-started/establish-serial-connection.html](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/establish-serial-connection.html)
+
+### Serial UART over RS232
+
+*Serial UART over RS232* and *Serial UART over USB* are mutually exclusive, ie. they cannot be used at the same time.
+
+*Serial UART over RS232* is configured by using the supplied jumpers/shunts to bridge the required pins on the `Patch` and `Comms` headers accessible on the rear of the PCB (TBA), and connecting a suitable RS232 device to the DE-9 connector labeled `RS232-1`
+
+RS232 line levels are provided by the Maxim MAX3232 IC (data sheet TBA)
+
+::: warning
+The DE-9 connector labeled `RS232-2`is currently unused but is intended for future expansion
+:::
 
 ## Wi-Fi Communications
 
@@ -154,7 +198,7 @@ Alternatively the **microSD Card** can be mounted in a PC and the `/imsai/conf/b
 ::: warning
 When the IMSAI 8080esp is configured to work in station mode (STA) but it is unable to make a connection to the configured Wi-Fi network within 30 seconds, the ESP32 will reboot and temporarily start in AP mode.
 - This enables you to connect to the IMSAI 8080esp from a browser on the advertised SSID and modify/correct the STA mode Wi-Fi configuration.
-- The simplest way to determine if this has happed is to look for the AP mode SSID being broadcast, or to look at the ESP32 console log output on the IUART.
+- The simplest way to determine if this has happed is to look for the AP mode SSID being broadcast, or to look at the ESP32 console log output on the UART.
 :::
 
 ::: danger

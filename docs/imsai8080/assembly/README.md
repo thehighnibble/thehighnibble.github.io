@@ -84,7 +84,11 @@ This may require mailing replacement parts to you and that will take time, so pl
 | 5. | Resistor 10K | `R14` front | |
 | 6. | Capacitor 100nF | `C1` front | |
 | 7. | Resistor Network 6x10K | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
-| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see video, details to follow) |
+| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
+
+::: tip
+If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge* used on the ESP32-PICO-KIT. See [Serial Communications (RS232, USB)](../configure/#serial-communications-rs232-usb) in the Configuration guide for details.
+:::
 
 ::: danger
 Before continuing, remove both the microSD Memory Card from the socket and the ESP32-PICO-KIT from the female connectors, **taking care not to bend the Wi-Fi antenna.**
