@@ -11,8 +11,9 @@ If you experience problems that are not covered in this trouble shooting guide, 
 ## During assembly
 
 ::: tip
-The trouble shooting outlined here focuses on understanding the messages that are logged to the console by the ESP32 as it boots.
-The simplest way to see these messages is to 
+The troubleshooting outlined here focuses on understanding the messages that are logged to the console by the ESP32 as it boots.
+The simplest way to see these messages is to
+
 1. connect the `ESPP32-PICO-KIT` to a PC using a suitable USB cable
 2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the ESP32 on
    - Windows will be a COMx: port
@@ -41,9 +42,7 @@ Then that's my fault, and I've shipped you an ESP32-PICO-KIT module without the 
 
 #### I see an error in the logs
 ::: danger
-A error is the logs appears as **red text** with a capital **E** as the first character of the line.
-
-I haven't yet figured out how to colour the errors in red in the examples below so I have simply highlighted the error message.
+An error in the logs appears as **red text** with a capital **E** as the first character of the line.
 :::
 
 ::: tip
@@ -109,8 +108,83 @@ Once the toggle switches are soldered in you will be able to more get some more 
 
 ### With all the LEDs and ICs in place (and supporting passives)
 
-TBA
+::: warning
+Without the toggle switches in place, the testing that is possible is limited, don't expect too much
+:::
+
+::: tip
+For a visual guide to the following tests refer to the YouTube video titled [THN #019 - Kit Assembly #11- The dead LED is fixed and testing continues.](https://youtu.be/VrSLJicIlcU)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VrSLJicIlcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+#### Testing for power on/off
+
+*(refer to video above for now)*
+
+#### Testing the LEDs
+
+*(refer to video above for now)*
 
 ### With the toggle switches in place
 
-TAB
+::: tip
+At this point your IMSAI 8080esp should by fully operational.
+
+For a visual guide to the following tests refer to the YouTube video titled [THN #022 - Kit Assembly #14 - Some last testing before final assembly](https://youtu.be/Cwv_gRtWnZM)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cwv_gRtWnZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
+
+#### Testing the LEDs
+
+*(refer to video above for now)*
+
+#### Testing the Red and Blue Toggle Switches
+
+*(refer to video above for now)*
+
+::: tip
+You should be able to repeat any of the above tests but more importantly you should be able to enter *startup configuration mode* and configure your IMSAI 8080esp to boot into a ROM based application eg. BASIC, or to boot a floppy disk image and start a disk based operating system eg. CP/M 2.2 (as supplied). See the [Configuration guide](../configure/) for details.
+:::
+
+## After assembly
+
+::: tip
+There is a growing community of fellow IMSAI 8080esp owners and interested parties, sharing with and helping each other on the **IMSAI 8080esp Forum**.
+
+If you haven't visited it yet, head over to the [IMSAI 8080esp Forum](http://bit.ly/IMSAI8080esp). You need to **request to join** before you can post, but you can freely browse the exiting posts while you wait to be added.
+
+Remember I am one person, I have a day job, I need sleep and I'm in Sydney, Australia (UTC+10). So I could be at work or asleep when you most need support. The **IMSAI 8080esp Forum** on the other hand has members located all around the world, in different timezones and with great experience. I highly recommend the forum.
+:::
+
+### Essential hardware functionality (LEDs and Toggle Switches)
+
+If you have LEDs or Toggle switches that don't operate correctly the most likely cause is the soldering.
+
+A visual inspection of all solder joints is ofter the best first approach.
+
+Any joints that don't look like the others, especially on pads connected to the faulty component can be re-worked with a hot soldering iron and some flux, or more solder added if required.
+
+You will have to (partially or fully) disassemble the acrylic components to get access to the PCB so that you can do any soldering or some further testing. A digital multimeter can be a useful tool for this work to help you do some continuity testing, test resistors for correct values, check that voltages are as expected (+5V DC).
+
+### The hardware checks out, you suspect it is the software
+
+::: tip
+The troubleshooting outlined here focuses on understanding the messages that are logged to the console by the ESP32 as it boots.
+The simplest way to see these messages is to
+
+1. connect the `ESPP32-PICO-KIT` to a PC using a suitable USB cable
+2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the ESP32 on
+   - Windows will be a COMx: port
+   - OSX will be /dev/tty.SLAB_USBtoUART
+   - Linux will be /dev/tty.USB0 (or similar, TBA)
+:::
+
+::: tip
+The level of detail provided by the ESP32 in the console logs can be changed by the **NVS_LOG_LEVEL** bits in the *startup configuration*
+
+The most informative level to set **NVS_LOG_LEVEL** is **INFO**. This is not recommended for normal operation as it is too verbose, but it is recommended for troubleshooting.
+
+See the [Startup configuration (Non-Volatile Storage, NVS)](../configure/#startup-configuration-non-volatile-storage-nvs) section of the Configuration guide for instructions on setting the **NVS_LOG_LEVEL**
+:::
+
+When you are posting in the forum requesting help with a problem, it would be a good idea to include an attached file of your current ESP32 console logs that highlight the problem.
