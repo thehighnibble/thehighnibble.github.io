@@ -207,8 +207,53 @@ The design of the IMSAI 8080esp is intended for only **one** Wi-Fi client (brows
 
 ## Boot.conf file
 
-TBA
+The **boot.conf** file is located on the microSD card with the path `/imsai/conf/boot.conf`
+As the ESP32 boots this file is loaded, each line parsed and the **variable=value** pair is added to the environment (like posix environment variables).
+
+::: danger
+There is little to no error checking done at the moment. If you significantly change this file and remove a variable, or leave a value blank you may cause the boot process to fail. I know I've managed to do that once or twice.
+
+The solution is to mount the microSD card on a PC and edit the **boot.conf** file to fix the problem.
+:::
+
+The default configuration, as shipped is a follows:
+
+```conf
+#Network configuration
+NTP_SERVER=pool.ntp.org
+TZ=AEST-10ADST,M10.1.0,M4.1.0
+HOSTNAME=imsai8080
+PORT=80
+SSID=mySSID
+PASSWORD=myPASSWORD
+#Bootrom configutation
+ROM1=mpu-a-rom.hex
+ROM2=mpu-a-vio-rom.hex
+ROM3=basic4k.hex
+ROM4=basic8k.hex
+ROM5=xybasic.hex
+```
+
+The *Network configuration* entries should be familiar and mostly self explanatory.
+
+Note: the TZ variable cannot use values like *Sydney/Australia* but must use explicitly defined timezone strings, as with the value shown (TBA)
+
+The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
 
 ## System.conf file
 
-TBA
+The **system.conf** file is located on the microSD card with the path `/imsai/conf/system.conf`
+
+This is a legacy configuration file, maintained for source code compatibility with the *Z80PACK, imsaisim* machine.
+
+The only parameter that effects the IMSAI 8080esp is the last line:
+
+```
+ram			64
+```
+
+This still sets the maximum amount of RAM allocated to the simulated machine in KB.
+
+:::danger
+Changing this value is not tested and is likely to result in the machine failing to work as expected.
+:::
