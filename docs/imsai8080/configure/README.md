@@ -48,7 +48,11 @@ The IMSAI 8080esp should now be in *startup configuration mode*. This is indicte
 The current *startup configuration value* is displayed on the Address Bus LEDs (bits 0-15) when you enter *startup configuration mode*.
 :::
 
-![IMSAI 8080 CP-A](../CPA_1024.png)
+::: tip
+The whole procedure, including entering a value to boot into CP/M 2.2 (see below) is demonstrated in this *Kit Assembly* video
+<!-- ![IMSAI 8080 CP-A](../CPA_1024.png) -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Cwv_gRtWnZM?start=200" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
 
 ::: tip 
 There are 2 `Reset` switches available that both do the same thing:
