@@ -39,8 +39,17 @@ To enter *startup configuration mode*, follow the sequence:
 1. ensure the ESP32 is connected to a USB power source, the red LED on the ESP32 board should be illuminated
 2. turn the front panel power switch **off**, `PWR OFF`, the down position
 3. hold the `EXAMINE` toggle in the **Examine**, up position
-4. press the `Reset` switch while holding the `EXAMINE` toggle up
-5. release the `EXAMINE` toggle
+4. press and release the `Reset` switch while holding the `EXAMINE` toggle up
+5. hold the `EXAMINE` toggle for a second or two
+6. release the `EXAMINE` toggle
+
+::: tip 
+There are 2 `Reset` switches available that both do the same thing:
+
+- The `Tactile Switch SPST-NO` you installed in the `Reset` position on the PCB
+- The small tactile switch on the ESP32 board marked `EN`
+- **NOT** the *blue toggle switch* on the front panel
+:::
 
 The IMSAI 8080esp should now be in *startup configuration mode*. This is indicted by a running LED pattern (right to left) on the 4 LEDS at the right hand side of the front panel (`HOLD`, `WAIT`, `RUN`, `INTERRUPTS ENABLED`).
 
@@ -52,13 +61,6 @@ The current *startup configuration value* is displayed on the Address Bus LEDs (
 The whole procedure, including entering a value to boot into CP/M 2.2 (see below) is demonstrated in this *Kit Assembly* video
 <!-- ![IMSAI 8080 CP-A](../CPA_1024.png) -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cwv_gRtWnZM?start=200" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-:::
-
-::: tip 
-There are 2 `Reset` switches available that both do the same thing:
-
-- The `Tactile Switch SPST-NO` you installed in the `Reset` position on the PCB
-- The small tactile switch on the ESP32 board marked `EN`
 :::
 
 ::: warning
