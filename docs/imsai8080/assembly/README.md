@@ -78,12 +78,12 @@ This may require mailing replacement parts to you and that will take time, so pl
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 1. |  Header 20x1 Male | ESP32-PICO-KIT board | Cut 2 sets of 3 pins from the 20x1 Male Header strip. Solder these into the unpopulated through-holes on the ESP32-PICO-KIT board. Upon completion there should be 20 pins along each edge of the underside of the ESP32-PICO-KIT board. |
-| 2. | Connector 20x1 Female (x2) | `ESP32` back | Solder these connectors mounted on the **back** of the PCB in the 2 rows of 20 through-holes that form a DIP40 outline marked `ESP32`. |
-| 3. | PSRAM (SMD) | `U13` front | *Note: Pin 1 is indicated on the PCB by a white dot and on the component by a dimple in the plastic case*. When done, perform a continuity test with a multimeter from each pin of the SOP-8 package to a connected pad on the PCB (see video, details to follow) |
-| 4. | microSD Card Socket (SMD) | `uSD Card` front | Align the two locating pins on the microSD Card Socket with the two holes in the PCB. Solder the 4 large ground pads of the lid first ensuring the 9 smaller leads are well aligned, then solder the 9 smaller leads. |
-| 5. | Resistor 10K | `R14` front | |
-| 6. | Capacitor 100nF | `C1` front | |
-| 7. | Resistor Network 6x10K | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
+| 2. | PSRAM (SMD) | `U13` front | *Note: Pin 1 is indicated on the PCB by a white dot and on the component by a dimple in the plastic case*. When done, perform a continuity test with a multimeter from each pin of the SOP-8 package to a connected pad on the PCB (see video, details to follow) |
+| 3. | microSD Card Socket (SMD) | `uSD Card` front | Align the two locating pins on the microSD Card Socket with the two holes in the PCB. Solder the 4 large ground pads of the lid first ensuring the 9 smaller leads are well aligned, then solder the 9 smaller leads. |
+| 4. | Resistor 10K | `R14` front | |
+| 5. | Capacitor 100nF | `C1` front | |
+| 6. | Resistor Network 6x10K | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
+| 7. | Connector 20x1 Female (x2) | `ESP32` back | Solder these connectors mounted on the **back** of the PCB in the 2 rows of 20 through-holes that form a DIP40 outline marked `ESP32`. |
 | 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
 
 ::: tip
