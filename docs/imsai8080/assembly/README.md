@@ -5,6 +5,7 @@ sidebar: auto
 # Step-by-step Assembly Guide (Draft)
 
 ## Notices
+
 ::: tip
 **Please read all the following notices and instructions before assembling the IMSAI 8080esp replica kit.**
 :::
@@ -199,7 +200,7 @@ You can use the virtual `CPA:` device to toggle the `RUN/STOP` switch.
 :::
 
 ::: warning
-While you can operate the IMSAI 8080esp at this point, it will not do much for you without some further configuration. The default configuration is like an empty machine with no ROM only RAM, and you don't have a full frontpanel to play with. Damn!
+While you can operate the IMSAI 8080esp at this point, it will not do much for you without some further configuration. The default configuration is like an empty machine with no ROM only RAM, and you don't have a full front panel to play with. Damn!
 Configuration is (or will be) covered elsewhere.
 :::
 
@@ -210,7 +211,7 @@ Time for a cup of tea if you've gotten this far.
 ## Rocker/Toggle Switches
 
 ::: tip
-To correctly locate and align the rocker switches before soldering, the frontpanel should be partially assembled according to the following instructions.
+To correctly locate and align the rocker switches before soldering, the front panel should be partially assembled according to the following instructions.
 :::
 
 ::: tip
@@ -218,7 +219,7 @@ Many of the sheets of acrylic have a protective backing cover (plastic or paper)
 :::
 
 ::: tip
-When assembling all or part of the frontpanel it is sometimes necessary to flip the assembly. To avoid having the M4 socket screws fall out you can use masking tape to hold them in place, or use a cardboard sheet from the packaging to cover the socket screws while flipping the assembly (see video).
+When assembling all or part of the front panel it is sometimes necessary to flip the assembly. To avoid having the M4 socket screws fall out you can use masking tape to hold them in place, or use a cardboard sheet from the packaging to cover the socket screws while flipping the assembly (see video).
 :::
 
 ::: warning
@@ -289,6 +290,7 @@ Having successfully gotten this far, the next section can go very smoothly if yo
 :::
 
 ::: tip
+
 1. Remove the `M4 Nuts` (8) without letting the `M4 Socket Screws` (8) drop out of place, tape may help.
 2. Place the `PCB` down on a surface with the `3mm Black acrylic LED/switch masking plate` facing up, the `M4 Socket Screws` will need to slide up to let the `PCB` sit down flat on the surface.
 3. Carefully remove the `M4 Socket Screws` (8) without disturbing the `3mm Black acrylic LED/switch masking plate`, the `PCB` **and especially don't allow the `9mm Spacers` to move out of place**.
@@ -302,6 +304,7 @@ Having successfully gotten this far, the next section can go very smoothly if yo
 | 40. | 0.8mm Red transparent filter | | Align the `Red transparent filter` over the `M4 socket screws` and slide it down to meet the `Text Facia` |
 
 ::: tip
+
 1. Take this whole assembly and flip it over, with the clear acrylic and the `Text Facia` facing up.
 2. Lower this into place, guiding the `M4 socket screws` through the holes in the other assembly you previously set aside (black acrylic, 9mm spacers and PCB)
 3. Making sure the `M4 socket screws` wont fall out (tape again), flip this whole assembly over, placing the front panel face down on a surface.
@@ -318,11 +321,12 @@ If by this point, any of the `9mm Spacers` have slipped out of position, you can
 | 43. | M4 Hex Nut Nylon (x8) | | Push a  `M4 Nut` into each hexagonal cutout in the `3mm Clear acrylic back cover` behind each of the 8 `M4 socket screws`, tape them into position so that they don't fall out while tightening the  `M4 socket screws` |
 
 ::: tip
+
 1. Holding the whole assembly firmly together (again tape may help) stand it up on one long edge.
 2. Screw each of the 8 `M4 socket screws` firmly into their corresponding `M4 Nut`, take care not to over-tighten and strip the thread in the `M4 Nut`.
 :::
 
-::: tip 
+::: tip
 Almost done!
 
 Who would have thought you'd have a working replica of an IMSAI 8080 in around just 40 simple steps :-)
@@ -332,7 +336,7 @@ Probably time for another cup of tea, but in my case, I think I'd choose somethi
 
 ## Switch Surround
 
-::: tip 
+::: tip
 Don't try to operate your IMSAI 8080esp for long periods of time without this component in place. It looks so good, you're missing out if you don't have it in place :-).
 :::
 
@@ -344,7 +348,7 @@ Don't try to operate your IMSAI 8080esp for long periods of time without this co
 
 ## The Lid
 
-::: tip 
+::: tip
 The lid can wait, its time to play!
 :::
 
