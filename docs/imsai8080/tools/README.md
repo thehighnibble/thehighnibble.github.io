@@ -9,7 +9,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 :::
 
 ::: warning
-I use solder that contains lead because it has a lower melting temperature and is easier to work with. WHen soldering it is recommended that you work in a well ventilated area and use a fan to blow or suck the soldering fumes away from your face so that you don't breath them.
+I use solder that contains lead because it has a lower melting temperature and is easier to work with. When soldering it is recommended that you work in a well ventilated area and use a fan to blow or suck the soldering fumes away from your face so that you don't breath them.
 :::
 
 ## Soldering tools & supplies
