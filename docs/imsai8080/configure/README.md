@@ -184,8 +184,8 @@ You must position 4 of the jumpers/shunts provided to enable the *Serial UART ov
 
 #### Patch header
 
-- bridge Tx - T1 - *right most position*
-- bridge Rx - R1 - *position second from right*
+- bridge Tx - T1 - *position second from right*
+- bridge Rx - R1 - *right most position*
 
 #### Comms header
 
