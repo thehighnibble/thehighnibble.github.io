@@ -69,8 +69,8 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 | ![microSD 16GB Memory_Card](./parts/microSD_16GB_Memory_Card.png) | 1 | | <h4>microSD 16GB Memory Card</h4> |
 | ![Shunt-Jumper](./parts/Shunt-Jumper.png) | 8 | | <h4>Shunt-Jumper</h4> |
 | ![Test Lead](./parts/Test_Lead.png) | 1 | | <h4>Test lead</h4> Used to test LEDs during assembly, but not used in the final assembled kit |
-| ![Velcro tape]() | 120mm x 25mm | | <h4>Black Velcro adhesive backed hook & loop tape</h4> Used to mount the Charcoal grey hammer tone painted acrylic switch surround to the Black acrylic LED/switch masking plate.
-| ![PCB]()| 1 | | <h4>PCB</h4> |
+| ![Velcro hook tape](./parts/120mm_Hook_Tape.png) ![Velcro loop tape](./parts/120mm_Loop_Tape.png) | 120mm x 25mm | | <h4>Black Velcro adhesive backed hook & loop tape</h4> Used to mount the Charcoal grey hammer tone painted acrylic switch surround to the Black acrylic LED/switch masking plate.
+| ![PCB](./parts/pcb.jpg)| 1 | | <h4>PCB</h4> |
 
 ## Mounting hardware
 
@@ -85,14 +85,20 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 
 ## Acrylic parts
 
+::: tip
+Many of the sheets of acrylic have a protective backing cover (plastic or paper) to protect them from scratching during cutting and transportation. This should be removed before you use them in the assembly of the kit.
+
+If any of the following acrylic parts, especially the clear parts, appear white or any colour other than indicated, it is because they have a protective covering.
+:::
+
 | Part | Quantity | Description |
 | ---- | --------:| ----------- |
-| | 1 | <h4>6mm Clear acrylic front cover</h4> |
-| | 1 | <h4>6mm Charcoal grey hammer tone painted acrylic switch surround</h4> |
-| | 1 | <h4>1.5mm White text/decals through Black facia</h4> |
-| | 1 | <h4>0.8mm Red transparent filter</h4> |
-| | 1 | <h4>3mm Black acrylic LED/switch masking plate</h4> |
-| | 1 | <h4>3mm Clear acrylic back cover</h4> |
-| | 1 | <h4>3mm Blue acrylic lid</h4> |
-| | 1 | <h4>3mm Black acrylic LED spacer & switch alignment guide (8 slots)</h4> |
-| | 1 | <h4>3mm Black acrylic LED alignment guide (8 round holes)</h4> |
+| ![Clear acrylic front cover](./parts/front_cover.jpg) | 1 | <h4>6mm Clear acrylic front cover</h4> |
+| ![Charcoal grey acrylic switch surround](./parts/switch_surround.jpg) | 1 | <h4>6mm Charcoal grey hammer tone painted acrylic switch surround</h4> |
+| ![White text/decals through Black facia](./parts/text_facia.jpg) | 1 | <h4>1.5mm White text/decals through Black facia</h4> |
+| ![Red semi-transparent filter](./parts/red_filter.jpg) | 1 | <h4>0.8mm Red semi-transparent filter</h4> |
+| ![Black acrylic LED/switch masking plate](./parts/switch_masking_plate.jpg) | 1 | <h4>3mm Black acrylic LED/switch masking plate</h4> |
+| ![Clear acrylic back cover](./parts/back_cover.jpg) | 1 | <h4>3mm Clear acrylic back cover</h4> |
+| ![Blue acrylic lid<](./parts/blue_lid.jpg) | 1 | <h4>3mm Blue acrylic lid</h4> |
+| ![LED Spacer/Switch Alignment guide](./parts/LED_Spacer_Rocker_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED spacer & switch alignment guide (8 slots)</h4> |
+| ![LED alignment guide](./parts/LED_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED alignment guide (8 round holes)</h4> |
