@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+editLink: false
 ---
 # IMSAI 8080 replica
 
@@ -141,11 +142,11 @@ less than 4.4 lbs
 
 less than 2 kg
 
-## [Bill-of-Materials (Draft)](bom/)
+## [Bill-of-Materials (draft)](bom/)
 
-## [Recommended tools for assembly (Draft)](tools/)
+## [Recommended tools for assembly (draft)](tools/)
 
-## [Step-by-step assembly guide (Draft)](assembly/)
+## [Step-by-step assembly guide (draft)](assembly/)
 
 ## [Configuration (draft)](configure/)
 

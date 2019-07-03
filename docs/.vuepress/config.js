@@ -3,6 +3,14 @@ module.exports = {
     ga: 'UA-138596150-1',
     evergreen: true,
     themeConfig: {
+      repo: 'thehighnibble/firmware',
+      
+      docsRepo: 'thehighnibble/thehighnibble.github.io',
+      docsDir: 'docs',
+      docsBranch: 'vuepress',
+      editLinks: true,
+      editLinkText: 'Find a mistake? Got a suggestion? Edit this page.', 
+
       // logo: '/THN_Logo.png',
       lastUpdated: 'Last Updated',
       nav: [
