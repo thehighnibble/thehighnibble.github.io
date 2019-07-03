@@ -174,12 +174,26 @@ Additional information is available from the Espressif (manufacturer of the `ESP
 
 *Serial UART over RS232* and *Serial UART over USB* are mutually exclusive, ie. they cannot be used at the same time.
 
-*Serial UART over RS232* is configured by using the supplied jumpers/shunts to bridge the required pins on the `Patch` and `Comms` headers accessible on the rear of the PCB (TBA), and connecting a suitable RS232 device to the DE-9 connector labeled `RS232-1`
+*Serial UART over RS232* is configured by using the supplied jumpers/shunts to bridge the required pins on the `Patch` and `Comms` headers accessible on the rear of the PCB, and connecting a suitable RS232 device to the DE-9M connector labeled `RS232-1`
 
 RS232 line levels are provided by the Maxim MAX3232 IC (data sheet TBA)
 
+You must position 4 of the jumpers/shunts provided to enable the *Serial UART over RS232*. This image shows the only currently valid and supported configuration for the jumpers/shunts on both the `Patch` and `Comms` headers.
+
+![Patch & Comms jumpers](./rs232_jumpers.jpg)
+
+#### Patch header
+
+- bridge Tx - T1 - *right most position*
+- bridge Rx - R1 - *position second from right*
+
+#### Comms header
+
+- bridge @ Tx1 - *second position from top*
+- bridge @ Rx1 - *fourth position from top*
+
 ::: warning
-The DE-9 connector labeled `RS232-2`is currently unused but is intended for future expansion
+The DE-9M connector labeled `RS232-2`is currently unused but is intended for future expansion
 :::
 
 ## Wi-Fi Communications
@@ -238,7 +252,11 @@ ROM5=xybasic.hex
 
 The *Network configuration* entries should be familiar and mostly self explanatory.
 
-Note: the TZ variable cannot use values like *Sydney/Australia* but must use explicitly defined timezone strings, as with the value shown (TBA)
+::: tip
+The TZ variable cannot use values like *Sydney/Australia* (Olson format) but must use explicitly defined timezone strings (POSIX format) eg. `TZ=AEST-10ADST,M10.1.0,M4.1.0` which is correct for Sydney, Australia.
+
+An article that defines the POSIX format can be found at [Specifying the Time Zone with TZ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html), however please note, the "third format" referenced in this article is the Olson format, and not supported on the ESP32.
+:::
 
 The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). There can be a maximum of 7, `ROM1` to `ROM7`. Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
 
