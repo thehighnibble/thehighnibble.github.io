@@ -177,7 +177,7 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 24. | 74HC595 (x6) | `U1-U6` front | `U1-U6` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
-| 25. | 74HC74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
+| 25. | 74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
 | 26. | MAX3232 | `U11` back | `U11` is oriented with the crescent/indent to the **left** when looking at the **back** of the PCB. |
 
 ## Testing I
