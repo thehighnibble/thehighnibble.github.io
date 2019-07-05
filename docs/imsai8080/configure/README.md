@@ -4,17 +4,60 @@ sidebar: auto
 
 # Configuration (Draft)
 
-## Default configuration
+This section will covering setting up your IMSAI 8080esp so you can see what is doing, show you how to run software, and discuss ways of expanding its capabilities using the serial ports.
+
+## Overview
+
+Just like the real IMSAI computer, the default configuration of your kit is an empty machine. While you *can* enter instructions using the toggle switches (and you *should* experiment with this sometime) it's more interesting to run some real software.
+
+In order to run any applications, you will need to activate a virtual ROM (to run BASIC, for example) or load an operating system (such as CP/M) from a virtual disk.
+
+Also like the original computer, your IMSAI 8080esp has no video output port. Owners of the original IMSAI would connect a serial terminal (either a teletype printer or video display) to a serial port. While you can still do this (see the section of Serial Communications), this modern kit offers a much easier solution using WiFi.
+
+Once power is applied to your kit, the ESP32 will create a WiFi access point. You can  connect your computer to this WiFi as if it were a WiFI router, and then open a special web page that will gives you full access to the IMSAI - including a virtual serial terminal, floppy disks, printer and more.
+
+Once connected, you can then configure the IMSAI to connect directly to your home WiFi, so you can use it without having to change your WiFI settings again.
+
+
+
+## Getting connected
+
+* Plug in the power to the IMSAI 8080esp kit.
+* On your computer, open the WiFi settings and select `imsai8080`.
+* When prompted for a password, enter `password`.
+
+Your computer should now be connected, and you will be able to open the IMSAI Webpage. The web interface has been written and tested with the Chrome browser in mind, and you might find it works differently if you are using a different browser.
+
+* If you have a Mac, open your browser and enter **imsai8080.local** as the web address.
+* If you have a PC, open your browser and enter **192.168.4.1** as the address.
+
+## Configuring your kit to connect directly to your home WiFi
+
+TBD
+
+## Launching applications
+
+TBD
+
+## Where to get more software
+
+TBD
+
+## Writing your own applications
+
+TBD
+
+
+# Reference and Advanced Settings section
+
+
 
 ### IMSAI 8080 (guest)
 
-::: warning
-The default configuration is like an empty machine with no ROM only RAM.
-:::
-
 - RAM is 64K occupying the entire address space from `0000h` to `FFFFh`
 - CPU is Intel 8080 @ 2MHz with support for undocumented op-codes
-- no boot ROM
+- No boot ROM is active by default
+
 
 ### ESP32 (host)
 
