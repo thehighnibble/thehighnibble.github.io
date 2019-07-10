@@ -4,6 +4,32 @@ sidebar: auto
 
 # Configuration (Draft)
 
+## Overview
+
+::: warning
+Just like the real IMSAI 8080 computer, the default configuration of your kit is an empty machine. While you *can* enter instructions using the toggle switches (and you *should* experiment with this sometime) it's more interesting to run some real software.
+The default configuration is like an empty machine with no ROM only RAM.
+:::
+
+In order to run any applications, you will need to activate a virtual ROM (eg. to run BASIC, or boot a floppy disk) and maybe load an operating system (such as CP/M) from a virtual disk.
+
+Also like the original computer, your IMSAI 8080esp has no video output port. Owners of the original IMSAI 8080 would connect a serial terminal (either a teletype printer or visual display unit) to a serial port. While you can still do this (see [Serial Communications](http://localhost:8080/imsai8080/configure/#serial-communications-rs232-usb) section), this modern kit offers a much easier solution using Wi-Fi.
+
+Once power is applied to your kit, the ESP32 will create a Wi-Fi Access Point. You can connect your computer to this Wi-Fi network as if it were connected to a Wi-FI router. You can then open a web page, the Desktop UI, that will give you full access to the IMSAI 8080esp - including a virtual serial terminal (TTY:), floppy disks, printer (LPT:) and more.
+
+Once connected, you can then configure the IMSAI 8080esp to connect directly to your home Wi-Fi, so you can use it without having to change your Wi-FI settings again.
+
+## Getting connected
+
+* Plug in the power to the IMSAI 8080esp kit.
+* On your computer, open the Wi-Fi settings and select the `imsai8080` network (SSID).
+* When prompted for a password, enter `password`.
+
+Your computer should now be connected, and you will be able to open the Desktop UI. The web interface has been written and tested with the Chrome browser in mind, and you might find it works differently if you are using a different browser.
+
+* If you have a Mac, open your browser and enter `imsai8080.local` as the web address.
+* If you have a PC, open your browser and enter `192.168.4.1` as the address.
+
 ## Default configuration
 
 ### IMSAI 8080 (guest)
@@ -12,19 +38,19 @@ sidebar: auto
 The default configuration is like an empty machine with no ROM only RAM.
 :::
 
-- RAM is 64K occupying the entire address space from `0000h` to `FFFFh`
-- CPU is Intel 8080 @ 2MHz with support for undocumented op-codes
-- no boot ROM
+* RAM is 64K occupying the entire address space from `0000h` to `FFFFh`
+* CPU is Intel 8080 @ 2MHz with support for undocumented op-codes
+* No boot ROM is active by default
 
 ### ESP32 (host)
 
-- Wi-Fi set to **Access-Point (AP)** mode with the default SSID of `imsai8080`, password of `password`
-- Hostname (HOSTNAME environment variable) set to `imsai8080` (`imsai8080.local` for MDNS)
-- Port (PORT environment variable) set to `80`
-- Timezone (TZ environment variable) set for AEST+10, ADST+11 (ie. Sydney, Australia)
-- Time server (NTP_SERVER environment variable) set to `pool.ntp.org`
-- POST (Power On Self Test) disabled
-- Console log level set to `NONE` (details to follow)
+* Wi-Fi set to **Access-Point (AP)** mode with the default SSID of `imsai8080`, password of `password`
+* Hostname (HOSTNAME environment variable) set to `imsai8080` (`imsai8080.local` for mDNS)
+* Port (PORT environment variable) set to `80`
+* Timezone (TZ environment variable) set for AEST+10, ADST+11 (ie. Sydney, Australia)
+* Time server (NTP_SERVER environment variable) set to `pool.ntp.org`
+* POST (Power On Self Test) disabled
+* Console log level set to `NONE` (details to follow)
 
 ::: tip
 Once you are connected to the Wi-Fi network, start a Chrome browser and enter the URL `http://imsai8080.local` to see the Desktop UI.
@@ -46,9 +72,9 @@ To enter *startup configuration mode*, follow the sequence:
 ::: tip
 There are 2 `Reset` switches available that both do the same thing:
 
-- The `Tactile Switch SPST-NO` you installed in the `Reset` position on the PCB
-- The small tactile switch on the ESP32 board marked `EN`
-- **NOT** the *blue toggle switch* on the front panel
+* The `Tactile Switch SPST-NO` you installed in the `Reset` position on the PCB
+* The small tactile switch on the ESP32 board marked `EN`
+* **NOT** the *blue toggle switch* on the front panel
 :::
 
 The IMSAI 8080esp should now be in *startup configuration mode*. This is indicted by a running LED pattern (right to left) on the 4 LEDS at the right hand side of the front panel (`HOLD`, `WAIT`, `RUN`, `INTERRUPTS ENABLED`).
@@ -70,9 +96,9 @@ When you **Deposit** a new *startup configuration value*, all the bits of the cu
 ::: tip Booting into MSBASIC 1.4 (8K)
 To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 MHz, the following startup configuration value can be used.
 
-- Binary: 0000 0100 0000 0000
-- Octal: 002000
-- Hexadecimal: 0400
+* Binary: 0000 0100 0000 0000
+* Octal: 002000
+* Hexadecimal: 0400
 
 1. Enter *startup configuration mode* (above)
 2. Toggle in this value on the **Address** toggle switches
@@ -83,9 +109,9 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8
 ::: tip Booting into XYBASIC
 To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z80 mode @ 4 MHz, the following startup configuration value can be used.
 
-- Binary: 0000 0101 0101 0000
-- Octal: 002520
-- Hexadecimal: 0550
+* Binary: 0000 0101 0101 0000
+* Octal: 002520
+* Hexadecimal: 0550
 
 1. Enter *startup configuration mode* (above)
 2. Toggle in this value on the **Address** toggle switches
@@ -97,9 +123,9 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z8
 
 To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in Z80 mode @ 4 MHz, the following startup configuration value can be used. You can mount the `cpm_22.dsk` disk image in drive `DSK:A:` via the *Desktop UI*.
 
-- Binary: 0000 1001 0101 0000
-- Octal: 004520
-- Hexadecimal: 0950
+* Binary: 0000 1001 0101 0000
+* Octal: 004520
+* Hexadecimal: 0950
 
 1. Enter *startup configuration mode* (above)
 2. Toggle in this value on the **Address** toggle switches
@@ -158,9 +184,9 @@ The `ESP32-PICO-KIT` supports serial communications from the UART over USB. It u
 
 1. connect the `ESPP32-PICO-KIT` to a PC using a suitable USB cable
 2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the `ESP32-PICO-KIT` on
-   - Windows will be a COMx: port
-   - OSX will be /dev/tty.SLAB_USBtoUART
-   - Linux will be /dev/tty.USB0 (or similar, TBA)
+   * Windows will be a COMx: port
+   * OSX will be /dev/tty.SLAB_USBtoUART
+   * Linux will be /dev/tty.USB0 (or similar, TBA)
 
 ::: tip
 If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT when connected, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge*.
@@ -184,13 +210,13 @@ You must position 4 of the jumpers/shunts provided to enable the *Serial UART ov
 
 #### Patch header
 
-- bridge Tx - T1 - *position second from right*
-- bridge Rx - R1 - *right most position*
+* bridge Tx - T1 - *position second from right*
+* bridge Rx - R1 - *right most position*
 
 #### Comms header
 
-- bridge @ Tx1 - *second position from top*
-- bridge @ Rx1 - *fourth position from top*
+* bridge @ Tx1 - *second position from top*
+* bridge @ Rx1 - *fourth position from top*
 
 ::: warning
 The DE-9M connector labeled `RS232-2`is currently unused but is intended for future expansion
@@ -200,11 +226,11 @@ The DE-9M connector labeled `RS232-2`is currently unused but is intended for fut
 
 The ESP32 has on-board Wi-Fi and can boot in either **Access Point** (AP) or **Station** (STA) mode. The mode is determined by the **NVS_IF_STA** bit in the *startup configuration* stored in NVS and described [above](#startup-configuration-non-volatile-storage-nvs).
 
-- In AP mode, the ESP32 acts as an Access Point and broadcasts a system defined SSID and provides DHCP services for clients to connect
-  - The **SSID** hardcoded in the firmware is *imsai* with a **password** of *password*, this will only be used if the **boot.conf** file on the microSD card cannot be read or does not include a `HOSTNAME=name` statement, see [Boot.conf file](#boot-conf-file) below.
-  - If a `HOSTNAME=name` statement is found in the **boot.conf** file, then this hostname is also used as the **SSID** in AP mode. In this case, the **password** still remains *password*
-- In STA mode, the ESP32 acts as a Wi-Fi station or client and can join an existing Wi-Fi network (supporting WPA or WPA2, but not Enterprise WPA).
-  - The **SSID** and **password** of the desired Wi-Fi network must be configured in the **boot.conf** file using the `SSID=name` and `PASSWORD=password` statements, see [Boot.conf file](#boot-conf-file) below.
+* In AP mode, the ESP32 acts as an Access Point and broadcasts a system defined SSID and provides DHCP services for clients to connect
+  * The **SSID** hardcoded in the firmware is *imsai* with a **password** of *password*, this will only be used if the **boot.conf** file on the microSD card cannot be read or does not include a `HOSTNAME=name` statement, see [Boot.conf file](#boot-conf-file) below.
+  * If a `HOSTNAME=name` statement is found in the **boot.conf** file, then this hostname is also used as the **SSID** in AP mode. In this case, the **password** still remains *password*
+* In STA mode, the ESP32 acts as a Wi-Fi station or client and can join an existing Wi-Fi network (supporting WPA or WPA2, but not Enterprise WPA).
+  * The **SSID** and **password** of the desired Wi-Fi network must be configured in the **boot.conf** file using the `SSID=name` and `PASSWORD=password` statements, see [Boot.conf file](#boot-conf-file) below.
 
 ::: tip
 The **boot.conf** file can be edited via the **SYS:** virtual system device in the Desktop UI while connected to the IMSAI 8080esp running in AP mode.
@@ -214,8 +240,8 @@ Alternatively the **microSD Card** can be mounted in a PC and the `/imsai/conf/b
 ::: warning
 When the IMSAI 8080esp is configured to work in station mode (STA) but it is unable to make a connection to the configured Wi-Fi network within 30 seconds, the ESP32 will reboot and temporarily start in AP mode.
 
-- This enables you to connect to the IMSAI 8080esp from a browser on the advertised SSID and modify/correct the STA mode Wi-Fi configuration.
-- The simplest way to determine if this has happed is to look for the AP mode SSID being broadcast, or to look at the ESP32 console log output on the UART.
+* This enables you to connect to the IMSAI 8080esp from a browser on the advertised SSID and modify/correct the STA mode Wi-Fi configuration.
+* The simplest way to determine if this has happed is to look for the AP mode SSID being broadcast, or to look at the ESP32 console log output on the UART.
 :::
 
 ::: danger

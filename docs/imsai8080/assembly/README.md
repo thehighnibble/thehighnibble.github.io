@@ -79,14 +79,14 @@ This may require mailing replacement parts to you and that will take time, so pl
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 1. |  Header 20x1 Male | ESP32-PICO-KIT board | Cut 2 sets of 3 pins from the 20x1 Male Header strip. Solder these into the unpopulated through-holes on the ESP32-PICO-KIT board. Upon completion there should be 20 pins along each edge of the underside of the ESP32-PICO-KIT board. |
+| 1. |  Header 20x1 Male | ESP32-PICO-KIT board | Before soldering anything to the main circuit board, it's first necessary to solder some pins to the ESP32-PICO-KIT board. Cut 2 sets of 3 pins from the 20x1 Male Header strip. Solder these into the unpopulated through-holes on the ESP32-PICO-KIT board. Upon completion there should be 20 pins along each edge of the underside of the ESP32-PICO-KIT board. |
 | 2. | PSRAM (SMD) | `U13` front | *Note: Pin 1 is indicated on the PCB by a white dot and on the component by a dimple in the plastic case*. When done, perform a continuity test with a multimeter from each pin of the SOP-8 package to a connected pad on the PCB (see video, details to follow) |
-| 3. | microSD Card Socket (SMD) | `uSD Card` front | Align the two locating pins on the microSD Card Socket with the two holes in the PCB. Solder the 4 large ground pads of the lid first ensuring the 9 smaller leads are well aligned, then solder the 9 smaller leads. |
-| 4. | Resistor 10K | `R14` front | |
-| 5. | Capacitor 100nF | `C1` front | |
-| 6. | Resistor Network 6x10K | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
+| 3. | microSD Card Socket (SMD) | `uSD Card` front | The microSD Card Socket is also soldered to the **front** of the circuit board. Align the two locating pins on the microSD Card Socket with the two holes in the PCB. Solder the 4 large ground pads of the lid first ensuring the 9 smaller leads are well aligned, then solder the 9 smaller leads. |
+| 4. | Resistor 10K Ohm | `R14` front | There are 15 10K resistors in this kit (including 1 spare), and they are colour-coded Brown, Black, Orange, Gold. The resistors are tight fitting, so bend the leads close to the their body before inserting into location. Resistors are not polarized, and can be soldered in either orientation. |
+| 5. | Capacitor 100nF | `C1` front | There is only one type of capacitor in this kit, and they can be soldered in either orientation. |
+| 6. | Resistor Network 6x10K Ohm | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
 | 7. | Connector 20x1 Female (x2) | `ESP32` back | Solder these connectors mounted on the **back** of the PCB in the 2 rows of 20 through-holes that form a DIP40 outline marked `ESP32`. |
-| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
+| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator (e.g. PuTTY on Windows, or iTerm2, Serial on Mac) at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
 
 ::: tip
 If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge* used on the ESP32-PICO-KIT. See [Serial Communications (RS232, USB)](../configure/#serial-communications-rs232-usb) in the Configuration guide for details.
@@ -106,7 +106,7 @@ The LEDs and accompanying Resistors should be soldered in groups of 8 as indicat
 Use the supplied black acrylic spacer and alignment tools. Tape them in place with the LEDs before you solder to help achieve the  alignment of each group of 8 LEDs.
 
 - My preference is to raise the LEDs 3mm off the PCB, the black acrylic spacer with 8 open vertical slots enables this. You can, however, solder the LEDs sitting flush with the PCB.
-- The black acrylic alignment tool with 8 round holes should always be used to help align 8 LEDs at a time to be in alignment
+- The black acrylic alignment tool with 8 round holes should always be used to help align 8 LEDs at a time to be in alignment. Peel any covering off the alignment tool before using it.
 
 (see video, details to follow)
 :::
@@ -118,7 +118,7 @@ LEDs are polarized and must be soldered in the correct orientation. The cathode 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 9a. | LED Red 5mm (x8) | `LA8-LA15` front |  *Note: LEDs are polarized and must be soldered in the correct orientation.* Use the acrylic spacer and alignment tools. See notes above. |
-| 10a. | Resistor 3K ohm (x8) | `R32-R39` front | Resistors are **not** polarized and can be inserted & soldered either way around. Because of my sense of aesthetic (ok, my OCD) I like to orientate them all the same way according to the coloured bands. |
+| 10a. | Resistor 3K Ohm (x8) | `R32-R39` front | There are 45 3K resistors in this kit (including 1 spare), and they are colour-coded Orange, Black, Red, Gold. Resistors are **not** polarized and can be inserted and soldered either way around. Because of my sense of aesthetic (ok, my OCD) I like to orientate them all the same way according to the coloured bands. |
 | 11a. | Test Lead | [TEST STEP] | At this time you should test the group of 8 LEDs you have just soldered into place. Insert the ESP32-PICO-KIT into its socket and connect it to a power source. Using the supplied test lead you can use the +5V provided by the ESP32-PICO-KIT to the PCB to test each LED (see video, details to follow) |
 
 ::: danger
@@ -130,19 +130,19 @@ Before continuing, remove both the microSD Memory Card from the socket and the E
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 9b. | LED Red 5mm (x8) | `LS0-LS7` front | |
-| 10b. | Resistor 3K ohm (x8) | `R40-R47` front | |
+| 10b. | Resistor 3K Ohm (x8) | `R40-R47` front | Orange, Black, Red, Gold |
 | 11b. | Test Lead | [TEST STEP] | |
 | 9c. | LED Red 5mm (x8) | `LO0-LO7` front | |
-| 10c. | Resistor 3K ohm (x8) | `R16-R23` front | |
+| 10c. | Resistor 3K Ohm (x8) | `R16-R23` front | Orange, Black, Red, Gold |
 | 11c. | Test Lead | [TEST STEP] | |
 | 9d. | LED Red 5mm (x8) | `LA0-LA7` front | |
-| 10d. | Resistor 3K ohm (x8) | `R24-R31` front | |
+| 10d. | Resistor 3K Ohm (x8) | `R24-R31` front | Orange, Black, Red, Gold |
 | 11d. | Test Lead | [TEST STEP] | |
 | 9e. | LED Red 5mm (x8) | `LD0-LD7` front | |
-| 10e. | Resistor 3K ohm (x8) | `R52-R59` front | |
+| 10e. | Resistor 3K Ohm (x8) | `R52-R59` front | Orange, Black, Red, Gold |
 | 11e. | Test Lead | [TEST STEP] | |
 | 9f. | LED Red 5mm (x4) | `LHT1, LWT1, LRN1, LIE1` front | |
-| 10f. | Resistor 3K ohm (x4) | `R48-R51` front | |
+| 10f. | Resistor 3K Ohm (x4) | `R48-R51` front | Orange, Black, Red, Gold |
 | 11f. | Test Lead | [TEST STEP] | |
 
 ### Other Resistors, Capacitors, IC sockets & Miscellaneous Parts
@@ -153,8 +153,8 @@ The transistor `Q1` and the accompanying Resistor `R13` are **optional**. They a
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 12. | Resistor 10K ohm | `R1-R12` front | Resistors are **not** polarized and can be inserted & soldered either way around. Because of my sense of aesthetic (ok, my OCD) I like to orientate them all the same way according to the coloured bands. |
-| 13. | Resistor 10K ohm | `R13` back | *(Optional) See note above.* |
+| 12. | Resistor 10K Ohm | `R1-R12` front | Brown, Black, Orange, Gold. Resistors are **not** polarized and can be inserted & soldered either way around. Because of my sense of aesthetic (ok, my OCD) I like to orientate them all the same way according to the coloured bands. |
+| 13. | Resistor 10K Ohm | `R13` back | *(Optional) See note above.* Brown, Black, Orange, Gold. |
 | 14. | Capacitor 100nF (0.1μF, 104) | `C3-C12, C17` front | These capacitors are **not** polarized and can be inserted & soldered either way around. |
 | 15. | Capacitor 100nF (0.1μF, 104) | `C2, C13-C16` back | These capacitors are **not** polarized and can be inserted & soldered either way around. |
 | 16. | 16 pin DIP Socket (x10) | `U1-U10` front | DIP sockets should be inserted to align the crescent/indent at one end with the corresponding mark in the silk screen for the IC Socket. This makes no difference functionally, but will help with the inserting the ICs with the correct orientation later in the assembly. |
@@ -173,12 +173,12 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 :::
 
 ::: danger
-**ICs are polarized/directional and must be inserted in the correct orientation.** ICs should be inserted to align the crescent/indent at one end with the corresponding mark in the silk screen. If you have soldered in the **16 pin DIP Sockets** with the indicated orientation, this will make the job easier.
+**ICs are polarized/directional and must be inserted in the correct orientation.** ICs should be inserted to align the crescent/indent at one end with the corresponding mark in the silk screen. If you have soldered in the **16 pin DIP Sockets** with the indicated orientation, this will make the job easier. Once you have inserted the ICs, have a cup of tea and then double-check they are in the correct way: it's easy to accidentally insert them the wrong way round.
 :::
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 24. | 74HC595 (x6) | `U1-U6` front | `U1-U6` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
+| 24. | 74HC595 (x6) | `U1-U6` front | `U1-U6` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. Take time to check you are putting the ICs in the correct sockets, as U6 might not be where you expect it to be. |
 | 25. | 74HC165 (x4) | `U7-U10` front | `U7-U10` are all oriented the same way, with the crescent/indent to the **right** when looking at the **front** of the PCB. |
 | 26. | MAX3232 | `U11` back | `U11` is oriented with the crescent/indent to the **left** when looking at the **back** of the PCB. |
 
