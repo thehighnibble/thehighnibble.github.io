@@ -43,7 +43,7 @@ To enter *startup configuration mode*, follow the sequence:
 5. hold the `EXAMINE` toggle for a second or two
 6. release the `EXAMINE` toggle
 
-::: tip 
+::: tip
 There are 2 `Reset` switches available that both do the same thing:
 
 - The `Tactile Switch SPST-NO` you installed in the `Reset` position on the PCB
@@ -64,11 +64,11 @@ The whole procedure, including entering a value to boot into CP/M 2.2 (see below
 :::
 
 ::: warning
-When you **Desposit** a new *startup configuration value*, all the bits of the current value are overwritten. If your objective is to **modify** the existing value changing only a few of the bits, you must toggle in all the bits of the existing value indicated by the Address Bus LEDs and then switch the bits you want to configure differently, before you **Deposit** this new value.
+When you **Deposit** a new *startup configuration value*, all the bits of the current value are overwritten. If your objective is to **modify** the existing value changing only a few of the bits, you must toggle in all the bits of the existing value indicated by the Address Bus LEDs and then switch the bits you want to configure differently, before you **Deposit** this new value.
 :::
 
 ::: tip Booting into MSBASIC 1.4 (8K)
-To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 Mhz, the following startup configuration value can be used.
+To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 MHz, the following startup configuration value can be used.
 
 - Binary: 0000 0100 0000 0000
 - Octal: 002000
@@ -81,7 +81,7 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8
 :::
 
 ::: tip Booting into XYBASIC
-To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z80 mode @ 4 Mhz, the following startup configuration value can be used.
+To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z80 mode @ 4 MHz, the following startup configuration value can be used.
 
 - Binary: 0000 0101 0101 0000
 - Octal: 002520
@@ -95,7 +95,7 @@ To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z8
 
 ::: tip Booting into CP/M 2.2
 
-To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in Z80 mode @ 4 Mhz, the following startup configuration value can be used. You can mount the `cpm_22.dsk` disk image in drive `DSK:A:` via the *Desktop UI*.
+To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in Z80 mode @ 4 MHz, the following startup configuration value can be used. You can mount the `cpm_22.dsk` disk image in drive `DSK:A:` via the *Desktop UI*.
 
 - Binary: 0000 1001 0101 0000
 - Octal: 004520
@@ -114,7 +114,7 @@ To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in 
 | 3 | NVS_IF_STA | n/a | Set Wi-Fi Mode,  0 = Access Point Mode (AP); 1 = Station Mode (STA) |
 | 4 | NVS_Z80 | `-z`, `-8` | Enable Z80 CPU emulation, 0 = 8080 `-8`; 1 = Z80 `-z` |
 | 5 | NVS_NO_UNDOC | `-u` | Suppress support for undocumented op. codes, 1 = `-u` |
-| 6 | NVS_4MHZ | `-f` | Set CPU speed, 0 = 2 MHz `-f 2`; 1 = 4 Mhz `-f 4` |
+| 6 | NVS_4MHZ | `-f` | Set CPU speed, 0 = 2 MHz `-f 2`; 1 = 4 MHz `-f 4` |
 | 7 | NVS_UNLIMITED | `-f 0` | Set CPU speed to Unlimited, 0 = use speed from bit 6; 1 = Unlimited `-f 0` |
 | 8-10 | NVS_BOOT_ROM | `-x` | Set boot ROM to 1 of 7 *slots*, 0 = No boot ROM, 1-7 = use slot *n* `-x $ROMn` |
 | 11 | NVS_BANK_ROM | `-r` | Enable **MPU-B(A)** style Banked ROM/RAM functionality, 1 = `-r`. Only compatible with MPU-A ROM images. |
@@ -131,7 +131,7 @@ The IMSAI 8080esp must be rebooted for the new configuration to take effect. Thi
 :::
 
 ::: tip
-For further details about the *Equivalent Flag* refer to the **Z80PACK** documentation for the **imasaisim** machine.
+For further details about the *Equivalent Flag* refer to the **Z80PACK** documentation for the **imsaisim** machine.
 :::
 
 ## Serial Communications (RS232, USB)
@@ -198,7 +198,7 @@ The DE-9M connector labeled `RS232-2`is currently unused but is intended for fut
 
 ## Wi-Fi Communications
 
-The ESP32 has on-board Wi-Fi and can boot in either **Access Point** (AP) or **Station** (STA) mode. The mode is determined by the **NVS_IF_STA** bit in the *startup configuration* stored in NVS and described [above](#startup-configuration-non-volatile-storage-nvs). 
+The ESP32 has on-board Wi-Fi and can boot in either **Access Point** (AP) or **Station** (STA) mode. The mode is determined by the **NVS_IF_STA** bit in the *startup configuration* stored in NVS and described [above](#startup-configuration-non-volatile-storage-nvs).
 
 - In AP mode, the ESP32 acts as an Access Point and broadcasts a system defined SSID and provides DHCP services for clients to connect
   - The **SSID** hardcoded in the firmware is *imsai* with a **password** of *password*, this will only be used if the **boot.conf** file on the microSD card cannot be read or does not include a `HOSTNAME=name` statement, see [Boot.conf file](#boot-conf-file) below.
@@ -213,6 +213,7 @@ Alternatively the **microSD Card** can be mounted in a PC and the `/imsai/conf/b
 
 ::: warning
 When the IMSAI 8080esp is configured to work in station mode (STA) but it is unable to make a connection to the configured Wi-Fi network within 30 seconds, the ESP32 will reboot and temporarily start in AP mode.
+
 - This enables you to connect to the IMSAI 8080esp from a browser on the advertised SSID and modify/correct the STA mode Wi-Fi configuration.
 - The simplest way to determine if this has happed is to look for the AP mode SSID being broadcast, or to look at the ESP32 console log output on the UART.
 :::
@@ -268,8 +269,8 @@ This is a legacy configuration file, maintained for source code compatibility wi
 
 The only parameter that effects the IMSAI 8080esp is the last line:
 
-```
-ram			64
+```config
+ram            64
 ```
 
 This still sets the maximum amount of RAM allocated to the simulated machine in KB.

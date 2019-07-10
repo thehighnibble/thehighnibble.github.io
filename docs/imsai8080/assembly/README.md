@@ -32,8 +32,9 @@ Keep one of the full sheets of cardboard from above or below the components. Thi
 :::
 
 ::: warning Notes on the PCB
+
 - There is no resistor R15, it was removed from the design long ago and the resistors were never renumbered
-- There are 2 silk screen errors on the PCB:
+- There are 2 silk screen errors on the PCB (v3.4.1, fixed on v3.4.2):
     1. the LED LA14 is incorrectly labeled as LS14
     2. the LED LD0 is labeled on the left of the LED and should be labeled above as per LD1-LD7
 - There is a 5x2 group of through-holes marked **Spare** that nothing gets soldered into
@@ -121,10 +122,10 @@ LEDs are polarized and must be soldered in the correct orientation. The cathode 
 | 11a. | Test Lead | [TEST STEP] | At this time you should test the group of 8 LEDs you have just soldered into place. Insert the ESP32-PICO-KIT into its socket and connect it to a power source. Using the supplied test lead you can use the +5V provided by the ESP32-PICO-KIT to the PCB to test each LED (see video, details to follow) |
 
 ::: danger
-Before continuing, remove both the microSD Memory Card from the socket and the ESP32-PICO-KIT from the female connectors, **taking care not to bend the Wi-Fi antenna.** 
+Before continuing, remove both the microSD Memory Card from the socket and the ESP32-PICO-KIT from the female connectors, **taking care not to bend the Wi-Fi antenna.**
 :::
 
-#### Steps 9-10 can now be repeated for each remaining group of LEDs in the following suggested order.
+#### Steps 9-10 can now be repeated for each remaining group of LEDs in the following suggested order
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
@@ -186,7 +187,7 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 ::: tip
 At this point you can operate the IMSAI 8080esp without having the rocker/toggle switches mounted.
 
-- Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. 
+- Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB.
 - *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connectors.*
 - Insert the microSD card.
 - Connect the ESP32-PICO-KIT to a USB power source with a suitable USB cable.
@@ -247,7 +248,7 @@ As you insert each rocker switch into the PCB, there should be a slight press-to
 | 32a. | Red Rocker (On-On) (x4)| `SA8-SA11` | **Don't solder them yet** |
 | 33a. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA8-SA15` | Place the small acrylic alignment guide over the ends of the whole set of 8 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
 
-#### Steps 27-29 can now be repeated for the second group of (On-On) switches.
+#### Steps 27-29 can now be repeated for the second group of (On-On) switches
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
@@ -373,5 +374,5 @@ Enjoy!
 :::
 
 ::: tip
-To do anything more than toggle programs into a machine with no stored programs in ROM, you will need to understand how to [Configure your IMSAI8080esp](../configure/) to load ROM images on startup, connect to Wi-Fi to access the Desktop UI, etc...
+To do anything more than toggle programs into a machine with no stored programs in ROM, you will need to understand how to [Configure your IMSAI 8080esp](../configure/) to load ROM images on startup, connect to Wi-Fi to access the Desktop UI, etc...
 :::

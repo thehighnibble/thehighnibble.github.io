@@ -9,8 +9,9 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 :::
 
 ::: warning Notes on the PCB
+
 - There is no resistor R15, it was removed from the design long ago and the resistors were never renumbered
-- There are 2 silk screen errors on the PCB:
+- There are 2 silk screen errors on the PCB (v3.4.1, fixed on v3.4.2):
     1. the LED LA14 is incorrectly labeled as LS14
     2. the LED LD0 is labeled on the left of the LED and should be labeled above as per LD1-LD7
 - There is a 5x2 group of through-holes marked **Spare** that nothing gets soldered into
@@ -22,10 +23,10 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
 | ![LED Red 5mm](./parts/LED_Red_5mm.png) | 44 (45 packed) |  LO0-7, LS0-7, LA0-15, LD0-7, LIE1, LRN1, LWT1, LHT1 | <h4>LED Red 5mm</h4> LEDs have polarity, ie. they must be inserted the correct way around to function properly (see assembly guide). |
-| ![Resistor 3K](./parts/Resistor_3Kohm.png) | 44 (45 packed) | R16-59 | <h4>Resistor 3K ohm</h4> One for each LED. The value 3K ohm was selected because it gives a reasonable brightness to the LEDs. If you want super-bright you can go down to 220 ohm. If you want the LEDs to be more dim, you can always substitute a higher value for these resistors. |
-| ![Resistor 10K](./parts/Resistor_10Kohm.png) | 14 (15 packed) | R1-12,14; R13 (back) | <h4>Resistor 10K ohm</h4> |
-| ![Resistor Network 6x10K](./parts/Resistor_Network_6x10Kohm.png) | 1 | RN1 (back) | <h4>Resistor Network 6x10K ohm</h4> |
-| ![Capacitor 100nF](./parts/Capacitor_100nF.png) | 17 (18 packed) | C1-17 | <h4>Capacitor 100nF (0.1μF, 104)</h4> |
+| ![Resistor 3K](./parts/Resistor_3Kohm.png) | 44 (45 packed) | R16-59 | <h4>Resistor 3K ohm [Orange, Black, Red, Gold]</h4> One for each LED. The value 3K ohm was selected because it gives a reasonable brightness to the LEDs. If you want super-bright you can go down to 220 ohm. If you want the LEDs to be more dim, you can always substitute a higher value for these resistors. |
+| ![Resistor 10K](./parts/Resistor_10Kohm.png) | 14 (15 packed) | R1-12,14; R13 (back) | <h4>Resistor 10K ohm [Brown, Black, Orange, Gold]</h4> |
+| ![Resistor Network 6x10K](./parts/Resistor_Network_6x10Kohm.png) | 1 | RN1 (back) | <h4>Resistor Network 6x10K ohm</h4> Pin 1 is indicated on the component by a white dot and on the PCB by the square pad. |
+| ![Capacitor 100nF](./parts/Capacitor_100nF.png) | 17 (18 packed) | C1, 3-12, 17; C2, 13-16 (back) | <h4>Capacitor 100nF (0.1μF, 104)</h4> These are the only capacitors in the kit, so all the capacitors have the same value. Keeps it simple. |
 | ![Transistor](./parts/Transistor.png) | 1 | Q1 (back) | <h4>S8050 NPN Transistor (TO-92-3) </h4> This component and its associated resistor R13 are optional. They allow the ESP32 to be flashed over USB without removing it from the connectors. They only do something if you add extra "bodge" wires to the ESP32 board and connect these to the Boot->DTR/RTS pins. |
 | ![74HC595](./parts/74HC595.png) | 6 | U1-6 | <h4>74HC595</h4> 8-bit serial in/out Shift Register 3-State Outputs|
 | ![74HC165](./parts/74HC165.png) | 4 | U7-10 | <h4>74HC165</h4> Shift Register 8-bit, parallel load|
@@ -41,6 +42,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 ## Surface Mount Device (SMD) components
 
 ::: tip Don't Panic
+
 - Yes there are two SMD components!
 - You can do it!
 - You can do it with a regular soldering iron, but you are going to need flux (see assembly guide and tools)
@@ -65,7 +67,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
-| ![ESP32_Pico_DevKit](./parts/ESP32_Pico_DevKit.png) | 1 | ESP32 | <h4>ESP32-PICO-KIT v4.1</h4> Look closely and you will see that 3 of the pinout through-holes on each side are unpopulated (at the end where the antenna is, opposite end to the micro-USB connector). These need to be populated with 0.1" pitch male header pins (provided in the strip of 20 above). These enable the PSRAM, soldered on the PCB, to be accessed by the ESP32. |
+| ![ESP32_Pico_DevKit](./parts/ESP32_Pico_DevKit.png) | 1 | ESP32 (back) | <h4>ESP32-PICO-KIT v4.1</h4> Look closely and you will see that 3 of the pinout through-holes on each side are unpopulated (at the end where the antenna is, opposite end to the micro-USB connector). These need to be populated with 0.1" pitch male header pins (provided in the strip of 20 above). These enable the PSRAM, soldered on the PCB, to be accessed by the ESP32. |
 | ![microSD 16GB Memory_Card](./parts/microSD_16GB_Memory_Card.png) | 1 | | <h4>microSD 16GB Memory Card</h4> |
 | ![Shunt-Jumper](./parts/Shunt-Jumper.png) | 8 | | <h4>Shunt-Jumper</h4> |
 | ![Test Lead](./parts/Test_Lead.png) | 1 | | <h4>Test lead</h4> Used to test LEDs during assembly, but not used in the final assembled kit |
