@@ -264,7 +264,7 @@ The default configuration, as shipped is a follows:
 ```conf
 #Network configuration
 NTP_SERVER=pool.ntp.org
-TZ=AEST-10ADST,M10.1.0,M4.1.0
+TZ=AEST-10AEDT,M10.1.0,M4.1.0
 HOSTNAME=imsai8080
 PORT=80
 SSID=mySSID
@@ -280,7 +280,10 @@ ROM5=xybasic.hex
 The *Network configuration* entries should be familiar and mostly self explanatory.
 
 ::: tip
-The TZ variable cannot use values like *Sydney/Australia* (Olson format) but must use explicitly defined timezone strings (POSIX format) eg. `TZ=AEST-10ADST,M10.1.0,M4.1.0` which is correct for Sydney, Australia.
+The TZ variable cannot use values like *Sydney/Australia* (Olson format) but must use explicitly defined timezone strings (POSIX format) eg. `TZ=AEST-10AEDT,M10.1.0,M4.1.0` which is correct for Sydney, Australia.
+
+A file with TZ variable values for many timezones can be found at [https://www.di-mgt.com.au/src/wclocktz.ini](https://www.di-mgt.com.au/src/wclocktz.ini) 
+[Credit to: John Mann in the Forum](https://groups.google.com/d/msg/imsai8080esp/PdNyxAOeBhU/7_IgKXXbCAAJ)
 
 An article that defines the POSIX format can be found at [Specifying the Time Zone with TZ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html), however please note, the "third format" referenced in this article is the Olson format, and not supported on the ESP32.
 :::
