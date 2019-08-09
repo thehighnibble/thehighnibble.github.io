@@ -18,7 +18,7 @@ The simplest way to see these messages is to
 2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the ESP32 on
    - Windows will be a COMx: port
    - OSX will be /dev/tty.SLAB_USBtoUART
-   - Linux will be /dev/tty.USB0 (or similar, TBA)
+   - Linux will be /dev/ttyUSB0 (or similar, TBA)
 
 If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge* used on the ESP32-PICO-KIT. See [Serial Communications (RS232, USB)](../configure/#serial-communications-rs232-usb) in the Configuration guide for details.
 :::
