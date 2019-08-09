@@ -61,7 +61,7 @@ Please unpack the entire kit and perform a stock take of what you have received 
 ::: warning
 If you believe you are missing any components when you compare the kit contents with the [Bill-of-Materials](../bom/) please contact me directly by email to [info@thehighnibble.com](mailto:info@thehighnibble.com).
 
-Please respect that this kit is a hobby project made by an individual maker and not a mass produced product from a manufacturer. While every care was taken to pack each kit correctly, mistakes make have occurred.
+Please respect that this kit is a hobby project made by an individual maker and not a mass produced product from a manufacturer. While every care was taken to pack each kit correctly, mistakes may have occurred.
 :::
 
 ::: danger DAMAGE
