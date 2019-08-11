@@ -115,6 +115,10 @@ Use the supplied black acrylic spacer and alignment tools. Tape them in place wi
 LEDs are polarized and must be soldered in the correct orientation. The cathode (short lead, nearest the flat edge) should be soldered in the **square**, lower, though-hole pad. The anode (long lead) should be soldered in the **round**, upper, though-hole pad. Check the orientation of all LEDs in each group of 8 before soldering into place by visually inspecting the flat edge corresponding with the flat indicated in the silk screen on **front** side of the PCB, and the alignment of the long and short leads on the **back** side of the PCB.
 :::
 
+::: danger
+Once resistors are soldered in the spacer ***does not fit*** under the LEDs and thus can't be used, so solder ***one bank*** of LEDs and resistors at a time.
+:::
+
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 9a. | LED Red 5mm (x8) | `LA8-LA15` front |  *Note: LEDs are polarized and must be soldered in the correct orientation.* Use the acrylic spacer and alignment tools. See notes above. |
