@@ -19,7 +19,7 @@ The worst that can happen is that you will need to install the **Espressif** [es
 ::: tip
 It is recommended to always use the release marked as the **Latest Release** unless you have a specific reason not to.
 
-The current release is [September 2019 Release - patch](https://github.com/thehighnibble/firmware/releases/tag/v1.2.2) (v.1.2.2)
+The current release is [September 2019 Release - patch-2](https://github.com/thehighnibble/firmware/releases/tag/v1.2.3) (v.1.2.3)
 :::
 
 ## Updating the Firmware
