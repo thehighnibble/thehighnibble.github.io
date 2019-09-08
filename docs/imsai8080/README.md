@@ -89,7 +89,7 @@ Once new kits are ready to ship I will contact you to confirm your order.
 
 ## News & Updates
 
-You can stay up-to-date with news about additions to this site, or new YouTube videos demonstrating the [features](/imsai8080/#features) listed above by following on [Twitter @TheHighNibble](https://twitter.com/@TheHighNibble) and subscribing to [TheHighNibble YouTube Channel](https://www.youtube.com/channel/UC8iQedOYRxQt8qjw2TGTq3w)
+You can stay up-to-date with news about additions to this site, or new YouTube videos demonstrating the [features](/imsai8080/#features) listed above by following on [Twitter @TheHighNibble](https://twitter.com/@TheHighNibble) and subscribing to [TheHighNibble YouTube Channel](https://www.youtube.com/thehighnibble)
 
 <br/>
 <br/>
@@ -97,7 +97,7 @@ You can stay up-to-date with news about additions to this site, or new YouTube v
     <a href='https://twitter.com/@TheHighNibble' target='_blank' rel="noopener noreferrer">
         <img class='social' src='/img/twitter.png'/>
     </a>
-    <a href='https://www.youtube.com/channel/UC8iQedOYRxQt8qjw2TGTq3w' target='_blank' rel="noopener noreferrer">
+    <a href='https://www.youtube.com/thehighnibble' target='_blank' rel="noopener noreferrer">
         <img class='social' src='/img/youtube.png'/>
     </a>
 </div>
@@ -142,13 +142,15 @@ less than 4.4 lbs
 
 less than 2 kg
 
-## [Bill-of-Materials (draft)](bom/)
+## [Bill-of-Materials](bom/)
 
-## [Recommended tools for assembly (draft)](tools/)
+## [Recommended tools for assembly](tools/)
 
-## [Step-by-step assembly guide (draft)](assembly/)
+## [Step-by-step assembly guide](assembly/)
 
 ## [Configuration (draft)](configure/)
+
+## [Updating Software (draft)](update/)
 
 ## [Troubleshooting (draft)](troubleshooting/)
 

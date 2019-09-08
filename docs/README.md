@@ -13,7 +13,7 @@ footer: The High Nibble @TheHighNibble  │  Copyright © The High Nibble Pty Lt
     <a href='https://twitter.com/@TheHighNibble' target='_blank' rel="noopener noreferrer">
         <img class='social' src='/img/twitter.png'/>
     </a>
-    <a href='https://www.youtube.com/channel/UC8iQedOYRxQt8qjw2TGTq3w' target='_blank' rel="noopener noreferrer">
+    <a href='https://www.youtube.com/thehighnibble' target='_blank' rel="noopener noreferrer">
         <img class='social' src='/img/youtube.png'/>
     </a>
 </div>
