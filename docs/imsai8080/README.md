@@ -14,9 +14,9 @@ These devices have a dual-core CPU @ 240MHz, 520KB SRAM, 4MB Flash RAM (storage)
 
 To this I have added
 
-- microSD Card for a FAT filesystem (using an 8GB card)
+- microSD Card for a FAT filesystem (using an 16GB card)
 - PSRAM for future memory paging implementation
-- MAX232 style RS-232 driver and DB-9M sockets for serial UART
+- MAX232 style RS-232 driver and DE-9M sockets for serial UART
 - Full size, fully functional replica of the IMSAI CP-A front panel with all LEDs and switches (for scale: the green cutting mat is A3)
 
 ![IMSAI 8080 CP-A](./CPA_1024.png)
@@ -79,7 +79,17 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 ## Availability
 
-The first batch of IMSAI 8080 replicas shipped in June 2019. There is a second batch planed for July 2019.
+The first batches of IMSAI 8080 replicas shipped in June & July 2019.
+
+Production has been on hold since then as I have had a few other priorities including:
+
+- releasing a firmware update to
+  - enable the second UART and RS232 port
+  - enable configuring the speed and settings for the two UARTS
+- updating the black & white text facia and red filter to be more authentic to the original IMSAI 8080
+- sorting out a new aluminium lid to replace the blue acrylic lid you will seen in current videos and pictures
+
+The next batch is planned for October 2019. The price for the kit is USD$280 and in addition you also pay for postage and any PayPal transaction fees.
 
 ### Expression of interest
 
@@ -106,7 +116,6 @@ You can stay up-to-date with news about additions to this site, or new YouTube v
 ## Forum
 
 The [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp) has been set up in Google Groups. It is open to everyone to read the posts but you must apply to join the group if you wish to post.
-
 
 ## Specifications
 
@@ -154,6 +163,20 @@ less than 2 kg
 
 ## [Troubleshooting (draft)](troubleshooting/)
 
-## Coming Soon
+## Enhancements and Add-ons
 
-### Enhancements and Add-ons (wish list)
+### Coming soon
+
+- Harddisk emulation
+- Virtual 'AT' modem over TCP/IP sockets (telnet) (outbound only, no answer mode)
+- Paged memory management to enable CP/M 3.0 (Plus) with banked memory
+
+### Planned
+
+- Add answer mode (inc. auto-answer) to the virtual 'AT' modem
+- Add virtual 'AT' modem UI on the desktop GUI
+- Add 132 column mode to the LPT: line printer
+- Add basic escape code support for formatting output on the LPT: line printer
+- Virtual paper tape reader and punch on the desktop GUI
+- Hardware based VIO, Dazzler, VT100 terminal with VGA output and PS/2 (and maybe USB) keyboard input
+- Hardware based interface for the replica Cromemco Cyclops ACC: digital camera
