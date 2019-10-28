@@ -15,17 +15,17 @@ These devices have a dual-core CPU @ 240MHz, 520KB SRAM, 4MB Flash RAM (storage)
 To this I have added
 
 - microSD Card for a FAT filesystem (using an 16GB card)
-- PSRAM for future memory paging implementation
+- PSRAM for banked memory implementation
 - MAX232 style RS-232 driver and DE-9M sockets for serial UART
 - Full size, fully functional replica of the IMSAI CP-A front panel with all LEDs and switches (for scale: the green cutting mat is A3)
 
-![IMSAI 8080 CP-A](./CPA_1024.png)
+![IMSAI 8080 CP-A](./NEW_CPA_1024.png)
 
-If you've seen the original IMSAI 8080, I hope you'll agree that the toggle switches are a great match to the original colours. The case colour is the best I can source in blue acrylic but I think many people will choose to spray paint it for a better match to the original.
+If you've seen the original IMSAI 8080, I hope you'll agree that the toggle switches are a great match to the original colours. The case is now made of 3mm thick aluminium, powder coated blue and also a good match to the original.
 
 Sometimes I use the USB based serial UART for TTY: (under CP/M) but most of the time I connect over WiFi using a browser to launch the desktop GUI that this port of the **imsaisim** can serve using an embedded web server.
 
-Running the replica at unlimited speed I can get a simulated clock speed somewhere above 4 MHz, there is certainly no problem with reliably running the simulation at a realistic 2 MHz or 4 MHz making WordStar, SuperCalc2, M80/L80 a pleasure to use.
+Running the replica at unlimited speed I can get a simulated clock speed somewhere above 5 MHz, there is certainly no problem with reliably running the simulation at a realistic 2 MHz or 4 MHz making WordStar, SuperCalc2, M80/L80 a pleasure to use.
 
 ## Features
 The stock **imsaisim** machine from **z80pack** is configured with:
@@ -35,6 +35,10 @@ The stock **imsaisim** machine from **z80pack** is configured with:
 - IMSAI MPU-A bootrom
 - MPU-B style bank-switched ROM and RAM for bootrom masking
 - IMSAI VIO support (optional based on bootrom choice)
+- Harddisk emulation
+- Virtual 'AT' modem over TCP/IP sockets (with selectable telnet protocol support) (outbound/dial and (auto) answer mode)
+- **Experimental:** An MMU with Banked memory management to enable CP/M 3.0 (Plus) with banked memory
+- **Experimental:** An RTC to support CP/M 3.0 (Plus)
 - A range of disk images with different operating systems, applications, games, demos...
 
 The best reference for the **imsaisim** machine is Udo Munk's [z80pack](http://bit.ly/z80pack) site.
@@ -44,7 +48,7 @@ To this I added a simulated GUI desktop that you access over WiFi from an evergr
 - **TTY:** - VT100/ansi compatible character mode serial terminal, can be windowed or zoomed to full-screen (over websockets)
 - **CRT:** -  implementation of the IMSAI VIO (over websockets: mirrors the 2KB display RAM and does all rendering in the browser)
 - **LPT:**  - implementation of an 80-column dot-matrix/line printer with selectable paper-types - ready to print on your real printer (dumb text printer, no Esc codes, over websockets)
-- **X:DSK:**  & **LIB:** - graphical disk manager for the 4 floppy drives A-D, including eject, insert (drag-and-drop) from a disk library (.../machine/disks/library/), download disk image, upload disk image, delete disk image (uses RESTful web service interface)
+- **X:DSK:**  & **LIB:** - graphical disk manager for the 4 floppy drives A-D, including eject, insert (drag-and-drop) from a disk library (.../machine/disks/library/), download disk image, upload disk image, delete disk image (uses RESTful web service interface). Also a hard disk presented as drive I.
 - **CPA:** - IMSAI CP-A front panel (only the 6 control switches & 4 status LEDs on the RHS, over websockets)
 - **SYS:** - system status window, shows details of the simulation (host?), enables remote reboot
 - **CFG:** - configuration file editor, enables config files (.../machine/conf) to be edited and saved
@@ -65,7 +69,7 @@ The desktop GUI has been back-ported to **z80pack V1.36-dev** for desktop operat
 
 ### Notes
 
-- TTY:, VIO:, DZLR: are all able to go **full-screen** with the use of a widget on the window title-bar and the use of the `ALT-Escape` key combination
+- TTY:, VIO:, DZLR: are all able to go **full-screen** with the use of a widget on the window title-bar and the use of the `CTRL-ALT-Escape` key combination
 - you can take screen-shots of the VIO: and DZLR: with the use of a widget on the window title-bar
 - ability to change aspect-ratio of the Dazzler display between 1:1 (square pixels), 4:3 (CRT TV), 8:7 (not common, but the closest to the "real thing" I could measure off a YouTube video of an original [Cromemco Dazzler working](http://bit.ly/2KVVcfHI), so I've made this the default), with the use of a widget on the window title-bar
 - this chosen aspect-ratio is preserved in full-screen mode
@@ -81,21 +85,28 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 The first batches of IMSAI 8080 replicas shipped in June & July 2019.
 
-Production has been on hold since then as I have had a few other priorities including:
+Production *had* been on hold since then as I had a few other priorities including:
 
-- releasing a firmware update to
+- releasing firmware updates to
   - enable the second UART and RS232 port
   - enable configuring the speed and settings for the two UARTS
+  - include harddisk support
+  - add a virtual 'AT' modem with *telnet* support
+  - add an MMU with banked RAM and an RTC (both experimental) for CP/M 3.0 (Plus) support
 - updating the black & white text facia and red filter to be more authentic to the original IMSAI 8080
-- sorting out a new aluminium lid to replace the blue acrylic lid you will seen in current videos and pictures
+- sorting out a new aluminium lid to replace the blue acrylic lid you will seen in videos and pictures
 
-The next batch is planned for October 2019. The price for the kit is USD$280 and in addition you also pay for postage and any PayPal transaction fees.
+The October 2019 batch is now shipping and all units are spoken for.
+
+Depending upon demand I will try to arrange for another batch prior to the end of December.
 
 ### Expression of interest
 
 I am accepting expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
 
 Once new kits are ready to ship I will contact you to confirm your order.
+
+The price for the kit is USD$280 and in addition you also pay for postage and any PayPal transaction fees.
 
 ## News & Updates
 
@@ -129,9 +140,9 @@ The [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp) has been set up in Google 
 
 ### Weight (built)
 
-3.48 lbs
+4.22 lbs
 
-1.575 kg
+1.915 kg
 
 ### Power
 
@@ -147,9 +158,9 @@ The [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp) has been set up in Google 
 
 ### Weight (boxed/shipped)
 
-less than 4.4 lbs
+less than 5.1 lbs
 
-less than 2 kg
+less than 2.3 kg
 
 ## [Bill-of-Materials](bom/)
 
@@ -165,16 +176,9 @@ less than 2 kg
 
 ## Enhancements and Add-ons
 
-### Coming soon
-
-- Harddisk emulation
-- Virtual 'AT' modem over TCP/IP sockets (telnet) (outbound only, no answer mode)
-- Paged memory management to enable CP/M 3.0 (Plus) with banked memory
-
 ### Planned
 
-- Add answer mode (inc. auto-answer) to the virtual 'AT' modem
-- Add virtual 'AT' modem UI on the desktop GUI
+- Add a UI on the desktop GUI for the virtual 'AT' modem
 - Add 132 column mode to the LPT: line printer
 - Add basic escape code support for formatting output on the LPT: line printer
 - Virtual paper tape reader and punch on the desktop GUI

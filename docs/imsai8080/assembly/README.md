@@ -230,12 +230,12 @@ When screwing the M4 Nylon Nuts and the M4 Socket Screws together only ever make
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 27. | M4x30mm Hex Socket Screw (x8) | 3mm Black acrylic LED/switch masking plate | Insert the 8 `M4 socket screws` into each of the 8 round holes in the large `3mm Black acrylic LED/switch masking plate` |
-| 28. | Spacer 9mm Nylon (x8) | | Thread a `9mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
-| 29. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `9mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
+| 28. | Spacer 8mm Nylon (x8) | | Thread a `8mm spacer` over each of the 8 `M4 socket screws` behind the `3mm Black acrylic LED/switch masking plate` |
+| 29. | PCB | | Fit the `PCB` over the 8 `M4 socket screws` behind the `8mm spacers` and the `3mm Black acrylic LED/switch masking plate` |
 | 30. | M4 Hex Nut Nylon (x8) | | Secure this partial assembly of the front panel by screwing a `M4 Nut` on each of the 8 `M4 socket screws` behind the `PCB` |
 
 :::  tip
-You should now have a sandwich with the PCB at the back and the 3mm Black acrylic LED/switch masking plate at the front, separated by the 9mm spacers and held together with the M4 socket screws and nuts.
+You should now have a sandwich with the PCB at the back and the 3mm Black acrylic LED/switch masking plate at the front, separated by the 8mm spacers and held together with the M4 socket screws and nuts.
 :::
 
 ::: tip
@@ -294,25 +294,25 @@ Having successfully gotten this far, the next section can go very smoothly if yo
 
 1. Remove the `M4 Nuts` (8) without letting the `M4 Socket Screws` (8) drop out of place, tape may help.
 2. Place the `PCB` down on a surface with the `3mm Black acrylic LED/switch masking plate` facing up, the `M4 Socket Screws` will need to slide up to let the `PCB` sit down flat on the surface.
-3. Carefully remove the `M4 Socket Screws` (8) without disturbing the `3mm Black acrylic LED/switch masking plate`, the `PCB` **and especially don't allow the `9mm Spacers` to move out of place**.
+3. Carefully remove the `M4 Socket Screws` (8) without disturbing the `3mm Black acrylic LED/switch masking plate`, the `PCB` **and especially don't allow the `8mm Spacers` to move out of place**.
 4. Leave this assembly undisturbed while you put the remaining front panel acrylic together
 :::
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 38. | M4x30mm Hex Socket Screw (x8) | 6mm Clear acrylic front cover | Insert the 8 `M4 socket screws` into each of the 8 round holes in the thick `6mm Clear acrylic front cover`. Tape over the heads to hold them in place. |
-| 39. | 1.5mm White text/decals through Black facia | | Align the `Text Facia` over the `M4 socket screws` and slide it down to meet the clear acrylic |
-| 40. | 0.8mm Red transparent filter | | Align the `Red transparent filter` over the `M4 socket screws` and slide it down to meet the `Text Facia` |
+| 39. | 3mm White text/decals on Black facia over red transparent filter | | Align the `Text Facia` over the `M4 socket screws` and slide it down to meet the clear acrylic |
+| 40. | | | This step removed as the `Text Facia` and `transparent red filter` are now a single piece |
 
 ::: tip
 
 1. Take this whole assembly and flip it over, with the clear acrylic and the `Text Facia` facing up.
-2. Lower this into place, guiding the `M4 socket screws` through the holes in the other assembly you previously set aside (black acrylic, 9mm spacers and PCB)
+2. Lower this into place, guiding the `M4 socket screws` through the holes in the other assembly you previously set aside (black acrylic, 8mm spacers and PCB)
 3. Making sure the `M4 socket screws` wont fall out (tape again), flip this whole assembly over, placing the front panel face down on a surface.
 :::
 
 ::: warning
-If by this point, any of the `9mm Spacers` have slipped out of position, you can withdraw the corresponding `M4 socket screw` and use tweezers to correctly  locate the `9mm Spacer` before reinserting the `M4 socket screw`
+If by this point, any of the `8mm Spacers` have slipped out of position, you can withdraw the corresponding `M4 socket screw` and use tweezers to correctly  locate the `8mm Spacer` before reinserting the `M4 socket screw`
 :::
 
 | Step | Parts | Location | Notes |
@@ -356,7 +356,7 @@ The lid can wait, its time to play!
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 47. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue acrylic lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue acrylic lid` and screw a `M3 Nut` on the end of each `M3 Screw`. |
-| 48. | 3mm Blue acrylic lid | | Place the `Blue acrylic lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
+| 48. | 3mm Blue aluminium lid | | Place the `Blue aluminium lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
 
 ## Celebrating
 

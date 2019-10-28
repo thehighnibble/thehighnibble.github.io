@@ -11,7 +11,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 ::: warning Notes on the PCB
 
 - There is no resistor R15, it was removed from the design long ago and the resistors were never renumbered
-- There are 2 silk screen errors on the PCB (v3.4.1, fixed on v3.4.2):
+- There were 2 silk screen errors on the PCB (v3.4.1, fixed on v3.4.2 and later):
     1. the LED LA14 is incorrectly labeled as LS14
     2. the LED LD0 is labeled on the left of the LED and should be labeled above as per LD1-LD7
 - There is a 5x2 group of through-holes marked **Spare** that nothing gets soldered into
@@ -79,7 +79,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
 | ![M4x30 Hex Socket Screw](./parts/M4x30_Hex_Socket_Screw.png) | 8 | | <h4>M4x30mm Hex Socket Screw</h4> |
-| ![Spacer 9mm](./parts/Spacer_9mm.png) | 8 | | <h4>Spacer 9mm Nylon</h4>  The 9mm spacers fit on the `M4x30mm Hex Socket Screws` **in front of** the PCB, between the PCB and the `3mm Black acrylic LED/switch masking plate` |
+| ![Spacer 8mm](./parts/Spacer_9mm.png) | 8 | | <h4>Spacer 8mm Nylon</h4>  The 8mm spacers fit on the `M4x30mm Hex Socket Screws` **in front of** the PCB, between the PCB and the `3mm Black acrylic LED/switch masking plate` |
 | ![Spacer 6mm](./parts/Spacer_6mm.png) | 8 | | <h4>Spacer 6mm Nylon</h4> The 6mm spacers fit on the `M4x30mm Hex Socket Screws` **behind** the PCB, between the PCB and the `3mm Clear acrylic back cover` |
 | ![M4 Hex Nut Nylon](./parts/M4_Hex_Nut_Nylon.png) | 8 | | <h4>M4 Hex Nut Nylon</h4> |
 | ![M3x12 Machine Screw](./parts/M3x12_Machine_Screw.png) | 4 | | <h4>M3x12mm Black Machine Screw</h4> |
@@ -88,7 +88,7 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 ## Acrylic parts
 
 ::: tip
-Many of the sheets of acrylic have a protective backing cover (plastic or paper) to protect them from scratching during cutting and transportation. This should be removed before you use them in the assembly of the kit.
+Most pieces of acrylic have a protective backing cover (plastic or paper) to protect them from scratching during cutting and transportation. This should be removed before you use them in the assembly of the kit.
 
 If any of the following acrylic parts, especially the clear parts, appear white or any colour other than indicated, it is because they have a protective covering.
 :::
@@ -97,10 +97,9 @@ If any of the following acrylic parts, especially the clear parts, appear white 
 | ---- | --------:| ----------- |
 | ![Clear acrylic front cover](./parts/front_cover.jpg) | 1 | <h4>6mm Clear acrylic front cover</h4> |
 | ![Charcoal grey acrylic switch surround](./parts/switch_surround.jpg) | 1 | <h4>6mm Charcoal grey hammer tone painted acrylic switch surround</h4> |
-| ![White text/decals through Black facia](./parts/text_facia.jpg) | 1 | <h4>1.5mm White text/decals through Black facia</h4> |
-| ![Red semi-transparent filter](./parts/red_filter.jpg) | 1 | <h4>0.8mm Red semi-transparent filter</h4> |
+| ![White text/decals on Black facia over transparent red filter](./parts/new_facia_and_filter.jpg) | 1 | <h3>NEW</h3><h4> 3.0mm White text/decals on Black facia over a transparent red filter</h4> |
 | ![Black acrylic LED/switch masking plate](./parts/switch_masking_plate.jpg) | 1 | <h4>3mm Black acrylic LED/switch masking plate</h4> |
 | ![Clear acrylic back cover](./parts/back_cover.jpg) | 1 | <h4>3mm Clear acrylic back cover</h4> |
-| ![Blue acrylic lid<](./parts/blue_lid.jpg) | 1 | <h4>3mm Blue acrylic lid</h4> |
+| ![Blue aluminium lid](./parts/aluminium_lid.jpg) | 1 | <h3>NEW</h3><h4> 3mm Blue aluminium lid</h4> |
 | ![LED Spacer/Switch Alignment guide](./parts/LED_Spacer_Rocker_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED spacer & switch alignment guide (8 slots)</h4> |
 | ![LED alignment guide](./parts/LED_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED alignment guide (8 round holes)</h4> |
