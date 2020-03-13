@@ -96,15 +96,13 @@ Production *had* been on hold since then as I had a few other priorities includi
 - updating the black & white text facia and red filter to be more authentic to the original IMSAI 8080
 - sorting out a new aluminium lid to replace the blue acrylic lid you will seen in videos and pictures
 
-The October 2019 batch is now shipping and all units are spoken for.
-
-Depending upon demand I will try to arrange for another batch prior to the end of December.
+Shipping of kits resumed in November 2019 and now kits are shipping on a regular schedule.
 
 ### Expression of interest
 
 I am accepting expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
 
-Once new kits are ready to ship I will contact you to confirm your order.
+Once a kit is available for you within the month, I will contact you to confirm your order.
 
 The price for the kit is USD$280 and in addition you also pay for postage and any PayPal transaction fees.
 
