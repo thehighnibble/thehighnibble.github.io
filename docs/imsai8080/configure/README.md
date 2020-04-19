@@ -162,25 +162,35 @@ For further details about the *Equivalent Flag* refer to the **Z80PACK** documen
 
 ## Serial Communications (RS232, USB)
 
-The **IMSAI 8080esp** is configured with a single simulated **SIO** UART (TTY:). When the machine boots, the **SIO** UART is routed to the physical UART on the `ESP32-PICO-KIT`.
+The **IMSAI 8080esp** is configured with two simulated **SIO 2** UART boards.
 
-This enables you to use any software on the IMSAI 8080 that communicates via the SIO (TTY:) using a terminal or terminal emulator depending your method of connection.
+Each **SIO** board provides two serial I/O ports. The board/port/devices are assigned as follows:
 
-The only supported speed with the current firmware is 115200 baud @ 8N1
+| SIO Board | UART Port | I/O ports (decimal) | Connected Device | CP/M 2.2 Device via BIOS |
+| -- | - | -------------------- | - | ---- |
+| #1 | A | 2 (data), 3 (status) | Physical **UART0** (Tx/Rx Patch pins & USB) | TTY: |
+|    | B | 4 (data), 5 (status) | Virtual VIO keyboard                   | CRT: (input only, no output) |
+| #2 | A | 34 (data), 35 (status) | Physical **UART1** (IO22/IO5 Patch pins) | UC1: (default) |
+|    | B | 36 (data), 37 (status) | Virtual 'AT' Hayes modem    | (assignable as UC1:) |
+
+ When the machine boots, the **SIO** board #1 port A is routed to the physical **UART0** on the `ESP32-PICO-KIT`.
+
+* This enables you to use any software on the IMSAI 8080 that communicates via this UART on the SIO (namely the CP/M TTY: as console) using a terminal or terminal emulator depending your method of connection.
+* The default speed with the current firmware is 115200 baud @ 8N1
 
 ::: tip
-Both the *ESP32 console log* and the IMSAI 8080 **SIO** (TTY:) will be directed to the serial UART. If you set the `NVS_LOG_LEVEL` to `INFO` (3) this will likely send console log messages during normal use of the machine. It is recommended to set the `NVS_LOG_LEVEL` to a lower level during normal operation.
+Both the *ESP32 console log* and the IMSAI 8080 **SIO #1-A** (TTY:) will be directed to the serial **UART0**. If you set the `NVS_LOG_LEVEL` to `INFO` (3) this will likely send console log messages during normal use of the machine. It is recommended to set the `NVS_LOG_LEVEL` to a lower level during normal operation.
 :::
 
 ::: warning
-If you start the **Desktop UI** from a web browser and the *TTY: virtual device* is connected (default behavior) then the simulated SIO UART (TTY:) is disconnected from the physical UART on the `ESP32-PICO-KIT` and instead re-routed to the *TTY: virtual device* on the Desktop UI. If the *TTY: virtual device* is disconnected, then the SIO UART is re-routed back to the physical UART on the `ESP32-PICO-KIT`, ie. only one of these two destinations can be connected at a time.
+If you start the **Desktop UI** from a web browser and the *TTY: virtual device* is connected (default behavior) then the simulated SIO UART (TTY:) is disconnected from the physical UART0 on the `ESP32-PICO-KIT` and instead re-routed to the *TTY: virtual device* on the Desktop UI. If the *TTY: virtual device* is disconnected, then the SIO UART is re-routed back to the physical UART0 on the `ESP32-PICO-KIT`, ie. only one of these two destinations can be connected at a time.
 
-**Note: the *ESP32 console log* is always sent to the physical UART and is never redirected.**
+**Note: the *ESP32 console log* is always sent to the physical UART0 and is never redirected.**
 :::
 
 ### Serial UART over USB
 
-The `ESP32-PICO-KIT` supports serial communications from the UART over USB. It uses a *Silicon Labs CP210x USB to UART bridge*
+The `ESP32-PICO-KIT` supports serial communications from UART0 over USB. It uses a *Silicon Labs CP210x USB to UART bridge*
 
 1. connect the `ESPP32-PICO-KIT` to a PC using a suitable USB cable
 2. start a terminal emulator on the PC set for 115200 baud 8N1 connected to the serial device your OS identifies the `ESP32-PICO-KIT` on
@@ -198,29 +208,62 @@ Additional information is available from the Espressif (manufacturer of the `ESP
 
 ### Serial UART over RS232
 
-*Serial UART over RS232* and *Serial UART over USB* are mutually exclusive, ie. they cannot be used at the same time.
+::: warning
+*Serial UART0 over RS232* and *Serial UART0 over USB* are mutually exclusive, ie. they cannot be used at the same time.
+:::
 
-*Serial UART over RS232* is configured by using the supplied jumpers/shunts to bridge the required pins on the `Patch` and `Comms` headers accessible on the rear of the PCB, and connecting a suitable RS232 device to the DE-9M connector labeled `RS232-1`
+*Serial UART over RS232* is configured by using the supplied jumpers/shunts to bridge the required pins on the `Patch` and `Comms` headers accessible on the rear of the PCB, and connecting a suitable RS232 device to one of the DE-9M connectors labeled `RS232-1` and `RS232-2`
 
-RS232 line levels are provided by the Maxim MAX3232 IC (data sheet TBA)
+RS232 line levels are provided by the Maxim MAX3232 IC see the [data sheet](https://datasheets.maximintegrated.com/en/ds/MAX3222-MAX3241.pdf) for details.
 
-You must position 4 of the jumpers/shunts provided to enable the *Serial UART over RS232*. This image shows the only currently valid and supported configuration for the jumpers/shunts on both the `Patch` and `Comms` headers.
+You must position 4 of the jumpers/shunts provided to enable a *Serial UART over RS232*. This image shows the currently supported configuration for the jumpers/shunts on both the `Patch` and `Comms` headers for **UART0** to `RS232-1`
 
 ![Patch & Comms jumpers](./rs232_jumpers.jpg)
 
-#### Patch header
+#### UART0 to RS232-1
 
-* bridge Tx - T1 - *position second from right*
-* bridge Rx - R1 - *right most position*
+##### Patch header
 
-#### Comms header
+* bridge Tx - T1 - vertical *position second from right*
+* bridge Rx - R1 - vertical *right most position*
 
-* bridge @ Tx1 - *second position from top*
-* bridge @ Rx1 - *fourth position from top*
+##### Comms header
 
-::: warning
-The DE-9M connector labeled `RS232-2`is currently unused but is intended for future expansion
-:::
+* bridge @ Tx1 - horizontal *second position from top*
+* bridge @ Rx1 - horizontal *fourth position from top*
+
+#### UART1 to RS232-2
+
+##### Patch header
+
+* bridge IO22 - T2 - vertical *position third from right*
+* bridge IO5  - R2 - vertical *position fourth from right*
+
+##### Comms header
+
+* bridge @ Tx2 - horizontal *third position from bottom*
+* bridge @ Rx2 - horizontal *last position at bottom*
+
+### Configuring physical UART parameters (speed, data & stop bits)
+
+You can configure the parameters for both **UART0** (`RS232-1`/USB) and **UART1** (`RS232-2`) via the `boot.conf` file, for example:
+
+```conf
+#UART configuration
+UART0=115200,cs8 # ie. 115200, 8N1 - not required because this is default
+UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
+```
+
+* parameters can be separated by *spaces* or *commas*
+* parameters are *case insensitive*
+* parameters follow the convention used by the `screen` program under *unix/linux/gnu* ie.:
+  * default is `115200,cs8` in other words 115200 8N1
+  * standard baud rates from `110` to `115200` e.g. 110, 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, others may work, but you'll have to experiment
+  * `cs7` - for 7 data bits
+  * `cs8` - for 8 data bits
+  * `cstopb` - for 2 stop bits, default is 1
+  * `parenb` - for even parity, default is none
+  * `parenb,parodd` - for odd parity
 
 ## Wi-Fi Communications
 
