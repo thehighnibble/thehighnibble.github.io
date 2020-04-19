@@ -246,24 +246,9 @@ You must position 4 of the jumpers/shunts provided to enable a *Serial UART over
 
 ### Configuring physical UART parameters (speed, data & stop bits)
 
-You can configure the parameters for both **UART0** (`RS232-1`/USB) and **UART1** (`RS232-2`) via the `boot.conf` file, for example:
+You can configure the parameters for both **UART0** (`RS232-1`/USB) and **UART1** (`RS232-2`) via the `boot.conf` file.
 
-```conf
-#UART configuration
-UART0=115200,cs8 # ie. 115200, 8N1 - not required because this is default
-UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
-```
-
-* parameters can be separated by *spaces* or *commas*
-* parameters are *case insensitive*
-* parameters follow the convention used by the `screen` program under *unix/linux/gnu* ie.:
-  * default is `115200,cs8` in other words 115200 8N1
-  * standard baud rates from `110` to `115200` e.g. 110, 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, others may work, but you'll have to experiment
-  * `cs7` - for 7 data bits
-  * `cs8` - for 8 data bits
-  * `cstopb` - for 2 stop bits, default is 1
-  * `parenb` - for even parity, default is none
-  * `parenb,parodd` - for odd parity
+See [UART Configuration](./#uart-configuration) below, for further details.
 
 ## Wi-Fi Communications
 
@@ -302,7 +287,9 @@ There is little to no error checking done at the moment. If you significantly ch
 The solution is to mount the microSD card on a PC and edit the **boot.conf** file to fix the problem.
 :::
 
-The default configuration, as shipped is a follows:
+### Default boot.conf
+
+The default configuration, as shipped (in Release v1.6.0) is a follows:
 
 ```conf
 #Network configuration
@@ -318,7 +305,18 @@ ROM2=mpu-a-vio-rom.hex
 ROM3=basic4k.hex
 ROM4=basic8k.hex
 ROM5=xybasic.hex
+ROM6=memon80.hex
+#UART configuration
+#UART0=115200,cs8
+#UART1=230400,cs8
+#Harddisk image
+HARDDISK=hd-ws4
+#performance parameters
+#SIO1.netsrv.buffer_delay=33
+#LPT.netsrv.buffer_delay=33
 ```
+
+### Network Configuration
 
 The *Network configuration* entries should be familiar and mostly self explanatory.
 
@@ -331,7 +329,78 @@ A file with TZ variable values for many timezones can be found at [https://www.d
 An article that defines the POSIX format can be found at [Specifying the Time Zone with TZ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html), however please note, the "third format" referenced in this article is the Olson format, and not supported on the ESP32.
 :::
 
+### Bootrom Configuration
+
 The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). There can be a maximum of 7, `ROM1` to `ROM7`. Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
+
+### UART Configuration
+
+The *UART configuration* entries define the speed, data & stop bits for the two physical UARTs on the ESP32, **UART0** and **UART1**
+
+For example:
+
+```conf
+#UART configuration
+UART0=115200,cs8 # ie. 115200, 8N1 - not required because this is default
+UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
+```
+
+* parameters can be separated by *spaces* or *commas*
+* parameters are *case insensitive*
+* parameters follow the convention used by the `screen` program under *unix/linux/gnu* ie.:
+  * default is `115200,cs8` in other words 115200 8N1
+  * standard baud rates from `110` to `115200` e.g. 110, 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, others may work, but you'll have to experiment
+  * `cs7` - for 7 data bits
+  * `cs8` - for 8 data bits
+  * `cstopb` - for 2 stop bits, default is 1
+  * `parenb` - for even parity, default is none
+  * `parenb,parodd` - for odd parity
+
+### Harddisk image
+
+A harddisk image (4MB) can be mounted as I:DSK: / Drive I:
+
+The current harddisk image is visible on the desktop as `I:DSK:`
+
+Harddisk images are visible in the disk library `LIB:` and indicated with a *harddisk* icon. You can drag-and-drop a new harddisk onto the `LIB:` window to upload a new harddisk image.
+
+The harddisk function is inactive unless you include the following line in `boot.conf`
+
+```conf
+HARDDISK=imagename
+```
+
+e.g.
+
+```conf
+#HARDDISK image (don't include the .hdd extension)
+HARDDISK=hd-ws4
+```
+
+The harddisk image file must reside in `/imsai/disks/` and end with `.hdd` eg. `/imsai/disks/hd-ws4.hdd`
+do not use the `.dsk` extension for a harddisk image as it will be confused with a floppy disk image
+
+::: tip
+If you change harddisk image you must **reboot** the IMSAI8080esp to load the new image
+:::
+
+The harddisk cannot be made a bootable device, the bootrom doesn't support this. A CP/M system floppy disk image is still required in drive A: to boot CP/M
+
+::: warning
+There is no UI for changing hard disk images, the required image must be set using the environment variable `HARDDISK` in the `boot.conf` file and then the ESP32 hard reset to reload the environment.
+:::
+
+### Performance parameters
+
+The *Performance parameters* exist only for the two devices `TTY:` (SIO1) and `LPT:` and apply only to websocket communication to the *Desktop UI*
+
+They specify a time in milliseconds (ms) during which output to the device will be buffered (up to the next line feed character) and transmitted in a single (websocket) packet. This can greatly improve performance of both the TTY: and LPT: devices. If used, recommended optimal settings are:
+
+```conf
+#performance parameters
+SIO1.netsrv.buffer_delay=33
+LPT.netsrv.buffer_delay=33
+```
 
 ## System.conf file
 
