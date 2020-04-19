@@ -162,28 +162,32 @@ For further details about the *Equivalent Flag* refer to the **Z80PACK** documen
 
 ## Serial Communications (RS232, USB)
 
-The **IMSAI 8080esp** is configured with two simulated **SIO 2** UART boards.
+The **IMSAI 8080esp** is configured with two *virtual* **IMSAI SIO-2** UART boards.
 
-Each **SIO** board provides two serial I/O ports. The board/port/devices are assigned as follows:
+Each SIO board provides two serial I/O ports. The board/port/devices are assigned as follows:
 
 | SIO Board | UART Port | I/O ports (decimal) | Connected Device | CP/M 2.2 Device via BIOS |
-| -- | - | -------------------- | - | ---- |
-| #1 | A | 2 (data), 3 (status) | Physical **UART0** (Tx/Rx Patch pins & USB) | TTY: |
+| :-: | :-: | -------------------- | - | ---- |
+| #1 | A (SIO1) | 2 (data), 3 (status) | Physical **UART0** (Tx/Rx Patch pins & USB) | TTY: |
 |    | B | 4 (data), 5 (status) | Virtual VIO keyboard                   | CRT: (input only, no output) |
-| #2 | A | 34 (data), 35 (status) | Physical **UART1** (IO22/IO5 Patch pins) | UC1: (default) |
+| #2 | A (SIO2) | 34 (data), 35 (status) | Physical **UART1** (IO22/IO5 Patch pins) | UC1: (default) |
 |    | B | 36 (data), 37 (status) | Virtual 'AT' Hayes modem    | (assignable as UC1:) |
 
- When the machine boots, the **SIO** board #1 port A is routed to the physical **UART0** on the `ESP32-PICO-KIT`.
+ When the machine boots, the *virtual* **SIO1** UART (board #1 port A) is routed to the *physical* **UART0** on the `ESP32-PICO-KIT`.
 
 * This enables you to use any software on the IMSAI 8080 that communicates via this UART on the SIO (namely the CP/M TTY: as console) using a terminal or terminal emulator depending your method of connection.
 * The default speed with the current firmware is 115200 baud @ 8N1
 
 ::: tip
-Both the *ESP32 console log* and the IMSAI 8080 **SIO #1-A** (TTY:) will be directed to the serial **UART0**. If you set the `NVS_LOG_LEVEL` to `INFO` (3) this will likely send console log messages during normal use of the machine. It is recommended to set the `NVS_LOG_LEVEL` to a lower level during normal operation.
+Both the *ESP32 console log* and the IMSAI 8080 **SIO1** (TTY:) will be directed to the serial **UART0**. If you set the `NVS_LOG_LEVEL` to `INFO` (3) this will likely send console log messages during normal use of the machine. It is recommended to set the `NVS_LOG_LEVEL` to a lower level during normal operation.
 :::
 
 ::: warning
-If you start the **Desktop UI** from a web browser and the *TTY: virtual device* is connected (default behavior) then the simulated SIO UART (TTY:) is disconnected from the physical UART0 on the `ESP32-PICO-KIT` and instead re-routed to the *TTY: virtual device* on the Desktop UI. If the *TTY: virtual device* is disconnected, then the SIO UART is re-routed back to the physical UART0 on the `ESP32-PICO-KIT`, ie. only one of these two destinations can be connected at a time.
+Behavior of serial communications is further effected by the settings on the *virtual* **SIO** UARTs (SIO1 and SIO2). See [SIO flags](./#sio-flags) in the `system.conf` file below, for further details.
+:::
+
+::: warning
+If you start the **Desktop UI** from a web browser and the *TTY: virtual device* is connected (default behavior) then the *virtual** SIO1 UART (TTY:) is disconnected from the *physical* UART0 on the `ESP32-PICO-KIT` and instead re-routed to the *TTY: virtual device* on the Desktop UI. If the *TTY: virtual device* is disconnected, then the SIO1 UART is re-routed back to the UART0 on the `ESP32-PICO-KIT`, ie. only one of these two destinations can be connected at a time.
 
 **Note: the *ESP32 console log* is always sent to the physical UART0 and is never redirected.**
 :::
@@ -248,7 +252,7 @@ You must position 4 of the jumpers/shunts provided to enable a *Serial UART over
 
 You can configure the parameters for both **UART0** (`RS232-1`/USB) and **UART1** (`RS232-2`) via the `boot.conf` file.
 
-See [UART Configuration](./#uart-configuration) below, for further details.
+See [UART Configuration](./#uart-configuration) in the `boot.conf` file below, for further details.
 
 ## Wi-Fi Communications
 
@@ -349,7 +353,7 @@ UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
 * parameters are *case insensitive*
 * parameters follow the convention used by the `screen` program under *unix/linux/gnu* ie.:
   * default is `115200,cs8` in other words 115200 8N1
-  * standard baud rates from `110` to `115200` e.g. 110, 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, others may work, but you'll have to experiment
+  * standard baud rates from `110` to `230400` e.g. 110, 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400 others may work, but you'll have to experiment
   * `cs7` - for 7 data bits
   * `cs8` - for 8 data bits
   * `cstopb` - for 2 stop bits, default is 1
@@ -406,9 +410,36 @@ LPT.netsrv.buffer_delay=33
 
 The **system.conf** file is located on the microSD card with the path `/imsai/conf/system.conf`
 
-This is a legacy configuration file, maintained for source code compatibility with the *Z80PACK, imsaisim* machine.
+::: warning
+This is a legacy configuration file, maintained for source code compatibility with the *Z80PACK, imsaisim* machine. Only the parameters documented here have any effect on the **IMSAI8080esp**.
+:::
 
-The only parameter that effects the IMSAI 8080esp is the last line:
+### SIO flags
+
+The *SIO flags* effect the behavior of the the two *virtual* SIO UART ports that are mapped to *physical* UARTs on the ESP32.
+
+These two *virtual* UART devices can:
+* force upper case 
+* strip the parity bit (the MSB in each character byte) - the default for the CP/M console (SIO1)
+* drop nulls
+
+The function is **enabled** by setting the flag value to **1** or **disabled** with a value of **0** (zero)
+
+```config
+# SIO 1, Ports 2/3 connected to the first UART0 (TTY:)
+sio1_upper_case		0
+sio1_strip_parity	0
+sio1_drop_nulls		1
+
+# SIO 2, Ports 34/35, connected to the second UART1 (UC1:)
+sio2_upper_case		0
+sio2_strip_parity	0
+sio2_drop_nulls		1
+```
+
+### RAM size
+
+The only other parameter that effects the **IMSAI 8080esp** is the last line:
 
 ```config
 ram            64
