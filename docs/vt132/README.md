@@ -37,7 +37,7 @@ This is where the fun/trouble began...
   - It is possible to run the Arduino library as a component in the ESP-IDF environment.
   - I was easily able to make FabGL behave as an ESP-IDF component too.
 
-By April 2020 I was able to start posting [videos to You Tube showcasing the features of the VT132](https://www.youtube.com/playlist?list=PLADkYVZqAxdO1fTDprnp_jRCTQ-9n1OIV).
+By April 2020 I was able to start posting [videos to YouTube showcasing the features of the VT132](https://www.youtube.com/playlist?list=PLADkYVZqAxdO1fTDprnp_jRCTQ-9n1OIV).
 
 ![V1.2](./VT132_v1.2.png)
 
