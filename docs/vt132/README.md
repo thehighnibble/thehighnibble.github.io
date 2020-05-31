@@ -83,6 +83,7 @@ The VT100 Terminal:
   - additional character ROM (NRCS and MCS fonts)
 - implements user programmable answer back as per VT100
 - implements a physical buzzer on the PCB for
+  - keyclick
   - bell (^G)
   - margin bell
   - NVRAM error notification
