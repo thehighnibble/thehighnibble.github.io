@@ -61,7 +61,7 @@ The VT100 Terminal:
 - 10x10 character cells in 80 column mode
   - original DEC VT100 font (ASCII 7-bit) with pixel stretching as per the original VT100 hardware
   - original DEC Special Graphics overlay font (inc. line drawing characters)
-  - original DEV VT220 Multinational Character Set (MCS) font (8-bit)
+  - original DEC VT220 Multinational Character Set (MCS) font (8-bit)
   - DEC National Replacement Character Set (NRCS) support (7-bit) (from VT220)
     - implemented for US/UK/Germany/Italy, other countries to follow
   - PC/VGA Code Page 437 font for ANSI compatibility
@@ -70,7 +70,7 @@ The VT100 Terminal:
 - 6x10 character cells in 132 column mode
   - modified DEC VT100 font (ASCII 7-bit)
   - modified DEC Special Graphics overlay font (inc. line drawing characters)
-  - modified DEV VT220 Multinational Character Set (MCS) font (8-bit)
+  - modified DEC VT220 Multinational Character Set (MCS) font (8-bit)
   - DEC National Replacement Character Set (NRCS) support (from VT220) see above.
   - no CP437 support in 132 column mode
 - accurate Smooth Scrolling (requires XON/XOFF as per the original VT100 to avoid dropped characters)
