@@ -248,7 +248,7 @@ As you insert each rocker switch into the PCB, there should be a slight press-to
 | 32a. | Red Rocker (On-On) (x4)| `SA8-SA11` | **Don't solder them yet** |
 | 33a. | 3mm Black acrylic LED spacer & switch alignment guide (8 slots) | `SA8-SA15` | Place the small acrylic alignment guide over the ends of the whole set of 8 rocker switch toggles/actuators, this should help get the switches in alignment. Secure this in place with tape of a couple of strong elastic bands. Solder the switches in place. |
 
-#### Steps 27-29 can now be repeated for the second group of (On-On) switches
+#### Steps 31-33 can now be repeated for the second group of (On-On) switches
 
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
