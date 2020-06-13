@@ -50,9 +50,9 @@ The `NO SCROLL` key is mapped to the `<Scroll Lock>` key on a PC keyboard and is
 
 ### International keyboard support *(enhancement)*
 
-The original VT100 keyboard was essentially a US keyboard with a small concession to the UK in that the `<Shift><3>` combination could be configured to transmit a `£` symbol instead of the usual `#`. This is also true of the VT132, see [US/UK setting in SET-UP B](###).
+The original VT100 keyboard was essentially a US keyboard with a small concession to the UK in that the `<Shift><3>` combination could be configured to transmit a `£` symbol instead of the usual `#`. This is also true of the VT132, see US/UK setting in SET-UP B.
 
-In addition to the standard US PC keyboard layout, the VT132 also supports international keyboards for the UK, Germany and Italy (with more to follow), see [Keyboard in SET-UP D](###).
+In addition to the standard US PC keyboard layout, the VT132 also supports international keyboards for the UK, Germany and Italy (with more to follow), see [Keyboard in SET-UP D](setup-d/#international-keyboard-support).
 
 ## [Part 2 - Set-Up Mode](https://vt100.net/docs/vt100-ug/chapter1.html#S1.2)
 
@@ -107,7 +107,7 @@ The definition and function of each feature on the `SET-UP A` and `SET-UP B` scr
 
 The `bits per character` for the VT132 is fixed at 8, enabling 8-bit extended ASCII modes of operation
 
-- bit 8 **is not set to space (o 0)** for characters transmitted
+- bit 8 **is not set to space (or 0)** for characters transmitted
 - bit 8 **is not ignored** for characters received
 
 ### INTERLACE
