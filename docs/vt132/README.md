@@ -190,3 +190,5 @@ less than 0.44 lbs
 less than 0.2 kg
 
 ## [Bill-of-Materials](bom/)
+
+## [Operation Manual](operation/)
