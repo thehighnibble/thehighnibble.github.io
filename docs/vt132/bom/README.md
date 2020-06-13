@@ -26,8 +26,8 @@ To see the images in full size you can right-click on an image and `Open Image i
 
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
-| ![ESP32-WROVER](./parts/WROVER.png) | 1 | ESP32-WROVER | <h4>ESP-32 WROVER Module</h4> |
-| ![NCP1117-33](./parts/LDO.png) | 1 | NCP1117-33 | <h4>NCP1117-33 LDO Linear Regulator</h4> |
+| ![ESP32-WROVER](./parts/WROVER.png) | 1 | ESP32-WROVER U1 | <h4>ESP-32 WROVER Module</h4> |
+| ![NCP1117-33](./parts/LDO.png) | 1 | NCP1117-33 U2 | <h4>NCP1117-33 LDO Linear Regulator</h4> |
 
 ## Through Hole (THT) components
 
@@ -53,9 +53,9 @@ To see the images in full size you can right-click on an image and `Open Image i
 
 | Part | Quantity | PCB | Description |
 | ---- | --------:| --- | ----------- |
-| ![Header 2pin](./parts/CNX_2RA.png) | 2 |  5V PWR (both) | <h4>2 Pin Header - Horizontal</h4> |
-| ![Header 6pin](./parts/CNX_6RA.png) | 2 |  FTDI Program, Modem (CTS/RTS) | <h4>6 Pin Header - Horizontal</h4> |
-| ![Header 8pin](./parts/CNX_4X2.png) | 1 |  PortA/PortB | <h4>8 Pin Header (4x2)- Vertical</h4> |
+| ![Header 2pin](./parts/CNX_2RA.png) | 2 |  JP5, JP6 5V Pwr | <h4>2 Pin Header - Horizontal</h4> |
+| ![Header 6pin](./parts/CNX_6RA.png) | 2 |  FTDI Program, Modem Port B | <h4>6 Pin Header - Horizontal</h4> |
+| ![Header 8pin](./parts/CNX_4X2.png) | 1 |  JP1 to JP4 RxA/TxA RxB/TxB | <h4>8 Pin Header (4x2)- Vertical</h4> |
 | ![Header 80pin](./parts/CNX_40X2RA.png) | 1 |  Pin 1 | <h4>80 Pin Header (40x2)- Horizontal</h4> RC2014 Pro Bus Connector. Remove the unneeded pins from the upper row. |
 
 ## Through Hole (THT) connectors
