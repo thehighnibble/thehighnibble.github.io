@@ -17,7 +17,7 @@ See [Hardware Configuration](../#hardware-configuration) for details on connecti
 ## 'AT' Commands
 
 ::: tip
-The original 'AT' command set was strictly in upper case. This is because the bit sequence of the ASCII values for 'A' and 'T' had a specific property then enabled [autobaud detection](https://en.wikipedia.org/wiki/Hayes_command_set#Autobaud) of the connection to the data terminal equipment (DTE).
+The original 'AT' command set was strictly in upper case. This is because the bit sequence of the ASCII values for 'A' and 'T' have a specific property that enables [autobaud detection](https://en.wikipedia.org/wiki/Hayes_command_set#Autobaud) of the connection to the data terminal equipment (DTE).
 
 - The modem only responds to 'AT' commands in upper case.
 :::
