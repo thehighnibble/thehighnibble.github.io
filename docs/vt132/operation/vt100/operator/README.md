@@ -84,6 +84,9 @@ The VT132 supports baud rates from 300 to 115200 and the Transmit and Receive sp
 
 Consequently in `SET-UP B`, both the `7` and the `8` key will cycle through the available baud rates changing both `T SPEED` and `R SPEED` simultaneously.
 
+- `7` will cycle *downwards* through the available speeds, rolling back to `115200` after `300`
+- `8` will cycle *upwards* through the available speeds, rolling back to `300` after `115200`
+
 ### SET-UP B - clear NVR (reset to factory defaults) *(enhancement)*
 
 **Only** on the `SET-UP B` screen the key combination `<Shift><C>` will clear the NVR for the VT100.
@@ -122,11 +125,45 @@ The `parity` for the VT132 is fixed to `None` given that the `bits per character
 
 The `parity sense` for the VT132 is not relevant as the `parity` is fixed to `None`.
 
-### POWER *(enhancement)*
+### POWER *(enhancement)* now: Backspace DEL/BS
 
 The `power` line frequency of the original VT100 (50Hz or 60Hz) is not relevant to the VT132.
 
 This 'soft switch' bit on the `SET-UP B` screen has been replaced with a bit that shows/sets the current [DECBKM](###) Backarrow Key Mode *(enhancement)*.
+
+
+### BOLD is BRIGHT *(enhancement)*
+
+Sets the `SGR` attribute **Bold** to be rendered *bright*
+
+### BOLD is THICK *(enhancement)*
+
+Sets the `SGR` attribute **Bold** to be rendered *double thick*
+
+::: tip
+One or both of these attributes must be set, it is not possible to clear them both.
+
+The default is that they are **both** set, making **bold* both *bright* and *thick*
+In ANSI.SYS mode it is typical to set only *bright*. This is done automatically by the **Ansi.sys** macro in the Quick Menu (see: [Ansi.sys emulation mode](quick-menu/#ansi-sys-emulation-mode))
+:::
+
+### Set ANSI.SYS compliance *(enhancement)*
+
+Enables two (2) MS-DOS ANSI.SYS compliant features:
+- The **ED** escape sequence `ESC [ 2 J` both clears the the screen **and** homes the cursor (equiavlent to a following `ESC [ H`)
+- Non-printable ASCII control characters in the **C0** range `(0x00 - 0x1F)` that are *"unused"* will print the corresponding glyph/character from the [PC Code Page 437](https://en.wikipedia.org/wiki/Code_page_437#Character_set) character set.
+  - The *"used"* control characters that will **not** print a glyph/character in this mode are:
+    - BEL `^G`
+    - HT `^I`
+    - LF `^J`
+    - VT `^K`
+    - FF `^L`
+    - CR `^M`
+    - ESC `^[`
+
+### Set NUMLOCK on Reset *(enhancement)*
+
+Sets the NUMLOCK key **on** whenever settings are restored from NVR.
 
 ### SCREEN BRIGHTNESS
 
