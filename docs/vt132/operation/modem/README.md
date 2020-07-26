@@ -117,6 +117,14 @@ Most of them are undefined and unused. The defined registers are set with defaul
 
 ## Wi-Fi Connection Results
 
+::: warning
+Wi-Fi **cannot** be started when the terminal is in **30 line** mode due to the limited amount of internal memory in the EPS32.
+
+If you attempt to (re)connect the Wi-Fi when in this mode you will receive the response: `WIFI ERROR`
+
+Return the terminal to **24 or 25 line** mode and you will be able to (re)connect the Wi-Fi.
+:::
+
 ### Dial Responses
 
 The following table details the responses from the modem for the **Dial** command `ATDhostname:port`

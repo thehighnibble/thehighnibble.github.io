@@ -87,6 +87,12 @@ When 30 line support is selected, the details on the `SET-UP C` screen change as
 25 and 30 line support is also available in 132 column mode.
 :::
 
+::: warning
+If Wi-FI has been started from the modem, then 30 line mode **will not** be selectable and this setting will only toggle between 24 and 25 line modes.
+
+To re-enable 30 line mode you must H/W Reset or Reboot the VT132 and ensure Wi-Fi is not started from the modem.
+:::
+
 ## ANSI/VGA Palette Support
 
 Pressing `6` on the keyboard toggles between standard ANSI and VGA colour palettes. The colour changes are only subtle and effect only a few colours.
