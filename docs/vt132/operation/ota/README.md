@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Over-the-Air (OTA) Firmware Update Procedure (Draft)
+# Over-the-Air (OTA) Firmware Update Guide (Draft)
 
 The OTA Update feature of the VT132 enables you to update the firmware of your VT132 to the latest release **without** having to connect your VT132 to a PC via the FTDI connector or install any utilities on your PC to flash new firmware to the ESP32 module.
 

@@ -85,4 +85,4 @@ You should normally only connect one power source to the system at a time.
 
 ## ['AT' (Hayes) Serial Modem Operation Manual](modem/)
 
-## [Over-the-Air (OTA) Firmware Update Procedure](ota/)
+## [Over-the-Air (OTA) Firmware Update Guide](ota/)
