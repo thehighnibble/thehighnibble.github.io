@@ -83,6 +83,7 @@ The first four (4) options *White/Green/Amber/Blue* set the terminal for
 
 - VT100 mode with ANIS.SYS compliance **disabled**
 - the **DEC VT100/VT220** Font
+- resets to 80 column mode
 - the **ANSI** Colour Palette (except *Amber* that sets the *VGA* Colour Palette for *Brown*)
 - sets **Bold** to be both *Bright* and *Thick*
 
@@ -94,6 +95,7 @@ The *Ansi.sys* option set the terminal for
 
 - VT100 mode with ANIS.SYS compliance **enabled**
 - the **PC Code Page 437** Font
+- resets to 80 column mode
 - the **VGA** Colour Palette
 - sets **Bold** to be only *Bright*
 
@@ -116,7 +118,7 @@ This is most useful when visiting Bulletin Board Systems (BBS) that expect to wo
 ## On-line (root menu)
 
 - **On-line** - equivalent to pressing `4` in any of the **Setup** screens to select between `ONLINE` or `LOCAL`
-  - `[X]` - selected `ONLINE` (default), the terminal is connected to the UART on the RC2014 Bus pins *TxA/RxA* 
+  - `[X]` - selected `ONLINE` (default), the terminal is connected to the UART on the RC2014 Bus pins *TxA/RxA*
   - `[ ]` - unselected `LOCAL`, the terminal is disconnected from the UART and will
     - echo "locally" if it is not connected to the modem
     - connect directly to the modem if set (see: [Modem menu](#modem-menu))
