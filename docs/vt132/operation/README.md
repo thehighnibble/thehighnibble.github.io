@@ -79,6 +79,13 @@ If you want to provide power to, or take power from either of the 6 pin headers 
 You should normally only connect one power source to the system at a time.
 :::
 
+## [VT132 Quick Reference Guide](https://git.imzadi.de/acn/vt132-quickref/src/master/vt132.pdf) Print-ready PDF
+
+One of the VT132 Beta testers, ACN, prepared this print-ready, PDF, Quick Reference Guide for you.
+The site hosts the source in *LaTeX* and a copy of the published PDF file.
+
+This is a living document and will be updated regularly as required.
+
 ## [VT100 (enhanced) Operator Information](vt100/operator/)
 
 ## [VT100 (enhanced) Programmer Information](vt100/programmer/)
