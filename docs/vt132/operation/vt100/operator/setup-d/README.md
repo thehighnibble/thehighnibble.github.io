@@ -84,6 +84,7 @@ The special, non-ASCII keyboard keys (mainly cursor control keys) are mapped to 
 The available personalities are:
 
 - ANSI/VT100 (the default VT100 operating mode)
+- WordStar/VT100 (same as above but with WordStar cursor navigation key mappings)
 - ADM-3A
 - ADM-31
 - Hazeltine 1500
