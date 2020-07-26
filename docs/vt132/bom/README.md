@@ -57,6 +57,7 @@ To see the images in full size you can right-click on an image and `Open Image i
 | ![Header 6pin](./parts/CNX_6RA.png) | 2 |  FTDI Program, Modem Port B | <h4>6 Pin Header - Horizontal</h4> |
 | ![Header 8pin](./parts/CNX_4X2.png) | 1 |  JP1 to JP4 RxA/TxA RxB/TxB | <h4>8 Pin Header (4x2)- Vertical</h4> |
 | ![Header 80pin](./parts/CNX_40X2RA.png) | 1 |  Pin 1 | <h4>80 Pin Header (40x2)- Horizontal</h4> RC2014 Pro Bus Connector. Remove the unneeded pins from the upper row. |
+| ![Shunt](./parts/SHUNT.png) | 6 |  For JP1 to JP6 as required | <h4>Header Pin Shunts</h4> To be placed only on JP1 to 4 for normal operation. |
 
 ## Through Hole (THT) connectors
 
