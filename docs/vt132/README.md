@@ -41,7 +41,7 @@ By April 2020 I was able to start posting [videos to YouTube showcasing the feat
 
 ![V1.2](./VT132_v1.2.png)
 
-In June & July 2020 I conducted a closed Beta programme with some fantastic people from the Retro-computer community. Their contribution to improving the VT132 and accelerating the development, ready for production has been invaluable.
+In June & July 2020 I conducted a closed Beta program with some fantastic people from the Retro-computer community. Their contribution to improving the VT132 and accelerating the development, ready for production has been invaluable.
 
 In July 2020 the VT132 began shipping to the patiently waiting early-adopters.
 
@@ -119,7 +119,7 @@ The VT100 Terminal:
       - personality (escape code and keyboard code translation) support for:
         - ANSI/VT100, ADM-3A, ADM-31, Hazeltine 1500, Osborne 1, Kaypro, VT52
         - WordStar/VT100 - VT100 terminal with WordStar navigation keys for compatibility with many CP/M applications
-        - details to follow on a separate page (tba)
+        - details on the [Setup-D screen](operation/vt100/operator/setup-d/#personality-support)
   - all Set-up screens include optional help by pressing 'F1' key (enhanced)
 - Quick Menu system (modeled on the VT510 setup menus)
   - Activated by *LeftAlt-Esc* key-press
@@ -137,6 +137,7 @@ The VT100 Terminal:
   - save settings function - 'S' in Set-up screens
   - restore settings function - 'R' in Set-up screens
   - settings are restored on reset and power-up
+- a 6-pin FTDI header with dedicated UART for firmware flashing and for debug log monitoring
 
 Full details of configuring the terminal via the Set-up screens is covered in the [VT100 Operator Information Manual](operation/vt100/operator/)
 
@@ -146,7 +147,6 @@ The Telnet/WiFi AT (Hayes) Modem:
 
 - connects to the RC2014 over the Tx2/Rx2 lines (Pins 35 & 36) of the RC2014 Enhanced Bus
 - takes power from the bus from Gnd/5V (Pins 17 & 18)
-- includes a dedicated 6-pin FTDI header with dedicated UART for (re)programming and for debug log monitoring
 - implements a minimal set of 'AT' commands enabling it to behave as a serially connected modem
 - supports storing all 'S' register settings in non-volatile storage (NVRAM)
 - settings can be restored from NVRAM or restored to 'factory' defaults
@@ -162,7 +162,7 @@ The Telnet/WiFi AT (Hayes) Modem:
   - does not currently support 'autobaud'
     - but is selected by the 'Prog' press button switch on the PCB
     - the chosen speed is stored in NVRAM and persists through resets and power cycling
-- supports CTS/RTS hardware flow-control over a 6-pin modified FTDI style modem header (not the RC2014 Enhanced Bus)
+- supports CTS/RTS hardware flow-control over a 6-pin *modified FTDI* style modem header (not the RC2014 Enhanced Bus)
   - making it compatible with the [SC104 Z80 SIO/2 Module](https://smallcomputercentral.wordpress.com/sc104-z80-sio-2-module-rc2014/) with CTS/RTS flow-control
 
 A full list of the 'AT' command set implemented and details of all the 'S' registers and their use is covered in the ['AT' (Hayes) Serial Modem Operation Manual](operation/modem/)
@@ -173,7 +173,7 @@ A full list of the 'AT' command set implemented and details of all the 'S' regis
 - The current production firmware (V1.0.0) can always be found at [github.com/thehighnibble/vt132/releases/latest](https://github.com/thehighnibble/vt132/releases/latest)
 - OTA Updates can be performed directly from the VT132 over Wi-Fi with only power, a VGA monitor and PS/2 keyboard connected, no connected RC2014 or PC is required
 
-The process for OTA Updates is covered in the [OTA Updates Manual](operation/ota/)
+The process for OTA Updates is covered in the [OTA Firmware Update Guide](operation/ota/)
 
 ## Availability
 
