@@ -83,6 +83,8 @@ You should normally only connect one power source to the system at a time.
 
 ## [VT100 (enhanced) Programmer Information](vt100/programmer/)
 
+## [VT100 (enhanced) Quick Menu Guide](vt100/operator/quick-menu/)
+
 ## ['AT' (Hayes) Serial Modem Operation Manual](modem/)
 
 ## [Over-the-Air (OTA) Firmware Update Guide](ota/)

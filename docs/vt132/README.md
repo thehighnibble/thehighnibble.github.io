@@ -121,7 +121,7 @@ The VT100 Terminal:
         - WordStar/VT100 - VT100 terminal with WordStar navigation keys for compatibility with many CP/M applications
         - details to follow on a separate page (tba)
   - all Set-up screens include optional help by pressing 'F1' key (enhanced)
-- Quick-menu system (modeled on the VT510 setup menus)
+- Quick Menu system (modeled on the VT510 setup menus)
   - Activated by *LeftAlt-Esc* key-press
   - Provides quick access to:
     - common actions, eg. clear screen, reset, reboot, clear NVR
