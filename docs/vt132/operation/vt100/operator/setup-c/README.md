@@ -59,9 +59,9 @@ When CP437 is selected as the current font, rendering characters from the **DEC 
 This codepage **is not available** in 132 column mode.
 :::
 
-## 24/25 Line Support
+## 24/25/30 Line Support
 
-Pressing `3` on the keyboard toggles between 24 and 25 line support. There is a noticeable delay while the VGA signal re-syncs with the changed viewport resolution.
+Pressing `3` on the keyboard toggles between 24, 25 & 30 line support. There is a noticeable delay while the VGA signal re-syncs with the changed viewport resolution.
 
 The original VT100 supported 24 lines of text. With the introduction of the IBM PC a 25 line display became the norm.
 
@@ -69,11 +69,22 @@ The main purpose of providing 25 line support is to allow visiting BBS systems t
 
 When 25 line support is selected, the details on the `SET-UP C` screen change as follows:
 
-![SET-UP-C-CP437](./SetupC_25line.jpg)
+![SET-UP-C-25Line](./SetupC_25line.jpg)
+
+The maximum viewport resolution of the VT132 is 800x300. At this vertical resolution, 30 lines of text can be displayed. This can be useful for displaying more text on the screen for working at the operating system (CP/M) prompt, programming in Basic or working with a range of full screen applications such as WordStar or SuperCalc2.
 
 ::: tip
+Full screen applications such as WordStar or SuperCalc2 typically must be configured using their accompanying install/setup program to work with the increased number of rows.
 
-25 line support is also available in 132 column mode.
+SuperCalc2 works well at 132 columns by 30 rows.
+:::
+
+When 30 line support is selected, the details on the `SET-UP C` screen change as follows:
+
+![SET-UP-C-30Line](./SetupC_30line.jpg)
+
+::: tip
+25 and 30 line support is also available in 132 column mode.
 :::
 
 ## ANSI/VGA Palette Support
