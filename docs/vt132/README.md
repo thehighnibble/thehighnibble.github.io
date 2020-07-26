@@ -55,18 +55,19 @@ The VT100 Terminal:
 - takes power from the bus from Gnd/5V (Pins 17 & 18)
 - fully DEC VT100 Escape Code compatible
   - extended escape code support from other DEC VTxxx models
-  - extended ANSI escape code support
+  - extended ANSI.SYS escape code support
   - to be detailed on another page (tba)
 - 800x600 native resolution over VGA (DB15 connector) - actually 800x300 with scanline doubling
   - 800x240 viewport in 24 line (native) mode
   - 800x250 viewport in 25 line (enhanced) mode
+  - 800x300 viewport in 30 line (enhanced) mode (excludes the use of Wi-Fi because of memory constraints)
 - 10x10 character cells in 80 column mode
   - original DEC VT100 font (ASCII 7-bit) with pixel stretching as per the original VT100 hardware
   - original DEC Special Graphics overlay font (inc. line drawing characters)
   - original DEC VT220 Multinational Character Set (MCS) font (8-bit)
   - DEC National Replacement Character Set (NRCS) support (7-bit) (from VT220)
     - implemented for US/UK/Germany/Italy, other countries to follow
-  - PC/VGA Code Page 437 font for ANSI compatibility
+  - PC/VGA Code Page 437 font for ANSI.SYS compatibility
     - supports DEC Special Graphics mapping to CP437
     - supports NRCS mapping to CP437
 - 6x10 character cells in 132 column mode
@@ -80,7 +81,7 @@ The VT100 Terminal:
 - PS/2 Keyboard (Mini-DIN 6, PS/2 connector)
   - supports keyboard layouts for US/UK/Germany/Italy, other countries to follow
 - implements all VT100 Advanced Video Option (AVO) features
-  - 132x24 (native), 132x25 (enhanced) character resolution
+  - 132x24 (native), 132x25 & 132x30 (enhanced) character resolution
   - additional character attributes - Bold, Blink, Underline, Reverse (and combinations)
   - additional character ROM (NRCS and MCS fonts)
 - implements user programmable answer back as per VT100
@@ -94,17 +95,19 @@ The VT100 Terminal:
   - complies with ANSI escape code selection
   - use selectable default text and background colours via additional Set-up C screen
 - full VT100 style Set-up screen implementation
-  - Activated by Alt-SysReq key-press (usually Alt-PrintScreen)
+  - Activated by *Alt-SysReq* key-press (usually *Alt-PrintScreen*)
   - Set-up A (native as per VT100 with minor modifications)
     - added 'T' command to restore default Tab-Stops (from VT102)
   - Set-up B (native as per VT100 with minor modifications)
     - added 'C' command to clear NVRAM
     - 50/60Hz bit replaced by Backarrow Key Mode selection bit (DECBKM)
+    - added selection of how **Bold** font is represented (bright &/or double-thick)
+    - added selection of **ANSI.SYS** mode compatibility
     - baud rates supported - 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200
     - fixed serial format 8N1, no current support for 7 bits, parity or 2 stop bits
   - Set-up C (enhanced) enables:
     - DEC/VT font or CP437 font selection
-    - 24 line (native) / 25 line (enhanced) mode selection for ANSI compatibility
+    - 24 line (native) / 25 line / 30 line (enhanced) mode selection for ANSI compatibility
     - default foreground text colour selection, 1 of 16 colours
     - default background colour selection, 1 of 16 colours
     - ANSI or VGA 16 colour palette selection
@@ -115,14 +118,27 @@ The VT100 Terminal:
     - personality selection
       - personality (escape code and keyboard code translation) support for:
         - ANSI/VT100, ADM-3A, ADM-31, Hazeltine 1500, Osborne 1, Kaypro, VT52
+        - WordStar/VT100 - VT100 terminal with WordStar navigation keys for compatibility with many CP/M applications
         - details to follow on a separate page (tba)
   - all Set-up screens include optional help by pressing 'F1' key (enhanced)
+- Quick-menu system (modeled on the VT510 setup menus)
+  - Activated by *LeftAlt-Esc* key-press
+  - Provides quick access to:
+    - common actions, eg. clear screen, reset, reboot, clear NVR
+    - terminal personality selection
+    - MCS/NRCS mode selection
+    - macros for ASCII modes including:
+      - Green/Amber/Blue/White screen emulation
+      - ANSI.SYS mode compatibility
+    - keyboard country/language selection
+    - modem locally connected mode (direct VT100 to modem connection)
+    - online/local mode selection
 - Non-volatile Storage (NVRAM) support for all terminal settings
   - save settings function - 'S' in Set-up screens
   - restore settings function - 'R' in Set-up screens
   - settings are restored on reset and power-up
 
-Full details of configuring the terminal via the Set-up screens will be covered on a separate page (tba).
+Full details of configuring the terminal via the Set-up screens is covered in the [VT100 Operator Information Manual](operation/vt100/operator/)
 
 ### Telnet/WiFi AT (Hayes) Modem
 
@@ -144,12 +160,20 @@ The Telnet/WiFi AT (Hayes) Modem:
 - supports serial baud rates of 4800, 9600, 14400, 19200, 38400, 57600, 1152000 from the UART
   - making it compatible with all the speeds of the [RC2014 Dual Serial Module SIO/2](https://rc2014.co.uk/modules/dual-serial-module-sio2/) or similar
   - does not currently support 'autobaud'
-    - but is selected by a press button switch on the PCB
+    - but is selected by the 'Prog' press button switch on the PCB
     - the chosen speed is stored in NVRAM and persists through resets and power cycling
 - supports CTS/RTS hardware flow-control over a 6-pin modified FTDI style modem header (not the RC2014 Enhanced Bus)
   - making it compatible with the [SC104 Z80 SIO/2 Module](https://smallcomputercentral.wordpress.com/sc104-z80-sio-2-module-rc2014/) with CTS/RTS flow-control
 
-A full list of the 'AT' command set implemented and details of all the 'S' registers and their use will be covered on a separate page (tba).
+A full list of the 'AT' command set implemented and details of all the 'S' registers and their use is covered in the ['AT' (Hayes) Serial Modem Operation Manual](operation/modem/)
+
+### Over-the-Air (OTA) Firmware Updates
+
+- Firmware updates are hosted on [GitHub](https://github.com/thehighnibble/vt132)
+- The current production firmware (V1.0.0) can always be found at [github.com/thehighnibble/vt132/releases/latest](https://github.com/thehighnibble/vt132/releases/latest)
+- OTA Updates can be performed directly from the VT132 over Wi-Fi with only power, a VGA monitor and PS/2 keyboard connected, no connected RC2014 or PC is required
+
+The process for OTA Updates is covered in the [OTA Updates Manual](operation/ota/)
 
 ## Availability
 
