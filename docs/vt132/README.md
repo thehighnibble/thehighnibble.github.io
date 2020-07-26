@@ -41,7 +41,9 @@ By April 2020 I was able to start posting [videos to YouTube showcasing the feat
 
 ![V1.2](./VT132_v1.2.png)
 
-More to come...
+In June & July 2020 I conducted a closed Beta programme with some fantastic people from the Retro-computer community. Their contribution to improving the VT132 and accelerating the development, ready for production has been invaluable.
+
+In July 2020 the VT132 began shipping to the patiently waiting early-adopters.
 
 ## Features
 
@@ -151,11 +153,15 @@ A full list of the 'AT' command set implemented and details of all the 'S' regis
 
 ## Availability
 
-The VT132 is currently in a closed Beta and is expected to be ready in July 2020.
+The VT132 is currently available (since July 2020) and has a price of USD$50. In addition to this you must pay for shipping and any transaction fees. Payment is via PayPal.
 
-### Expression of interest
+### To Order
 
-I am accepting expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
+I am accepting orders via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) with your shipping name & address, I will respond to you with a PayPal invoice with the total price including shipping and transaction fees.
+
+::: tip
+Please only pay against the PayPal invoice when I send it to you. Do not try to pay directly to me via PayPal as this will only delay your order.
+:::
 
 ## Specifications
 
