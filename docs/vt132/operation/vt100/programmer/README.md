@@ -67,7 +67,7 @@ There are two columns indicating whether the control character action is impleme
 | Control Character | Octal Code | Hex Code | Action Taken | VT100 | ANSI.SYS |
 | ----------------- | -----------| -------- | ------------ | ----- | -------- |
 | NUL | 000 | 0x00 | Ignored on input | No  | No  |
-| ENQ | 005 | 0x05 | Transmit answerback message | Yes | No  |
+| ENQ | 005 | 0x05 | Transmit answer-back message | Yes | No  |
 | BEL | 007 | 0x07 | Sound bell tone from buzzer | Yes | Yes |
 | BS  | 010 | 0x08 | Move the cursor to the left one character position, unless it is at the left margin, in which case no action occurs | Yes | Yes |
 | HT  | 011 | 0x09 | Move the cursor to the next tab stop, or to the right margin if no further tab stops are present on the line | Yes | Yes |
@@ -96,7 +96,7 @@ All other *Control Characters* **will be** output to the terminal, showing the c
 
 ### Control Sequences
 
-The following tables of *Control Sequences* are grouped into 4 categotries:
+The following tables of *Control Sequences* are grouped into 4 categories:
 
 - [Original VT100 Control Sequences](#original-vt100-control-sequences)
 - [Additional Control Sequences](#additional-control-sequences) from later models of VT family terminals
@@ -118,7 +118,7 @@ The following tables of *Control Sequences* are grouped into 4 categotries:
 | `ESC # 8` | DECALN | Screen Alignment Display | |
 | `ESC [ ? 2 l` | DECANM | ANSI/VT52 Mode | |
 | `ESC [ ? 8 h/l` | DECARM | Auto Repeat Mode | |
-| `ESC [ ? 7 h/l` | DECAWM | Autowrap Mode | |
+| `ESC [ ? 7 h/l` | DECAWM | Auto-wrap Mode | |
 | `ESC [ ? 1 h/l` | DECCKM | Cursor Keys Mode | |
 | `ESC [ ? 3 h/l` | DECCOLM | 132/80 Column Mode | |
 | `ESC # 3` | DECDHL | Double Height Line -Top Half | |
@@ -151,15 +151,15 @@ The following tables of *Control Sequences* are grouped into 4 categotries:
 | `ESC c` | RIS | Reset To Initial State | |
 | `ESC [ Ps ; ... l` | RM | Reset Mode | none |
 | | **SCS** | **Select Character Set** | |
-| *`ESC ( A`* | *SCS - G0* | G0 - Unitied Kingdom Set | |
+| *`ESC ( A`* | *SCS - G0* | G0 - United Kingdom Set | |
 | *`ESC ( B`* | *SCS - G0* | G0 - ASCII Set | |
-| *`ESC ( 0`* | *SCS - G0* | G0 - Special Grapahics | |
-| *`ESC ( 1`* | *SCS - G0* | G0 - Alt Standrad Character Set | |
+| *`ESC ( 0`* | *SCS - G0* | G0 - Special Graphics | |
+| *`ESC ( 1`* | *SCS - G0* | G0 - Alt Standard Character Set | |
 | *`ESC ( 2`* | *SCS - G0* | G0 - Alt Special Graphics | |
-| *`ESC ) A`* | *SCS - G1* | G1 - Unitied Kingdom Set | |
+| *`ESC ) A`* | *SCS - G1* | G1 - United Kingdom Set | |
 | *`ESC ) B`* | *SCS - G1* | G1 - ASCII Set | |
-| *`ESC ) 0`* | *SCS - G1* | G1 - Special Grapahics | |
-| *`ESC ) 1`* | *SCS - G1* | G1 - Alt Standrad Character Set | |
+| *`ESC ) 0`* | *SCS - G1* | G1 - Special Graphics | |
+| *`ESC ) 1`* | *SCS - G1* | G1 - Alt Standard Character Set | |
 | *`ESC ) 2`* | *SCS - G1* | G1 - Alt Special Graphics | |
 | **`ESC [ Ps ; ... m`** | **SGR** | **Select Graphics Rendition** | |
 | *`ESC [ 0 m`* | *SGR* | Attributes Off | |
