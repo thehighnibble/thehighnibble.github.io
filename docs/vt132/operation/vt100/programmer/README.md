@@ -182,7 +182,7 @@ TBA
 | Control Sequence | Mnemonic | Action Taken | Notes |
 | ---------------- | -------- | ------------ | ----- |
 | `ESC [ s` | SCOSC | Save current cursor state (position and attributes) | Does the same as `ESC 7` |
-| `ESC [ u` | SCOSC | Restore current cursor state (position and attributes) | Does the same as `ESC 8` |
+| `ESC [ u` | SCORC | Restore current cursor state (position and attributes) | Does the same as `ESC 8` |
 
 ### Original VT52 Control Sequences
 
