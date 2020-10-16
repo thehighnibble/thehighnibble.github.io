@@ -76,14 +76,15 @@ I haven't figured out how to set the image sizes in the site tool I am using, so
 
 ## Mounting hardware
 
-| Part | Quantity | PCB | Description |
-| ---- | --------:| --- | ----------- |
-| ![M4x30 Hex Socket Screw](./parts/M4x30_Hex_Socket_Screw.png) | 8 | | <h4>M4x30mm Hex Socket Screw</h4> |
-| ![Spacer 8mm](./parts/Spacer_9mm.png) | 8 | | <h4>Spacer 8mm Nylon</h4>  The 8mm spacers fit on the `M4x30mm Hex Socket Screws` **in front of** the PCB, between the PCB and the `3mm Black acrylic LED/switch masking plate` |
-| ![Spacer 6mm](./parts/Spacer_6mm.png) | 8 | | <h4>Spacer 6mm Nylon</h4> The 6mm spacers fit on the `M4x30mm Hex Socket Screws` **behind** the PCB, between the PCB and the `3mm Clear acrylic back cover` |
-| ![M4 Hex Nut Nylon](./parts/M4_Hex_Nut_Nylon.png) | 8 | | <h4>M4 Hex Nut Nylon</h4> |
-| ![M3x12 Machine Screw](./parts/M3x12_Machine_Screw.png) | 4 | | <h4>M3x12mm Black Machine Screw</h4> |
+| Part | Quantity | Description |
+| ---- | --------:| ----------- |
+| ![M4x30 Hex Socket Screw](./parts/M4x30_Hex_Socket_Screw.png) | 8 | <h4>M4x30mm Hex Socket Screw</h4> |
+| ![Spacer 8mm](./parts/Spacer_9mm.png) | 8 | <h4>Spacer 8mm Nylon</h4>  The 8mm spacers fit on the `M4x30mm Hex Socket Screws` **in front of** the PCB, between the PCB and the `3mm Black acrylic LED/switch masking plate` |
+| ![Spacer 6mm](./parts/Spacer_6mm.png) | 8 | <h4>Spacer 6mm Nylon</h4> The 6mm spacers fit on the `M4x30mm Hex Socket Screws` **behind** the PCB, between the PCB and the `3mm Clear acrylic back cover` |
+| ![M4 Hex Nut Nylon](./parts/M4_Hex_Nut_Nylon.png) | 8 | <h4>M4 Hex Nut Nylon</h4> |
+| ![M3x12 Machine Screw](./parts/M3x12_Machine_Screw.png) | 4 | <h4>M3x12mm Black Machine Screw</h4> |
 | ![M3 Nut](./parts/M3_Nut.png) | 4 | | <h4>M3 Nut</h4> |
+| ![Blue aluminium lid](./parts/aluminium_lid.jpg) | 1 | <h3>NEW</h3><h4> 3mm Blue aluminium lid</h4> |
 
 ## Acrylic parts
 
@@ -100,6 +101,5 @@ If any of the following acrylic parts, especially the clear parts, appear white 
 | ![White text/decals on Black facia over transparent red filter](./parts/new_facia_and_filter.jpg) | 1 | <h3>NEW</h3><h4> 3.0mm White text/decals on Black facia over a transparent red filter</h4> |
 | ![Black acrylic LED/switch masking plate](./parts/switch_masking_plate.jpg) | 1 | <h4>3mm Black acrylic LED/switch masking plate</h4> |
 | ![Clear acrylic back cover](./parts/back_cover.jpg) | 1 | <h4>3mm Clear acrylic back cover</h4> |
-| ![Blue aluminium lid](./parts/aluminium_lid.jpg) | 1 | <h3>NEW</h3><h4> 3mm Blue aluminium lid</h4> |
-| ![LED Spacer/Switch Alignment guide](./parts/LED_Spacer_Rocker_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED spacer & switch alignment guide (8 slots)</h4> |
-| ![LED alignment guide](./parts/LED_Alignment_Tool.png) | 1 | <h4>3mm Black acrylic LED alignment guide (8 round holes)</h4> |
+| ![LED Spacer/Switch Alignment guide](./parts/LED_Spacer_Rocker_Alignment_Tool.png) | 1 | <h4>2mm Black/White/Clear acrylic LED spacer & switch alignment guide (8 slots)</h4> |
+| ![LED alignment guide](./parts/LED_Alignment_Tool.png) | 1 | <h4>2mm Black/white/Clear acrylic LED alignment guide (8 round holes)</h4> |
