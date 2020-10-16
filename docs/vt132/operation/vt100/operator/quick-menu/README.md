@@ -60,6 +60,12 @@ The available actions are:
 - **Reboot** - equivalent to pressing the H/W Reset button in the VT132. Reboots the ESP32 resetting the terminal and the modem
 - **Clear NVR** - completely erases all settings from the NVR for both the terminal and the modem
 
+## New: Display menu
+
+- **Lines of history** - selects the number of lines stored (or disable) the scroll history
+- **CRT saver** - selects the timeout for (or disable) the screen saver
+- **Clear history** - an action that clears the contents of the scroll history, same as `<Shift>-C` when in the scroll history
+
 ## Terminal type menu
 
 ![QuickMenu Terminal](./QM_Personalities.jpg)
@@ -122,6 +128,16 @@ This is most useful when visiting Bulletin Board Systems (BBS) that expect to wo
   - `[ ]` - unselected `LOCAL`, the terminal is disconnected from the UART and will
     - echo "locally" if it is not connected to the modem
     - connect directly to the modem if set (see: [Modem menu](#modem-menu))
+
+## Save settings (root menu)
+
+- Save all settings to NVR for the terminal
+- equivalent to pressing `<Shift>-S` in any of the **Setup** screens
+
+## Restore settings (root menu)
+
+- Restore all settings from NVR for the terminal
+- equivalent to pressing `<Shift>-R` in any of the **Setup** screens
 
 ## Exit (root menu)
 
