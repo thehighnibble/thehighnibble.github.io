@@ -9,7 +9,7 @@ footer: The High Nibble @TheHighNibble  │  Copyright © The High Nibble Pty Lt
 ---
 <div class="hero">
 <p class="action">
-    <a class="nav-link action-button action-button2" href="/vt132/">VT132 Designed for RC2014 details →</a>
+    <a class="nav-link action-button action-button2" href="/vt132/">VT132 details →</a>
 </p>
 </div>
 <br/>
