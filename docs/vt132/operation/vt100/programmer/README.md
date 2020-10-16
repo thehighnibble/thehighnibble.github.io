@@ -54,7 +54,7 @@ The `BREAK` key function **is not implemented** by the VT132.
 
 ### Full Duplex
 
-The VT132 supports baud rates from 300 to 115200 and the Transmit and Receive speed must be the same. The available speeds are `300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200` corresponding to the speeds supported by most RC2014 serial interface cards based on the available clock settings.
+The VT132 supports baud rates from 300 to 115200 and the Transmit and Receive speed must be the same. The available speeds are `300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200` corresponding to the speeds supported by most serial interface cards based on the available clock settings.
 
 ## [Terminal Control Commands](https://www.vt100.net/docs/vt100-ug/chapter3.html#S3.3)
 

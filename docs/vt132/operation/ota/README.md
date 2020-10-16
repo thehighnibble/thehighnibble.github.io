@@ -13,7 +13,7 @@ From the modem prompt/command line you can type `AT$` for help to be reminded of
 :::
 
 ::: tip
-You can connect to the modem from your RC2014 using a terminal program such as **KERMIT** or **QTERM**
+You can connect to the modem from your system using a terminal program such as **KERMIT** or **QTERM**
 
 OR
 

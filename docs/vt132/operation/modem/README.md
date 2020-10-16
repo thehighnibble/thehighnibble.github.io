@@ -12,7 +12,7 @@ Instead it is designed to provide an MVP (minimum viable product) providing a mo
 
 Although later standardized by the TIA/EIA, in the early days of dialup modems the **'AT' command set** of the Hayes SmartModem was copied by other modem makers and became a de-facto standard or rather a **convention**, as other modem manufacturers took the liberty to alter and extend the 'AT' command set. The same applied to the so called **'S' Registers** where settings and configuration are made and saved to non-volatile storage (NVS).
 
-See [Hardware Configuration](../#hardware-configuration) for details on connecting from a UART on your RC2014 to the modem.
+See [Hardware Configuration](../#hardware-configuration) for details on connecting from a UART on your system to the modem.
 
 ## 'AT' Commands
 
