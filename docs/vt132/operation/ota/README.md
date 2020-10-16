@@ -57,7 +57,31 @@ A full description of the OTA Update commands and their output will be added her
 
 ## Update to a version from a local web server
 
-TBA
+If you have a firmware image file or if you wish to install a firmware image **other** than the one tagged *latest* on the [GitHub firmware repository](https://github.com/thehighnibble/vt132/releases) you can stage that file on a local web server (ie. on the same network as the VT132 connects over Wi-Fi) and use a process similar to the one above, but with one extra command to provide the local address of the firmware image.
+
+::: tip
+The standard firmware image file is named `VT132.bin`
+:::
+
+Eg. With the firmware image file `VT132.bin` staged on the root of the "local" web server running on **port** `5500` with **DNS name** `mylocalserver` and **IPv4 address** of `192.168.1.20` proceed as follows:
+
+From the modem prompt/command line:
+
+- `AT+W+` or `AT+W=ssid,pwd` to join your Wi-Fi network
+- `AT+U$` to see what firmware version you are currently running [optional]
+- `AT+U=url_for_local_file` to set the URL to the file on the local web server, eg.:
+  - `AT+U=http://mylocalserver:5500/VT132.bin` if using the DNS name, or
+  - `AT+U=http://192.168.1.20:5500/VT132.bin` if using the IPV4 address
+- `AT+U?` to query the local web server for the firmware image specified
+- should report `V1.0.0` (or similar)
+  - following the version number, a self explanatory indicator of `[OLDER]`, `[SAME]` or `[NEWER]` will be shown
+- `AT+U^` or `AT+U!` to upgrade or *force* the upgrade, depending on your current version
+  - `AT+U^` will only work if the queried firmware image is `[NEWER]`
+  - during the upgrade process a series of full-stops `...` will be output to indicate progress with the upgrade
+  - when the upgrade completes downloading the new firmware image into flash memory the modem will respond with an `OK`
+- `AT+U$` to see what firmware version you will boot next [optional]
+- H/W reset after success with the download & flash
+  - the new firmware image will only be run following a H/W reset or reboot
 
 ## For the security conscious
 
