@@ -83,6 +83,15 @@ From the modem prompt/command line:
 - H/W reset after success with the download & flash
   - the new firmware image will only be run following a H/W reset or reboot
 
+## Update to a version using the ESP-IDF `epstool.py` utility
+
+Instructions for flashing the firmware using the **ESP-IDF** `esptool.py` utility are included with the firmware downloadable from the [GitHub firmware repository](https://github.com/thehighnibble/vt132/releases)
+
+If using this process to upgrade:
+- download the `FIRMWARE.zip` file
+- unzip the file
+- read the `FLASHING.md` file for instructions
+
 ## For the security conscious
 
 ::: danger For the security conscious
