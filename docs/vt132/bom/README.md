@@ -4,6 +4,18 @@ sidebar: auto
 
 # VT132 Bill of Materials (Draft)
 
+::: danger Note:
+The BOM is yet to be updated to include details of 
+
+- the **Stand Alone edition**
+- the USB interface for USB-HID keyboard support
+
+The parts listed below are common for both editions with the exception of:
+
+- the Through Hole (THT) headers supplied
+- the Printed Circuit Board (PCB)
+:::
+
 ::: tip
 To see the images in full size you can right-click on an image and `Open Image in New Tab`
 :::
