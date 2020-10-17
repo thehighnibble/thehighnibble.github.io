@@ -151,7 +151,8 @@ There is a 12-pin (6 x 2) header under the MAX3232 ICs labelled `Patch` that mus
 | 9-11 | Modem | CTS | cross-over |
 | 10-12 | Modem | RTS | cross-over |
 
-TBA
+<img src="./SA_Patch_Straight.jpg" width="360" alt="Stand Alone Patch stright-through">
+<img src="./SA_Patch_Cross.jpg" width="360" alt="Stand Alone Patch cross-over">
 
 #### VT132 Stand Alone schematic
 
