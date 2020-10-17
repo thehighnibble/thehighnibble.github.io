@@ -62,9 +62,13 @@ The available actions are:
 
 ## New: Display menu
 
+![QuickMenu Display](./QM_History.jpg)
+
 - **Lines of history** - selects the number of lines stored (or disable) the scroll history
 - **CRT saver** - selects the timeout for (or disable) the screen saver
 - **Clear history** - an action that clears the contents of the scroll history, same as `<Shift>-C` when in the scroll history
+
+![QuickMenu CRT Saver](./QM_CRT_Saver.jpg)
 
 ## Terminal type menu
 
