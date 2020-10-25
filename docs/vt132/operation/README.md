@@ -66,7 +66,7 @@ The USB daughter board (Red PCB) for the USB keyboard interface is supplied with
 - USB Type-A connector
 - 6-pin male header, for connecting the USB daughter board (Red PCB) to the main VT132 PCB (White: RC2014, Black: Stand Alone)
 
-I recommend you watch the [YouTube video](#tba) on assembling and attaching the USB interface for the best results.
+I recommend you watch the [YouTube video](https://youtu.be/02tlehBJUas) on assembling and attaching the USB interface for the best results.
 
 ## Hardware configuration
 
