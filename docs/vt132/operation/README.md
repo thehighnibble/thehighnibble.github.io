@@ -126,10 +126,23 @@ There are significantly more hardware configuration options on the **VT132 Stand
 
 There are six (6) different 2-pin, horizontal headers on the PCB for selecting power options.
 
-TBA.
-
 ::: danger
-In most configurations only one (1) of these jumpers should be in place. Only connect more than one (1) if you have consulted the [schematic diagram](#vt132-stand-alone-schematic) and made an informed decision to configure power in a specific configuration. 
+In most configurations only one (1) of these jumpers should be in place. Only connect more than one (1) if you have consulted the [schematic diagram](#vt132-stand-alone-schematic) and made an informed decision to configure power in a specific configuration.
+
+If you use `JP6` to bypass the LM7805 5VDC linear power regulator, it is your responsibility to ensure you are providing regulated +5VDC to the VT132.
+:::
+
+- `JP6` **(5V Select)** bypasses the LM7805 5VDC linear power regulator and should **only** be put in place if you are supplying **regulated +5VDC** to the VT132 via the DC Barrel Jack or one of the EIA serial connectors for the modem (DCE) or the terminal (DTE)
+- `JP5` **(FTDI Power Vcc)** allows +5VDC power to be taken (or given) over the 6-pin **FTDI Program** header
+- `JP4` **(5V Vcc)** allows +5VDC power to be taken (or given) over the 6-pin **Modem TTL** header
+- `JP3` **(5V Vcc)** allows +5VDC power to be taken (or given) over the 6-pin **Terminal TTL** header
+- `JP2` **(+VDC)** allows unregulated power to be taken (or given) over the 3x2-pin **DCE - EIA Modem** header or the Modem DB25/DE9 RS-232 serial connectors
+- `JP1` **(+VDC)** allows unregulated power to be taken (or given) over the 3x2-pin **DTE - EIA Terminal** header or the Terminal DB25/DE9 RS-232 serial connectors
+
+::: tip
+The supplied DC Barrel Jack and the PCB layout is configured for **center-pin-positive**.
+
+For the DB25/DE9 RS-232 serial connectors, **Pin 9** (normally reserved in the RS-232 standard) can be used for providing unregulated power to the VT132 and is passed through the LM7805 5VDC linear power regulator unless this is bypassed by `JP6`.
 :::
 
 #### Serial communications configuration
