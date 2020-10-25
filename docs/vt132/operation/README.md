@@ -156,7 +156,7 @@ There is a 12-pin (6 x 2) header under the MAX3232 ICs labelled `Patch` that mus
 
 #### VT132 Stand Alone schematic
 
-TBA
+[<img src="/img/VT132-SA.png" width="360" alt="VT132 Stand Alone Schematic">](/img/VT132-SA.pdf)
 
 ### USB daughter board (Red PCB) for USB-HID keyboards
 
