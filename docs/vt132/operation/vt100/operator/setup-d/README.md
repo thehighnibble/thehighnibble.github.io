@@ -33,7 +33,7 @@ The [DEC National Replacement Character Set (NRCS)](https://en.wikipedia.org/wik
 
 - a standard 7-bit US-ASCII character set, with
 - a maximum of 12 standard US-ASCII characters substituted with language/country specific characters for a nominated country
-- (currently implemented for UK (British), DE (German) and IT (Italian) on the VT132, with more countries to follow)
+- (currently implemented for UK (British), FR (French), DE (German), IT (Italian) and SE (Swedish) on the VT132, with more countries to follow)
 - international character support for applications that are not 8-bit clean and that only support 7-bit ASCII
 
 The UK is the simplest of these with only the pound symbol `£` substituted for the US-ASCII `#` symbol at ASCII 35 (dec) or 0x24 (hex).
@@ -48,6 +48,23 @@ Only one country can be active for NRCS at a time. Changing the country will app
 
 PC keyboard scancode to character set mappings are provided for the same country/languages that the VT132 currently support with NRCS (see next section).
 
+Includes dead-key support (country specific) for composed characters with accent diacritics ` ´ ^ ¨ ~ (MCS 8-bit character set and CP437)
+
+- à á â ä ā À Á Â Ä Ã
+- è é ê ë È É Ê Ë
+- ì í î ï Ì Í Î Ï
+- ò ó ô ö õ Ò Ó Ô Ö Õ
+- ù ú û ü Ù Ú Û Ü
+- ñ Ñ
+- ÿ Ÿ
+
+note: not all keyboard layouts support all dead-keys
+
+pressing a dead-key twice, or followed by `<space>`, will output the accent character if printable
+` ^ ~ are printable as standalone characters
+´ ¨ are not printable as standalone characters
+see: [https://en.wikipedia.org/wiki/Dead_key]() for further information on the use of dead-keys
+
 ## Selecting character set and keyboard support
 
 Pressing `7` on the keyboard toggles between the two available character set modes
@@ -59,8 +76,10 @@ Pressing `6` on the keyboard selects the country/language for both NRCS mode and
 
 - US
 - UK
+- FR (French)
 - DE (German)
 - IT (Italian)
+- SE (Swedish)
 
 Moving the cursor left or right with the `<left>` and `<right>` cursor control keys, `<tab>` or `<cr>` enables you to choose the language/country you want to select.
 

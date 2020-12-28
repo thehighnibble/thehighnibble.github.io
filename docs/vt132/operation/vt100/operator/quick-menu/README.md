@@ -115,7 +115,11 @@ This is most useful when visiting Bulletin Board Systems (BBS) that expect to wo
 
 ![QuickMenu Keyboard](./QM_Keyboards.jpg)
 
-- **Keyboard language** - selects between the four (4) keyboard languages also selectable from **Setup-D**
+- **Keyboard language** - selects between the six (6) keyboard languages also selectable from **Setup-D**
+
+- **Enable dead keys** - enable/disable dead-keys (enabled by default) (see: [International Keyboard Support](/vt132/operation/vt100/operator/setup-d/#international-keyboard-support))
+  - `[ ]` - disabled, dead-key support is disabled to avoid conflicts with accent keys
+  - `[X]` - enabled (default), dead-key support is enabled
 
 ## Modem menu
 

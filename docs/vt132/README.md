@@ -97,7 +97,7 @@ See each section below for details.
   - original DEC Special Graphics overlay font (inc. line drawing characters)
   - original DEC VT220 Multinational Character Set (MCS) font (8-bit)
   - DEC National Replacement Character Set (NRCS) support (7-bit) (from VT220)
-    - implemented for US/UK/Germany/Italy, other countries to follow
+    - implemented for US/UK/French/German/Italian/Swedish, other countries to follow
   - PC/VGA Code Page 437 font for ANSI.SYS compatibility
     - supports DEC Special Graphics mapping to CP437
     - supports NRCS mapping to CP437
@@ -115,12 +115,13 @@ See each section below for details.
   - additional character ROM (NRCS and MCS fonts)
 - PC 104/105 key keyboard, either one of (you must specify which you want when ordering):
   - PS/2 keyboard (Mini-DIN 6, PS/2 connector)
-    - supports keyboard layouts for US/UK/Germany/Italy, other countries to follow
-  - **New:** USB-HID keyboard (standard USB Type-A socket)
+    - supports keyboard layouts for US/UK/French/German/Italian/Swedish, other countries to follow
+      - including dead-key support for composed characters with accent diacritics ` ´ ^ ¨ ~ (MCS 8-bit character set and CP437) - country specific
+  - USB-HID keyboard (standard USB Type-A socket)
     - supports **wired** and **wireless** keyboards but **not** Bluetooth
     - does **not** support use of a USB hub or keyboards with integrated hubs eg. the Raspberry Pi keyboard
-    - currently only support for US keyboard layout, other countries to follow
-      - (other country's keyboards will work but only standard 7-bit ASCII characters are generated)
+    - supports keyboard layouts for US/UK/French/German/Italian/Swedish, other countries to follow
+      - including dead-key support for composed characters with accent diacritics ` ´ ^ ¨ ~ (MCS 8-bit character set and CP437) - country specific
 - implements user programmable answer back as per VT100
 - implements a physical buzzer on the PCB for
   - keyclick
