@@ -44,6 +44,21 @@ The `PF1-PF4` keys are mapped to `F1-F4`.
 
 The `F5-F12` keys transmit ANSI escape sequences for these additional function keys *(enhancement)*.
 
+- Also generates escape codes for function keys `<F11>` to `<F20>` using `<Shift><F1>` through `<Shift><F10>`
+- this makes the physical `<F11>` and `<Shift><F1>` the same, and also `<F12>` and `<Shift><F2>`
+- escape codes transmitted follow the VT220 format:
+  - F11 ESC [ 23 ~ (as existing)
+  - F12 ESC [ 24 ~ (as existing)
+  - F13 ESC [ 25 ~
+  - F14 ESC [ 26 ~
+  - F15 ESC [ 28 ~
+  - F16 ESC [ 29 ~
+  - F17 ESC [ 31 ~
+  - F18 ESC [ 32 ~
+  - F19 ESC [ 33 ~
+  - F20 ESC [ 34 ~
+  - The "skips" are intentional (skipping 27 and 30) and as per the DEC VT terminal specs.
+
 The `LINEFEED` key does not exist on a PC keyboard but is equivalent to pressing `<Ctrl><J>`.
 
 The `NO SCROLL` key is mapped to the `<Scroll Lock>` key on a PC keyboard and is equivalent to pressing `<Ctrl><S>` and `<Ctrl><Q>` alternatively.
