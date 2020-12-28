@@ -29,7 +29,7 @@ From the modem prompt/command line:
 - `AT+W+` or `AT+W=ssid,pwd` to join your Wi-Fi network
 - `AT+U$` to see what firmware version you are currently running [optional]
 - `AT+U?` to query GitHub for the latest firmware image
-- should report `V1.1.1` (or similar)
+- should report `V1.2.0` (or similar)
   - following the version number, a self explanatory indicator of `[OLDER]`, `[SAME]` or `[NEWER]` will be shown
 - `AT+U^` or `AT+U!` to upgrade or *force* the upgrade, depending on your current version
   - `AT+U^` will only work if the queried firmware image is `[NEWER]`
@@ -73,7 +73,7 @@ From the modem prompt/command line:
   - `AT+U=http://mylocalserver:5500/VT132.bin` if using the DNS name, or
   - `AT+U=http://192.168.1.20:5500/VT132.bin` if using the IPV4 address
 - `AT+U?` to query the local web server for the firmware image specified
-- should report `V1.1.1` (or similar)
+- should report `V1.2.0` (or similar)
   - following the version number, a self explanatory indicator of `[OLDER]`, `[SAME]` or `[NEWER]` will be shown
 - `AT+U^` or `AT+U!` to upgrade or *force* the upgrade, depending on your current version
   - `AT+U^` will only work if the queried firmware image is `[NEWER]`
