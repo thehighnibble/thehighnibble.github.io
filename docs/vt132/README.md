@@ -132,12 +132,12 @@ See each section below for details.
   - complies with ANSI escape code selection
   - use selectable default text and background colours via additional Set-up C screen
   - user selectable for standard ANSI or VGA colour palette
-- **NEW:** implements a **scroll history buffer** with a 100, 1000 or 5000 line capacity selectable
+- implements a **scroll history buffer** with a 100, 1000 or 5000 line capacity selectable
   - activated by *LeftAlt-Page Up* key-press
   - scroll history can be stepped through page-at-a-time (*Page Up*/*Page Down* keys)
   - or line-by-line (*Up*/*Down* keys)
   - and can be cleared on demand (*Shift-C* keys)
-- **NEW:** implements a **CRT Saver** (screen saver) function with 10 second, 1, 5, 10, 20 or 30 minute selectable timeout
+- implements a **CRT Saver** (screen saver) function with 10 second, 1, 5, 10, 20 or 30 minute selectable timeout
 - full VT100 style Set-up screen implementation
   - activated by *Alt-SysReq* key-press (usually *Alt-PrintScreen*)
   - Set-up A (native as per VT100 with minor modifications)
