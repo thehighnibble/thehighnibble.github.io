@@ -184,6 +184,12 @@ TBA
 | `ESC [ s` | SCOSC | Save current cursor state (position and attributes) | Does the same as `ESC 7` |
 | `ESC [ u` | SCORC | Restore current cursor state (position and attributes) | Does the same as `ESC 8` |
 
+### XTERM Control Sequences
+
+| Control Sequence | Mnemonic | Action Taken | Notes |
+| ---------------- | -------- | ------------ | ----- |
+| `ESC [ Ps b` | REP | Repeat the preceding graphic character Ps times | otherwise ignored |
+
 ### Original VT52 Control Sequences
 
 | Control Sequence | Action Taken |
