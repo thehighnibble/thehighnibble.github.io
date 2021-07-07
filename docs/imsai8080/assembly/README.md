@@ -49,7 +49,7 @@ This step-by-step assembly guide refers to the **front** and **back** of the PCB
 :::
 
 ::: tip
-There is a [play list of videos on YouTube](https://www.youtube.com/playlist?list=PLADkYVZqAxdOlpkLc3HC-EbbttXevZ3-B) that demonstrate this step-by-step assembly sequence and includes additional tips for successful assembly.
+There is a [play list of videos on YouTube](https://www.youtube.com/playlist?list=PLADkYVZqAxdOlpkLc3HC-EbbttXevZ3-B) that demonstrates this step-by-step assembly sequence and includes additional tips for successful assembly.
 :::
 
 ## Unpacking and checking against the BOM
@@ -148,7 +148,7 @@ Before continuing, remove both the microSD Memory Card from the socket and the E
 ### Other Resistors, Capacitors, IC sockets & Miscellaneous Parts
 
 ::: warning Note
-The transistor `Q1` and the accompanying Resistor `R13` are **optional**. They are a convenience for flashing new firmware on the ESP32-PICO-KIT over USB without removing it from the IMSAI 8080esp PCB. However, on their own they do not provide the whole solution and two extra jumper wires are required to be directly soldered to component leads on the ESP32-PICO-KIT board (details to follow). The simple alternative is to remove the ESP32-PICO-KIT  from the IMSAI 8080esp PCB before flashing new firmware over USB, or more simply use the drag-and-drop, over-the-air (OTA) firmware update procedure via the Desktop UI (details to follow).
+The transistor `Q1` and the accompanying Resistor `R13` are **optional**. They are a convenience for flashing new firmware on the ESP32-PICO-KIT over USB without removing it from the IMSAI 8080esp PCB. However, on their own they do not provide the whole solution as two extra jumper wires are required to be directly soldered to component leads on the ESP32-PICO-KIT board (details to follow). The simple alternative is to remove the ESP32-PICO-KIT  from the IMSAI 8080esp PCB before flashing new firmware over USB, or more simply use the drag-and-drop, over-the-air (OTA) firmware update procedure via the Desktop UI (details to follow).
 :::
 
 | Step | Parts | Location | Notes |
@@ -287,7 +287,7 @@ Time for another cup of tea if you've gotten this far.
 ## Full Front Panel Stack
 
 ::: warning
-Having successfully gotten this far, the next section can go very smoothly if you take care or it can become very fiddly and frustrating if you rush or end up separating the `PCB` and the `3mm Black acrylic LED/switch masking plate`
+Having successfully gotten this far, the next section can go very smoothly if you take care, or it can become very fiddly and frustrating if you rush and end up separating the `PCB` and the `3mm Black acrylic LED/switch masking plate`
 :::
 
 ::: tip
