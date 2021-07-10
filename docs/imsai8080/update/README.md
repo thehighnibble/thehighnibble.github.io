@@ -19,7 +19,7 @@ The worst that can happen is that you will need to install the **Espressif** [es
 ::: tip
 It is recommended to always use the release marked as the **Latest Release** unless you have a specific reason not to.
 
-The current release is [October 2019 Release - rel-2](https://github.com/thehighnibble/firmware/releases/tag/v1.5.0) (v.1.5.0)
+The latest release is the [July 2021 Release](https://github.com/thehighnibble/firmware/releases/latest) (v.1.7.0)
 :::
 
 ## Updating the Firmware
@@ -73,19 +73,19 @@ The firmware version number is reported in two places:
 1. To the system console (UART0 - USB or RS232-1 at 115200 baud) early in the boot process:
 
 <pre><code><span style="color: #00FF00;">I (336) cpu_start: Application information:
-I (341) cpu_start: Project name:     imsaisim_esp32
-I (346) cpu_start: App version:      v1.5.0
-I (351) cpu_start: Compile time:     Oct 24 2019 17:51:26
-I (357) cpu_start: ELF file SHA256:  8658a754912594d1...
-I (363) cpu_start: ESP-IDF:          v4.1-dev-370-gbf9dd414d
+I (366) cpu_start: Project name:     imsaisim_esp32
+I (372) cpu_start: App version:      v1.7.0
+I (377) cpu_start: Compile time:     Jul  5 2021 14:21:20
+I (383) cpu_start: ELF file SHA256:  6e2f6503e36a286f...
+I (389) cpu_start: ESP-IDF:          v4.0.2-4-g877a28e05
 </span></code></pre>
 
-In this example you can see the `App version:   v1.5.0` indicating that the system is running the `v1.5.0` firmware.
+In this example you can see the `App version:   v1.7.0` indicating that the system is running the `v1.7.0` firmware.
 
 2. The `SYS:` System (host) virtual device on the *desktop UI*
 ![SYS:](./SYS_build_version.png)
 
-In this example you can see the `Build version: v1.5.0` indicating that the system is also running the `v1.5.0` firmware.
+In this example you can see the `Build version: v1.5.0` indicating that the system is running the `v1.5.0` firmware.
 
 ### Background - Over The Air (OTA) updates
 

@@ -293,7 +293,7 @@ The solution is to mount the microSD card on a PC and edit the **boot.conf** fil
 
 ### Default boot.conf
 
-The default configuration, as shipped (in Release v1.6.0) is a follows:
+The default configuration, as shipped (in Release v1.7.0) is a follows:
 
 ```conf
 #Network configuration
@@ -303,7 +303,7 @@ HOSTNAME=imsai8080
 PORT=80
 SSID=mySSID
 PASSWORD=myPASSWORD
-#Bootrom configutation
+#Bootrom configuration
 ROM1=mpu-a-rom.hex
 ROM2=mpu-a-vio-rom.hex
 ROM3=basic4k.hex
@@ -315,9 +315,16 @@ ROM6=memon80.hex
 #UART1=230400,cs8
 #Harddisk image
 HARDDISK=hd-ws4
-#performance parameters
+#Performance parameters
 #SIO1.netsrv.buffer_delay=33
 #LPT.netsrv.buffer_delay=33
+#Modem initialization string. Example:
+#MODEM.init=ATS0=1S15=1&A1
+#SIO-2 default port mappings
+#SIO1.portA.device=WEBTTY,UART0
+#SIO1.portB.device=VIOKBD
+#SIO2.portA.device=MODEM
+#SIO2.portB.device=UART1
 ```
 
 ### Network Configuration
@@ -401,10 +408,48 @@ The *Performance parameters* exist only for the two devices `TTY:` (SIO1) and `L
 They specify a time in milliseconds (ms) during which output to the device will be buffered (up to the next line feed character) and transmitted in a single (websocket) packet. This can greatly improve performance of both the TTY: and LPT: devices. If used, recommended optimal settings are:
 
 ```conf
-#performance parameters
+#Performance parameters
 SIO1.netsrv.buffer_delay=33
 LPT.netsrv.buffer_delay=33
 ```
+
+### Modem initialization string
+
+This string will be processed by the 'AT' Modem when it is initialised and reset (ie. with the command `ATZ`)
+
+For example, to initialize the modem for:
+- auto-answer after 1 ring (`ATS0=1`)
+- enable telnet protocol (`ATS15=1`)
+- enable answer mode (ie. listen) in "daemon" mode (`AT&A1`)
+- with the commands conncatenated into a single command string `ATS0=1S15=1&A1`
+
+add the following line:
+
+```conf
+#Modem initialization string
+MODEM.init=ATS0=1S15=1&A1
+```
+
+### SIO-2 port mappings
+
+A HAL (Hardware Abstraction Layer) enables mapping of character mode devices to the four (4) virtual SIO-2 serial ports
+- the SIO port mapping configuration is loaded and reported to the debug console (UART0/USB) when the IMSAI8080esp is started/powered-on
+- the SIO port mapping configuration is also displayed in the SYS: virtual device on the desktop UI
+- when no SIO port mapping configuration is specified, a stanard configuration is the default, and reported as follows:
+
+```config
+SIO PORT MAP:
+SIO1.portA = WEBTTY UART0  
+SIO1.portB = VIOKBD  
+SIO2.portA = UART1  
+SIO2.portB = MODEM
+```
+
+the purpose of the HAL is to:
+- simplify the addition of new character mode devices in future
+eg. additional hardware UART; network sockets; additional telnet listeners; new virtual peripherals on the desktop UI
+- enable the user to assign specific devices to each of the four (4) virtual SIO-2 serial ports
+- details of configuring the SIO port mappings will be published soon
 
 ## System.conf file
 
@@ -416,27 +461,45 @@ This is a legacy configuration file, maintained for source code compatibility wi
 
 ### SIO flags
 
-The *SIO flags* effect the behavior of the the two *virtual* SIO UART ports that are mapped to *physical* UARTs on the ESP32.
+The **SIO flags** affect the behavior of the the two *virtual* SIO serial ports that are (by default) mapped to *physical* UARTs on the ESP32.
 
-These two *virtual* UART devices can:
+These two *virtual* serial ports can:
 
 * force upper case
 * strip the parity bit (the MSB in each character byte) - the default for the CP/M console (SIO1)
 * drop nulls
+* set a *virtual* baud rate (independent of the *physical* UARTs baudrate - the lower rate will determine the actual speed)
 
-The function is **enabled** by setting the flag value to **1** or **disabled** with a value of **0** (zero)
+The functions are **enabled** by setting the flag value to **1** or **disabled** with a value of **0** (zero - the default)
+
+If the *virtual* baud rate is set to 0 (zero) then no rate limit is applied by the *virtual* SIO serial port 
+
+For example:
 
 ```config
-# SIO 1, Ports 2/3 connected to the first UART0 (TTY:)
-sio1_upper_case		0
-sio1_strip_parity	0
-sio1_drop_nulls		1
+# SIO 1 Channel A, Ports 2/3 connected to UART0/USB/RS232-1 (default)
+sio1a_upper_case		0
+sio1a_strip_parity		1
+sio1a_drop_nulls		1
+sio1a_baud_rate			9600
 
-# SIO 2, Ports 34/35, connected to the second UART1 (UC1:)
-sio2_upper_case		0
-sio2_strip_parity	0
-sio2_drop_nulls		1
+# SIO 2 Channel A, Ports 34/35, connected to UART1/RS232-2 (default)
+#sio2a_upper_case		0
+#sio2a_strip_parity		1
+#sio2a_drop_nulls		1
+sio2a_baud_rate			19200
 ```
+
+:::tip
+If you require **8-bit clean** communications, for example: if using protocols like *xmodem*, then all of **upper case**, **strip the parity bit** and **drop_nulls** should be **disabled**
+
+eg.
+```config
+sio1a_upper_case		0
+sio1a_strip_parity		0
+sio1a_drop_nulls		0
+```
+:::
 
 ### RAM size
 
