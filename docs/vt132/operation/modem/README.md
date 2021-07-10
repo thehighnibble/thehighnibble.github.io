@@ -68,11 +68,14 @@ Each command is explained in the following table.
 | +++ | Escape Sequence | When connected and in **Data Mode** the *Escape Sequence* will return to **Command Mode**. The `+++` *Escape Sequence* is only recognised if surrounded by a guard interval of 1 second ie. there must be a one second pause before and after entering `+++` or it will not be recognised but simply treated as part of the data stream |
 | **O** | Return Online | When connected and in **Command Mode** `ATO` will return to **Data Mode**. If not connected the modem will respond `NO CARRIER` |
 | **H** | Hangup | When connected and in **Command Mode** `ATH` will close the connection. If a connection is closed the modem will respond `HANGUP` |
-| **&A** | Enable Answer mode | Unless `AT&A` is entered the modem will not respond to requests for incoming connections. See [Answer Mode](#answer-mode) below for details |
+| **&A** or **&A0**  | Enable Answer mode (interactive) | Unless `AT&A` is entered the modem will not respond to requests for incoming connections. See [Answer Mode](#answer-mode) below for details. **Interactive:** Displays `RING` & `CONNECTED` responses (if enabled). Allows the interrupt sequence `+++` to return the Modem to command mode from data mode |
+| **&A1**  | Enable Answer mode (daemon) | Unless `AT&A` is entered the modem will not respond to requests for incoming connections. See [Answer Mode](#answer-mode) below for details. **Daemon:** Suppresses 'AT' command echo and responses (sets `ATE0` & `ATQ1`). Ignores the interrupt sequence `+++` preventing the Modem from returning to command mode from data mode|
 | **A** | Answer | When an incoming connection request is indicated by the modem responding `RING` the request can by manually accepted with the `ATA` command. If the connection is successful the modem will enter **Data Mode** |
 | **Sn** | Select current register | Select register *n* as the current 'S' register |
 | **?** | Query current register | The modem will respond with the value of the current 'S' register. If no register has been selected the default is zero (0). As commands can be concatenated it is normal to append this to the `Sn` command to query a specific register eg. `ATS15?` will query the value of 'S' Register 15 |
 | **=r** | Set current register | Sets the value of the current 'S' register to *r*. If no register has been selected the default is zero (0). As commands can be concatenated it is normal to append this to the `Sn` command to set a specific register eg. `ATS15=1` will set the value of 'S' Register 15 to 1 |
+| **En** | Command Echo | Where *n=0* is echo off and *n=1* is echo on; to disable/enable echoing 'AT' commands when in command mode; default is *on* (echo on) |
+| **Qn** | Quiet Results | Where *n=0* is quiet off and *n=1* is quiet on; to show/hide 'AT' command results when in command mode; default is *off* (quiet off) |
 | **&K** or **&K0** | Disable CTS/RTS flow control | The 6-pin modem header provides CTS/RTS lines. `AT&K0` disables their operation. This is the default |
 | **&K1** | Enable CTS/RTS flow control | The 6-pin modem header provides CTS/RTS lines. `AT&K1` enables their operation |
 | **+W?** | Query Wi-Fi Access Point (AP) connection status | Responds with the status of the Wi-Fi connection as a string. The possible responses are listed below under [Wi-Fi Connection Results](#wi-fi-connection-results) |
@@ -217,6 +220,19 @@ The library provides a framework for implementing any Telnet *Option*. So if the
 ## Answer Mode
 
 Listening for incoming TCP/IP socket connections is **not enabled** by default.
+
+:::tip Note
+Changes to the `AT&A` command include: See ['AT' Command Summary Table](#at-command-summary-table) above.
+
+- `AT&A0` is equivalent to `AT&A` for **interactive** command mode use (as below)
+  - Displays `RING` & `CONNECTED` responses (if enabled)
+  - Allows the interrupt sequence `+++` to return the Modem to command mode from data mode
+- `AT&A1` is a new **daemon** mode - this mode avoids a race condition when the 'AT' Modem is used, for example, as the CP/M console device CON: and allows the Modem to be used to provide remote access to the console eg. from a telnet client
+  - Suppresses 'AT' command echo and responses (sets `ATE0` & `ATQ1`).
+  - Ignores the interrupt sequence `+++` preventing the Modem from returning to command mode from data mode
+  - Typically would be executed from a modem initialisation string
+
+:::
 
 - To **enable** listening for incoming TCP/IP socket connections you must manually enter `AT&A` to *Enable Answer Mode*.
 - Answer Mode will remain enabled, and can only disabled by an `ATZ` Soft Reset, hardware reset or power-cycle.
