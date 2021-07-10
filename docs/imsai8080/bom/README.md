@@ -101,5 +101,7 @@ If any of the following acrylic parts, especially the clear parts, appear white 
 | ![White text/decals on Black facia over transparent red filter](./parts/new_facia_and_filter.jpg) | 1 | <h3>NEW</h3><h4> 3.0mm White text/decals on Black facia over a transparent red filter</h4> |
 | ![Black acrylic LED/switch masking plate](./parts/switch_masking_plate.jpg) | 1 | <h4>3mm Black acrylic LED/switch masking plate</h4> |
 | ![Clear acrylic back cover](./parts/back_cover.jpg) | 1 | <h4>3mm Clear acrylic back cover</h4> |
+| ![White acrylic back cover corner reinforcer (Top)](./parts/reinforce_top.png) | 1+3 | <h4>2mm White acrylic back cover corner reinforcer (top edge crucifix slots)</h4> See this [forum post](https://groups.google.com/g/imsai8080esp/c/9mQPFmFZeEU/m/rFo8j5coAwAJ) for details |
+| ![White acrylic back cover corner reinforcer (Bottom)](./parts/reinforce_bottom.png) | 4 | <h4>2mm White acrylic back cover corner reinforcer (bottom side edge crucifix slots)</h4>See this [forum post](https://groups.google.com/g/imsai8080esp/c/9mQPFmFZeEU/m/rFo8j5coAwAJ) for details  |
 | ![LED Spacer/Switch Alignment guide](./parts/LED_Spacer_Rocker_Alignment_Tool.png) | 1 | <h4>2mm Black/White/Clear acrylic LED spacer & switch alignment guide (8 slots)</h4> |
 | ![LED alignment guide](./parts/LED_Alignment_Tool.png) | 1 | <h4>2mm Black/white/Clear acrylic LED alignment guide (8 round holes)</h4> |
