@@ -12,7 +12,7 @@ Digital Equipment Corporation (DEC) experimented with a number of different setu
 
 It was desirable to add a quick access menu for features that you might frequently want to change eg. terminal personality or to turn ANSI.SYS compliance on and off. Also it was desirable to have an easily extensible menu to access new features added to the VT132 over time, without having to add additional VT100 style Setup screens.
 
-The solution was to add a VT510 style popup menu system. The implementation differs slightly to incorporate some more modern UI conventions and keyboard shot-cuts.
+The solution was to add a VT510 style popup menu system. The implementation differs slightly to incorporate some more modern UI conventions and keyboard short-cuts.
 
 - not features can be accessed via the Quick Menu
 - it is mainly for features that can't be accessed through Set-Up menus
@@ -128,6 +128,23 @@ This is most useful when visiting Bulletin Board Systems (BBS) that expect to wo
 - **Enable modem locally** - selects between the two (2) operating modes for the modem
   - `[ ]` - unselected (default), the modem is accessible only via its own UART on the RC2014 Bus pins *TxB/RxB* or via the 6 pin *Modem Part B* header
   - `[X]` - selected, the modem is disconnected from the UART and is available to the VT100 terminal *"locally"* when the terminal is in `LOCAL` mode (see: [On-Line (root menu)](#on-line-root-menu))
+
+- **Enable wi-fi autoconnect** - selects whether the modem autoconnects to the Wi-Fi network during startup
+  - `[ ]` - unselected (default), the modem **does not** autoconnect, `AT+W+` (or similar) is required to connect
+  - `[X]` - selected, the modem **does** autoconnect, equivalent to`AT+W+`
+
+- **Telnet TERM** - allows the TERM environment variable to be edited, see: `AT+T?` and `AT+T=ttt` in the ['AT' Command Summary](/vt132/operation/modem/#at-command-summary-table)
+
+- **Initialization string** - allows the modem initialization string to be edited, this is executed at power-on and reset, including a modem reset by `ATZ`
+
+- **Reset modem** - performs a modem reset as if the command `ATZ` had been peformed, an audible bell will confirm that the modem has been reset
+
+:::tip
+The following three (3) settings, detailed above, are immediately stored to NVR and don't require a further *save setteings* to retain:
+- Enable wi-fi autoconnect
+- Telnet TERM
+- Initialization string
+:::
 
 ## On-line (root menu)
 
