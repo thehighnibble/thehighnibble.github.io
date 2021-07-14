@@ -140,6 +140,25 @@ This feature of the VT132 lets you manually select your preferred default foregr
 
 This way you can make the VT132 appear as a green, amber , white (default) or blue phosphor terminal, or any other colour combination that you prefer.
 
+### Showing the currently loaded DECDLD / DRCS soft font
+
+Pressing `9` on the keyboard changes the codepage to display the presently loaded soft soft and its **Dscs**
+
+The example below shows the DEC APL soft font loaded from a file sourced from the VAX VMS system disks.
+
+![SET-UP-C-DRCS](./SetupC_drcs.jpg)
+
+
+The first row of glyphs does not belong to the soft font, but are the glyphs used to represent characters in **C0** when DEC CRM is enabled.
+
+Any glyphs that are not loaded from a **Down-Line-Loadable Character Set** are shown with a *reverse question mark* - **⸮**
+
+The **Dscs** (character set name) for the soft font, 1 to 3 characters, sprecified by the soft font definition is shown between **square brackets** in the inverse title above the character set. **Dscs=[ @]** in the example above.
+
+::: tip
+The use of soft fonts is beyond the scope of these notes, you should consult the [VT220 Programmers Guide - Chapter 4](https://vt100.net/docs/vt220-rm/chapter4.html#S4.16) for details. 
+:::
+
 ## SET-UP C - advance to next setup screen
 
 On the `SET-UP C` screen, pressing `5` will advance to the [`SET-UP D`](../setup-d/) screen, before returning to the `SET-UP A` screen.
