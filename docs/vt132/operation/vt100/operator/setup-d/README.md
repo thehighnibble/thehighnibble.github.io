@@ -24,7 +24,7 @@ The [DEC Multinational Character Set (MCS)](https://en.wikipedia.org/wiki/Multin
 
 - a standard 7-bit ASCII character set
 - an extended 8-bit ASCII character set including accented characters, currency symbols, and other character glyphs missing from 7-bit ASCII
-- (and is the ancestor of the ISO 8859-1 'Latin 1' codepage)
+- (and is the ancestor of the ISO-8859-1 'Latin 1' codepage)
 - a full MCS 8-bit character set available to all applications that are 8-bit clean
 
 ## DEC National Replacement Character Set (NRCS 7-bit) Support
