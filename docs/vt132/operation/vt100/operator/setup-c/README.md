@@ -27,9 +27,7 @@ The integrated help screen is accessible by pressing the `F1` key as with the ot
 
 ## Codepage Support
 
-Pressing `2` on the keyboard toggles between the two available codepages.
-
-The main purpose of providing [CP437](#pc-code-page-437) support is to allow visiting BBS systems that render menus and ASCII art expecting an ANSI terminal with VGA font support. You may find other uses but for general use this font is not as clear as the [DEC fonts](#dec-vt100-vt220-rom-code-page).
+Pressing `2` on the keyboard toggles between the three available codepages.
 
 ### DEC VT100/VT220 ROM Code Page
 
@@ -49,6 +47,8 @@ The alternate Codepage/Font [CP437](https://en.wikipedia.org/wiki/Code_page_437)
 
 ![SET-UP-C-CP437](./SetupC_cp437.jpg)
 
+The main purpose of providing [CP437](#pc-code-page-437) support is to allow visiting BBS systems that render menus and ASCII art expecting an ANSI terminal with VGA font support. You may find other uses but for general use this font is not as clear as the [DEC fonts](#dec-vt100-vt220-rom-code-page).
+
 ::: tip
 
 When CP437 is selected as the current font, rendering characters from the **DEC Special Graphics** character set will still work as they are automatically mapped to corresponding characters in the CP437 font.
@@ -59,6 +59,21 @@ When CP437 is selected as the current font, rendering characters from the **DEC 
 This codepage **is not available** in 132 column mode.
 :::
 
+### DEC VT220/Latin-1 Code Page
+
+The successor to the **DEC Multinational Character Set**, this code page also known as [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1) was the most commonly used code page prior to the adoption of [Unicode](https://en.wikipedia.org/wiki/Unicode) and is shown here.
+
+![SET-UP-C-LATIN-1](./SetupC_latin1.jpg)
+
+Available for both 80 and 132 column modes.
+
+The main purpose of providing [Latin-1](#dec-vt220-latin-1-code-page) codepage support is if you are connecting to a modern operating system and want an accurate, contemporary codepage.
+
+::: warning
+If **DEC VT220/Latin-1** is currently selected, any reset event or change of font/lines/columns etc... returns to **DEC VT100/VT220 ROM** codepage
+
+This setting is is not currently saved in NVR
+:::
 ## 24/25/30 Line Support
 
 Pressing `3` on the keyboard toggles between 24, 25 & 30 line support. There is a noticeable delay while the VGA signal re-syncs with the changed viewport resolution.
