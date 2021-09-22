@@ -197,3 +197,5 @@ This is a living document and will be updated regularly as required.
 ## ['AT' (Hayes) Serial Modem Operation Manual](modem/)
 
 ## [Over-the-Air (OTA) Firmware Update Guide](ota/)
+
+## [USB Host Controller (UHC) Firmware Update Guide](uhc/)
