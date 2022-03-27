@@ -9,6 +9,11 @@ footer: The High Nibble @TheHighNibble  │  Copyright © The High Nibble Pty Lt
 ---
 <div class="hero">
 <p class="action">
+    <a class="nav-link action-button action-button3" href="/cromemcoZ1/">Cromemco Z-1 Replica details →</a>
+</p>
+</div>
+<div class="hero">
+<p class="action">
     <a class="nav-link action-button action-button2" href="/vt132/">VT132 details →</a>
 </p>
 </div>

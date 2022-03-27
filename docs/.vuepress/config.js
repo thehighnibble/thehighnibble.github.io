@@ -16,6 +16,7 @@ module.exports = {
       nav: [
         { text: 'Home', link: '/' },
         { text: 'IMSAI 8080', link: '/imsai8080/' },
+        { text: 'Cromemco Z-1', link: '/cromemcoZ1/' },
         { text: 'VT132', link: '/vt132/' },
         { text: 'Forum', link: 'http://bit.ly/IMSAI8080esp' }
       ]

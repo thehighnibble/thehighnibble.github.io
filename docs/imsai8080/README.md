@@ -85,18 +85,7 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 The first batches of IMSAI 8080 replicas shipped in June & July 2019.
 
-Production *had* been on hold since then as I had a few other priorities including:
-
-- releasing firmware updates to
-  - enable the second UART and RS232 port
-  - enable configuring the speed and settings for the two UARTS
-  - include harddisk support
-  - add a virtual 'AT' modem with *telnet* support
-  - add an MMU with banked RAM and an RTC (both experimental) for CP/M 3.0 (Plus) support
-- updating the black & white text facia and red filter to be more authentic to the original IMSAI 8080
-- sorting out a new aluminium lid to replace the blue acrylic lid you will seen in videos and pictures
-
-Shipping of kits resumed in November 2019 and now kits are shipping on a regular schedule.
+Please be assured that I am continuing to make kits in 2022 and will continue to do so until I can no longer source the parts.
 
 ### Expression of interest
 
