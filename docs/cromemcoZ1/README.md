@@ -173,9 +173,7 @@ I will only supply one facia with the kit, please don't ask for both.
 
 ## [Step-by-step assembly guide](../imsai8080/assembly/)
 
-## Configuration
-
-TBA
+## [Configuration](configure/)
 
 ## Updating Software
 
