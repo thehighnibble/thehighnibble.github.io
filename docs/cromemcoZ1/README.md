@@ -6,7 +6,7 @@ editLink: false
 
 ## Overview
 
-[Cromemco](https://en.wikipedia.org/wiki/Cromemco) was a notably more successful microcomputer manufacturer them [IMSAI](https://en.wikipedia.org/wiki/IMS_Associates,_Inc.), despite the iconic status of the [IMSAI 8080](https://en.wikipedia.org/wiki/IMSAI_8080).
+[Cromemco](https://en.wikipedia.org/wiki/Cromemco) was a notably more successful microcomputer manufacturer than [IMSAI](https://en.wikipedia.org/wiki/IMS_Associates,_Inc.), despite the iconic status of the [IMSAI 8080](https://en.wikipedia.org/wiki/IMSAI_8080).
 
 Initially producing add-on cards and peripherals for other S-100 computers, notably the [Cyclops Camera](https://en.wikipedia.org/wiki/Cromemco_Cyclops), [Dazzler](https://en.wikipedia.org/wiki/Cromemco_Dazzler) graphics interface and [D+7A](http://www.s100computers.com/Hardware%20Folder/Cromemco/D+7IO/D+7IO.htm) digital & analog I/O interface, Cromemco went on to produce a family of related microcomputers initially powered by the Zilog Z80 microprocessor and then later incorporating both the Z80 and the Motorola 680x0 series of microprocessors.
 
@@ -16,7 +16,7 @@ Their first complete microcomputer was the [Cromemco Z-1](https://deramp.com/dow
 
 From its appearance you might think it is just a rebadged IMSAI 8080, but that is not the case (no pun intended).
 
-Cromemco does seem to have OEM'ed the front panel, chassis & lid for the Z-1 from IMSAI but the internals were all produced by Cromemco, and at its heart was the Cromemco [ZPU](http://www.s100computers.com/Hardware%20Folder/Cromemco/Z80/ZPU.htm) CPU board powered by the Zilog Z80 microprocessor.
+Cromemco OEM'ed the front panel, chassis & lid for the Z-1 from IMSAI but the internals were all produced by Cromemco, and at its heart was the Cromemco [ZPU](http://www.s100computers.com/Hardware%20Folder/Cromemco/Z80/ZPU.htm) CPU board powered by the Zilog Z80 microprocessor.
 
 Although this computer could run CP/M, Cromemco produced their own CP/M (v1.33) like operating system, Cromemco DOS, [CDOS](https://en.wikipedia.org/wiki/Cromemco_DOS). 
 
@@ -38,14 +38,38 @@ on a simulated Z80 microprocessor at 2 or 4 MHz (or "unlimited" at approximately
 
 There is support for up to three (3) UARTs (physical or virtual), so Cromix is configured with three (3) TTY devices and can support up to three (3) simultaneous users since it is a multitasking, multi-user, UNIX-like operating system.
 
+The Cromemco Z-1 machine emulation (Z80PACK, _cromemcosim_) includes the following emulated hardware configuration, following standard Cromemco memory and I/O port mapping:
+- ZPU - Z80 CPU @ 2MHz, 4MHz or Unlimited (~5MHz)
+- 64KB of RAM in Bank 0
+- seven (7) additional banks of 64KB of RAM as Banks 1 to 6
+- 16FDC/64FDC hybrid floppy disk controller
+  - with 4 floppy disk drives (typically A: to D:)
+  - that can behave as 5 1/4" or 8" drives SS/DS, SD/DD
+  - based on the `*.dsk` floppy disk image that is mounted
+  - banked ROM support for RDOS ROMs
+  - the console serial interface (TU-ART) as the TTY: device
+  - Real Time Clock (RTC) (512ms timer)
+- WDI-II winchester (hard) disk interface
+  - with up to 3 hard disk drives (typically hd0:, hd1: & hd2:)
+  - each emulating a 10MB capacity 8" IMI-7710
+  - the WDI-II will work with the CPU set to any speed as it reflects all timing relative to a 4MHz CPU
+- additional TU-ART communications interface with
+  - two (2) additional serial interfaces as the TTY2: and TTY3: devices
+  - two (2) parallel printers as lpt1 (LPT:) and lpt2 devices
+- Dazzler graphics
+- D+7A I/O with joystick input support
+
 Like the IMSAI 8080 replica, the Cromemco Z-1 replica also comes with a web based desktop user interface that provides access to a range of virtual devices including:
 
 - 3 simulated TTY terminals (VT100 &/or Cromemco 3102 Video Terminal compatible)
-- 2 line printers, 80/132 column selectable
+- 1 line printer, 80/132 column selectable
 - 4 simulated 8" floppy disks
 - Cromemco Dazzler graphics interface
-- Cromemco D+7A I/O including JS-1 joystick emulation (from connects USB joystick)
+- Cromemco D+7A I/O including JS-1 joystick emulation (from connected USB joystick)
 - Paper tape punch/reader
+- Manuals library
+- Disks library
+- Paper tapes library
 
 ![Web Desktop UI](./WebUI.png)
 
@@ -53,12 +77,12 @@ Like the IMSAI 8080 replica, the Cromemco Z-1 replica also comes with a web base
 
 The Cromemco Z-1 replica is available to order as of April 2022.
 
-::: danger Please note:
-The hardware kit is available now, complete with the Cromemco Z-1 facia panel (see: the [Bill-of-Materials](#bill-of-materials).
+::: warning Please note:
+The hardware kit is available complete with the Cromemco Z-1 facia panel (see: the [Bill-of-Materials](#bill-of-materials).
 
-However, the Cromemco Z-1 firmware is **not yet finalised** and is still in a closed Beta.
+However, the Cromemco Z-1 firmware is currently in **beta**.
 
-Kits that are shipped prior to the production Cromemco Z-1 firmware release will ship with an image of the [IMSAI 8080](../imsai8080/) replica firmware, and **NOT** the Cromemco Z-1 beta firmware.
+Kits are shipping with the Cromemco Z-1 beta firmware installed.
 
 Once the production Cromemco Z-1 firmware is released, the ESP32 can be reflashed (using [Over The Air](../imsai8080/update/#updating-the-firmware) updates) with the Cromemco Z-1 firmware.
 :::
@@ -141,7 +165,7 @@ The difference in colour is just my bad photography and lighting: they are both 
 :::
 
 ::: warning Please Note
-I will only supply one facia with the kit, so don't ask for both. 
+I will only supply one facia with the kit, please don't ask for both. 
 :::
 
 
@@ -165,4 +189,4 @@ Both the IMSAI 8080 replica and the Cromemco Z-1 replica will be able to run eit
 
 ### Planned
 
-- TBA
+- emulated Cromemco SDI - Super Dazzler Interface (hi-res graphics adapter)
