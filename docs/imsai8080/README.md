@@ -6,24 +6,24 @@ editLink: false
 
 ## Overview
 
-I've been working on building an IMSAI 8080 CP-A Front Panel replica since May 2017.
+I began working on building an IMSAI 8080 CP-A Front Panel replica in May 2017.
 
 I first ported Udo Munk's [z80pack](http://bit.ly/Z80pack) V1.36-dev, specifically the **imsaisim** machine, to the [**ESP32**](https://www.espressif.com/en/products/hardware/development-boards) micro-controller targeting the ESP32-PICO-KIT
 
-These devices have a dual-core CPU @ 240MHz, 520KB SRAM, 4MB Flash RAM (storage) and builtin WiFi, USB connector for serial UART and programming.
+These devices have a dual-core CPU @ 240MHz, 520KB SRAM, 4MB Flash RAM (storage) and builtin Wi-Fi, USB connector for serial UART and programming.
 
-To this I have added
+To this I added
 
 - microSD Card for a FAT filesystem (using an 16GB card)
 - PSRAM for banked memory implementation
 - MAX232 style RS-232 driver and DE-9M sockets for serial UART
-- Full size, fully functional replica of the IMSAI CP-A front panel with all LEDs and switches (for scale: the green cutting mat is A3)
+- Full size, fully functional replica of the IMSAI CP-A front panel with all LEDs and switches (for scale: the whole unit is 17" wide)
 
 ![IMSAI 8080 CP-A](./NEW_CPA_1024.png)
 
-If you've seen the original IMSAI 8080, I hope you'll agree that the toggle switches are a great match to the original colours. The case is now made of 3mm thick aluminium, powder coated blue and also a good match to the original.
+If you've seen the original IMSAI 8080, I hope you'll agree that the toggle switches are a great match to the original colours. The case is made of 3mm thick aluminium, powder coated blue and also a good match to the original.
 
-Sometimes I use the USB based serial UART for TTY: (under CP/M) but most of the time I connect over WiFi using a browser to launch the desktop GUI that this port of the **imsaisim** can serve using an embedded web server.
+Sometimes I use the USB based serial UART for TTY: (under CP/M) but most of the time I connect over Wi-Fi using a browser to launch the desktop GUI that this port of the **imsaisim** can serve using an embedded web server.
 
 Running the replica at unlimited speed I can get a simulated clock speed somewhere above 5 MHz, there is certainly no problem with reliably running the simulation at a realistic 2 MHz or 4 MHz making WordStar, SuperCalc2, M80/L80 a pleasure to use.
 
@@ -37,23 +37,25 @@ The stock **imsaisim** machine from **z80pack** is configured with:
 - IMSAI VIO support (optional based on bootrom choice)
 - Harddisk emulation
 - Virtual 'AT' modem over TCP/IP sockets (with selectable telnet protocol support) (outbound/dial and (auto) answer mode)
-- **Experimental:** An MMU with Banked memory management to enable CP/M 3.0 (Plus) with banked memory
-- **Experimental:** An RTC to support CP/M 3.0 (Plus)
+- An MMU with Banked memory management to enable CP/M 3.0 (Plus) with banked memory
+- An RTC to support CP/M 3.0 (Plus)
 - A range of disk images with different operating systems, applications, games, demos...
 
 The best reference for the **imsaisim** machine is Udo Munk's [z80pack](http://bit.ly/z80pack) site.
 
-To this I added a simulated GUI desktop that you access over WiFi from an evergreen browser (Chrome & Firefox, but not Safari) that includes the following virtual/emulated devices (some that I just made up)
+To this I added a simulated GUI desktop that you access over Wi-Fi from an evergreen browser (Chrome & Firefox, but not Safari) that includes the following virtual/emulated devices (some that I just made up)
 
 - **TTY:** - VT100/ansi compatible character mode serial terminal, can be windowed or zoomed to full-screen (over websockets)
 - **CRT:** -  implementation of the IMSAI VIO (over websockets: mirrors the 2KB display RAM and does all rendering in the browser)
-- **LPT:**  - implementation of an 80-column dot-matrix/line printer with selectable paper-types - ready to print on your real printer (dumb text printer, no Esc codes, over websockets)
+- **LPT:**  - implementation of an 80/132-column dot-matrix/line printer with selectable paper-types - ready to print on your real printer (dumb text printer, no Esc codes, over websockets)
 - **X:DSK:**  & **LIB:** - graphical disk manager for the 4 floppy drives A-D, including eject, insert (drag-and-drop) from a disk library (.../machine/disks/library/), download disk image, upload disk image, delete disk image (uses RESTful web service interface). Also a hard disk presented as drive I.
 - **CPA:** - IMSAI CP-A front panel (only the 6 control switches & 4 status LEDs on the RHS, over websockets)
 - **SYS:** - system status window, shows details of the simulation (host?), enables remote reboot
 - **CFG:** - configuration file editor, enables config files (.../machine/conf) to be edited and saved
+- **PTR:** - virtual paper tape reader and punch
 - **DZLR:** - implementation of the Cromemco Dazzler graphics display
 - **ACC:** - implementation the Cromemco 88-CCC Cyclops Camera Controller and 88-ACC Cyclops camera (using the web camera attached to the machine running the browser)
+- **JS1:** - implementation of the Cromemco D+7A I/O including JS-1 joystick emulation (from connected USB joystick)
 
 You can see what they look like in these screen-shots.
 
@@ -69,7 +71,7 @@ The desktop GUI has been back-ported to **z80pack V1.36-dev** for desktop operat
 
 ### Notes
 
-- TTY:, VIO:, DZLR: are all able to go **full-screen** with the use of a widget on the window title-bar and the use of the `CTRL-ALT-Escape` key combination
+- TTY:, VIO:, DZLR: are all able to go **full-screen** with the use of a widget on the window title-bar and the use of the `ALT-Enter` (Win) or `CMD-Enter` (Mac) key combination
 - you can take screen-shots of the VIO: and DZLR: with the use of a widget on the window title-bar
 - ability to change aspect-ratio of the Dazzler display between 1:1 (square pixels), 4:3 (CRT TV), 8:7 (not common, but the closest to the "real thing" I could measure off a YouTube video of an original [Cromemco Dazzler working](http://bit.ly/2KVVcfHI), so I've made this the default), with the use of a widget on the window title-bar
 - this chosen aspect-ratio is preserved in full-screen mode
@@ -83,13 +85,13 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 ## Availability
 
-The first batches of IMSAI 8080 replicas shipped in June & July 2019.
+The first batches of IMSAI 8080 replicas shipped in June 2019.
 
 Please be assured that I am continuing to make kits in 2022 and will continue to do so until I can no longer source the parts.
 
 ### Expression of interest
 
-I am accepting expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
+I accept expressions of interest via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) I will add you to the list.
 
 Once a kit is available for you within the month, I will contact you to confirm your order.
 
@@ -166,8 +168,6 @@ less than 2.3 kg
 ### Planned
 
 - Add a UI on the desktop GUI for the virtual 'AT' modem
-- Add 132 column mode to the LPT: line printer
 - Add basic escape code support for formatting output on the LPT: line printer
-- Virtual paper tape reader and punch on the desktop GUI
 - Hardware based VIO, Dazzler, VT100 terminal with VGA output and PS/2 (and maybe USB) keyboard input
 - Hardware based interface for the replica Cromemco Cyclops ACC: digital camera
