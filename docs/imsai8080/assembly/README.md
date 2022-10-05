@@ -86,7 +86,7 @@ This may require mailing replacement parts to you and that will take time, so pl
 | 5. | Capacitor 100nF | `C1` front | There is only one type of capacitor in this kit, and they can be soldered in either orientation. |
 | 6. | Resistor Network 6x10K Ohm | `RN1` back | *Note: Pin 1 is indicated on the PCB by the square pad and on the component by a white dot*|
 | 7. | Connector 20x1 Female (x2) | `ESP32` back | Solder these connectors mounted on the **back** of the PCB in the 2 rows of 20 through-holes that form a DIP40 outline marked `ESP32`. |
-| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator (e.g. PuTTY on Windows, or iTerm2, Serial on Mac) at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
+| 8. | ESP32-PICO-KIT, microSD Memory Card | **[TEST STEP]** | Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB. *Note: The USB connecter should be towards the near edge of the PCB and the Wi-Fi antenna towards the RS232 connector mounting holes.* Insert the microSD card. Connect the ESP32-PICO-KIT to a PC with a suitable USB cable. Run a terminal emulator (e.g. PuTTY on Windows, or iTerm2, Serial on Mac) at 115200 baud 8N1 connected to the TTY/COM port that the ESP32-PICO-KIT presents and observe the boot logs. Errors with either the PSRAM or the microSD card will indicate soldering mistakes (see the [During Assembly](../troubleshooting/#during-assembly) section in the Troubleshooting guide for details) |
 
 ::: tip
 If you do not see a TTY/COM port on your PC presented by the ESP32-PICO-KIT, you may need to install a driver for the *Silicon Labs CP210x USB to UART bridge* used on the ESP32-PICO-KIT. See [Serial Communications (RS232, USB)](../configure/#serial-communications-rs232-usb) in the Configuration guide for details.
@@ -103,10 +103,10 @@ The LEDs and accompanying Resistors should be soldered in groups of 8 as indicat
 :::
 
 ::: tip
-Use the supplied black acrylic spacer and alignment tools. Tape them in place with the LEDs before you solder to help achieve the  alignment of each group of 8 LEDs.
+Use the supplied acrylic spacer and alignment tools. Tape them in place with the LEDs before you solder to help achieve the  alignment of each group of 8 LEDs.
 
-- My preference is to raise the LEDs 3mm off the PCB, the black acrylic spacer with 8 open vertical slots enables this. You can, however, solder the LEDs sitting flush with the PCB.
-- The black acrylic alignment tool with 8 round holes should always be used to help align 8 LEDs at a time to be in alignment. Peel any covering off the alignment tool before using it.
+- My preference is to raise the LEDs 3mm off the PCB, the acrylic spacer with 8 open vertical slots enables this. You can, however, solder the LEDs sitting flush with the PCB.
+- The acrylic alignment tool with 8 round holes should always be used to help align 8 LEDs at a time to be in alignment. Peel any covering off the alignment tool before using it.
 
 (see video, details to follow)
 :::
@@ -188,7 +188,7 @@ If you fail to insert the ICs at this step, before proceeding to insert and sold
 At this point you can operate the IMSAI 8080esp without having the rocker/toggle switches mounted.
 
 - Plug the ESP32-PICO-KIT into the female connectors on the **back** of the PCB.
-- *Note: The USB connecter should be towards the near edge of the PCB and the WiFi antenna towards the RS232 connectors.*
+- *Note: The USB connecter should be towards the near edge of the PCB and the Wi-Fi antenna towards the RS232 connectors.*
 - Insert the microSD card.
 - Connect the ESP32-PICO-KIT to a USB power source with a suitable USB cable.
 - The simulation will not start until you short the centre and top pins of switch `S1`
@@ -341,6 +341,11 @@ Probably time for another cup of tea, but in my case, I think I'd choose somethi
 Don't try to operate your IMSAI 8080esp for long periods of time without this component in place. It looks so good, you're missing out if you don't have it in place :-).
 :::
 
+::: warning
+Don't attach any tape to the `6mm Charcoal grey hammer tone painted acrylic switch surround`
+There has been a report of this removing some paint when the tape was removed.
+:::
+
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
 | 44. | 120mm x 25mm Black Velcro adhesive backed hook & loop tape |  | Cut both the `hook and loop tape` into **2** x 60mm lengths. Cut each 60mm piece **lengthways in half** to produce **4** x 60mm x 12.5mm strips of `hook and loop tape` |
@@ -353,10 +358,16 @@ Don't try to operate your IMSAI 8080esp for long periods of time without this co
 The lid can wait, its time to play!
 :::
 
+::: warning
+It is highly recommended that you fit the `2mm White acrylic back cover corner reinforcement pieces` to the `3mm Clear acrylic back cover` before you you attach the lid. Failure to do so might result in cracking the `3mm Clear acrylic back cover`.
+:::
+
 | Step | Parts | Location | Notes |
 | ---: | ----- | -------- | ----- |
-| 47. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue acrylic lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue acrylic lid` and screw a `M3 Nut` on the end of each `M3 Screw`. |
-| 48. | 3mm Blue aluminium lid | | Place the `Blue aluminium lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Work each `M3 Screw` & `M3 Nut` into the corresponding slot in the `3mm Clear acrylic back cover`. Tighten the `M3 Screws` in turn to secure the lid.
+| 47a. | 2mm White acrylic back cover corner reinforcer (x3+1) (top edge crucifix slots) | 3mm Clear acrylic back cover | See this [forum post](https://groups.google.com/g/imsai8080esp/c/9mQPFmFZeEU/m/rFo8j5coAwAJ) for details. |
+| 47b. | 2mm White acrylic back cover corner reinforcer (x4) (bottom side edge crucifix slots) | 3mm Clear acrylic back cover | See this [forum post](https://groups.google.com/g/imsai8080esp/c/9mQPFmFZeEU/m/rFo8j5coAwAJ) for details. |
+| 48. | M3x12mm Black Machine Screw (x4), M3 Nut (x4) | 3mm Blue aluminium lid | Put an `M3 Screw` through each of the 4 smaller holes in the `Blue aluminium lid` and use a `M3 Nut` on the end of each `M3 Screw` to secure the `Blue aluminium lid`. |
+| 49. | 3mm Blue aluminium lid | | Place the `Blue aluminium lid` around the assembly completed at step 38 above. The `M3 Screws` are closer to the **back** than to the front. Secure each `M3 Screw` & `M3 Nut` in the corresponding slot in the `3mm Clear acrylic back cover`. Don't over-tighten the `M3 Screws` used to secure the lid or you could crack the `3mm Clear acrylic back cover`.
 
 ## Celebrating
 
