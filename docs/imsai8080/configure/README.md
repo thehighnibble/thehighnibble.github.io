@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Configuration - v1.10.0 or later
+# Configuration - `v1.10.0` or later
 
 ::: tip
 As of October 2022 kits ship with firmware `v1.10.0` or later.
