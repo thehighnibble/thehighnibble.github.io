@@ -2,14 +2,7 @@
 sidebar: auto
 ---
 
-# Configuration - v1.10.0 or later
-
-::: tip
-As of October 2022 kits ship with firmware `v1.10.0` or later.
-The following configuration guide relates to these firmware versions.
-
-If you are still running and older firmware revision `v1.9.1` or earlier, the previous version of the **Configuration Guide** is available [here](old_version_prior_v1.10.0/)
-:::
+# Configuration - `v1.9.1` or earlier
 
 ## Overview
 
@@ -34,8 +27,8 @@ Once connected, you can then configure the IMSAI 8080esp to connect directly to 
 
 Your computer should now be connected, and you will be able to open the Desktop UI. The web interface has been written and tested with the Chrome browser in mind, and you might find it works differently if you are using a different browser.
 
-* If you have a Mac, open your browser and enter `imsai8080` or `imsai8080.local` as the web address.
-* If you have a PC, open your browser and enter `imsai8080` or `192.168.4.1` as the address.
+* If you have a Mac, open your browser and enter `imsai8080.local` as the web address.
+* If you have a PC, open your browser and enter `192.168.4.1` as the address.
 
 ## Default configuration
 
@@ -60,7 +53,7 @@ The default configuration is like an empty machine with no ROM only RAM.
 * Console log level set to `NONE` (details to follow)
 
 ::: tip
-Once you are connected to the Wi-Fi network, start a Chrome browser and enter the URL `http://imsai8080` to see the Desktop UI.
+Once you are connected to the Wi-Fi network, start a Chrome browser and enter the URL `http://imsai8080.local` to see the Desktop UI.
 :::
 
 ## Startup configuration (Non-Volatile Storage, NVS)
@@ -100,12 +93,25 @@ The whole procedure, including entering a value to boot into CP/M 2.2 (see below
 When you **Deposit** a new *startup configuration value*, all the bits of the current value are overwritten. If your objective is to **modify** the existing value changing only a few of the bits, you must toggle in all the bits of the existing value indicated by the Address Bus LEDs and then switch the bits you want to configure differently, before you **Deposit** this new value.
 :::
 
+::: tip Booting into MSBASIC 1.4 (8K)
+To configure the IMSAI 8080esp to boot directly into a ROM based *MSBASIC 1.4 (8K)* in 8080 mode @ 2 MHz, the following startup configuration value can be used.
+
+* Binary: 0000 0100 0000 0000
+* Octal: 002000
+* Hexadecimal: 0400
+
+1. Enter *startup configuration mode* (above)
+2. Toggle in this value on the **Address** toggle switches
+3. Raise the `DEPOSIT` toggle to the **Deposit**, up position to store the entered startup configuration value.
+4. Reboot the IMSAI 8080esp by pressing a `Reset` switch
+:::
+
 ::: tip Booting into XYBASIC
 To configure the IMSAI 8080esp to boot directly into a ROM based *XYBASIC* in Z80 mode @ 4 MHz, the following startup configuration value can be used.
 
-* Binary: 0000 0100 0101 0000
-* Octal: 002120
-* Hexadecimal: 0450
+* Binary: 0000 0101 0101 0000
+* Octal: 002520
+* Hexadecimal: 0550
 
 1. Enter *startup configuration mode* (above)
 2. Toggle in this value on the **Address** toggle switches
@@ -136,11 +142,9 @@ To configure the IMSAI 8080esp to boot from the disk image in drive `DSK:A:` in 
 | 5 | NVS_NO_UNDOC | `-u` | Suppress support for undocumented op. codes, 1 = `-u` |
 | 6 | NVS_4MHZ | `-f` | Set CPU speed, 0 = 2 MHz `-f 2`; 1 = 4 MHz `-f 4` |
 | 7 | NVS_UNLIMITED | `-f 0` | Set CPU speed to Unlimited, 0 = use speed from bit 6; 1 = Unlimited `-f 0` |
-| 8-10 | NVS_MEMORY_MAP | `-M` | Set memory map, 0 = default 64K RAM, 1-7 = use memory map *n* `-M n` |
-| 11 | NVS_BANK_ROM | `-R` | Enable **MPU-B(A)** style Banked ROM/RAM functionality, 1 = `-r`. Only compatible with MPU-A ROM images. |
-| 12-14 | | | Reserved for future use |
-| 15 | NVS_AUTO_RUN | | Autorun - The CPU will automatically run when the machine is switched on (`PWR ON`)|
-
+| 8-10 | NVS_BOOT_ROM | `-x` | Set boot ROM to 1 of 7 *slots*, 0 = No boot ROM, 1-7 = use slot *n* `-x $ROMn` |
+| 11 | NVS_BANK_ROM | `-r` | Enable **MPU-B(A)** style Banked ROM/RAM functionality, 1 = `-r`. Only compatible with MPU-A ROM images. |
+| 12-15 | | | Reserved for future use |
 
 To set the startup configuration mode value, follow the sequence:
 
@@ -149,9 +153,7 @@ To set the startup configuration mode value, follow the sequence:
 3. Raise the `DEPOSIT` toggle to the **Deposit**, up position to store the entered startup configuration value.
 
 ::: warning
-The IMSAI 8080esp must be rebooted for the new configuration to take effect. 
-
-This can be done by raising the `RESET` toggle or by pressing a `Reset` switch.
+The IMSAI 8080esp must be rebooted for the new configuration to take effect. This can be done by pressing a `Reset` switch.
 :::
 
 ::: tip
@@ -291,34 +293,38 @@ The solution is to mount the microSD card on a PC and edit the **boot.conf** fil
 
 ### Default boot.conf
 
-The default configuration, as shipped (in Release v1.10.0) is a follows:
+The default configuration, as shipped (in Release v1.7.0) is a follows:
 
 ```conf
-### Network configuration
+#Network configuration
 NTP_SERVER=pool.ntp.org
 TZ=AEST-10AEDT,M10.1.0,M4.1.0
 HOSTNAME=imsai8080
 PORT=80
 SSID=mySSID
 PASSWORD=myPASSWORD
-WIFI.sta.scan=1
-#WIFI.password.hide=1
-### UART configuration
+#Bootrom configuration
+ROM1=mpu-a-rom.hex
+ROM2=mpu-a-vio-rom.hex
+ROM3=basic4k.hex
+ROM4=basic8k.hex
+ROM5=xybasic.hex
+ROM6=memon80.hex
+#UART configuration
 #UART0=115200,cs8
-#UART1=115200,cs8
-### Performance parameters
-#TTY.netsrv.buffer_delay=33
-#LPT.netsrv.buffer_delay=33
-### Harddisk image
+#UART1=230400,cs8
+#Harddisk image
 HARDDISK=hd-ws4
-### SIO-2 default port mappings (HAL)
+#Performance parameters
+#SIO1.netsrv.buffer_delay=33
+#LPT.netsrv.buffer_delay=33
+#Modem initialization string. Example:
+#MODEM.init=ATS0=1S15=1&A1
+#SIO-2 default port mappings
 #SIO1.portA.device=WEBTTY,UART0
 #SIO1.portB.device=VIOKBD
-#SIO2.portA.device=WEBPTR,UART1
-#SIO2.portB.device=MODEM
-### Modem initialization string. Example:
-#MODEM.init=ATS0=1S15=1&A1 #S0=1 auto-answer after 1 ring, S15=1 enable telnet protocol
-MODEM.init=ATS15=1 #S15=1 enable telnet protocol
+#SIO2.portA.device=MODEM
+#SIO2.portB.device=UART1
 ```
 
 ### Network Configuration
@@ -333,6 +339,11 @@ A file with TZ variable values for many timezones can be found at [https://www.d
 
 An article that defines the POSIX format can be found at [Specifying the Time Zone with TZ](https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html), however please note, the "third format" referenced in this article is the Olson format, and not supported on the ESP32.
 :::
+
+### Bootrom Configuration
+
+The *Bootrom configuration* entries define the *slots* corresponding to the **NVS_BOOT_ROM** bits in the *Startup configuration (NVS)* (see above). There can be a maximum of 7, `ROM1` to `ROM7`. Each value should be the filename of a bootable program in *Intel HEX file format* (TBA) and located on the microSD card in the path `/imsai/`
+
 ### UART Configuration
 
 The *UART configuration* entries define the speed, data & stop bits for the two physical UARTs on the ESP32, **UART0** and **UART1**
@@ -340,7 +351,7 @@ The *UART configuration* entries define the speed, data & stop bits for the two 
 For example:
 
 ```conf
-### UART configuration
+#UART configuration
 UART0=115200,cs8 # ie. 115200, 8N1 - not required because this is default
 UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
 ```
@@ -355,18 +366,6 @@ UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
   * `cstopb` - for 2 stop bits, default is 1
   * `parenb` - for even parity, default is none
   * `parenb,parodd` - for odd parity
-
-### Performance parameters
-
-The *Performance parameters* exist only for the two devices `TTY:` (SIO1) and `LPT:` and apply only to websocket communication to the *Desktop UI*
-
-They specify a time in milliseconds (ms) during which output to the device will be buffered (up to the next line feed character) and transmitted in a single (websocket) packet. This can greatly improve performance of both the TTY: and LPT: devices. If used, recommended optimal settings are:
-
-```conf
-### Performance parameters
-SIO1.netsrv.buffer_delay=33
-LPT.netsrv.buffer_delay=33
-```
 
 ### Harddisk image
 
@@ -385,12 +384,12 @@ HARDDISK=imagename
 e.g.
 
 ```conf
-### Harddisk image (don't include the .hdd extension)
+#HARDDISK image (don't include the .hdd extension)
 HARDDISK=hd-ws4
 ```
 
 The harddisk image file must reside in `/imsai/disks/` and end with `.hdd` eg. `/imsai/disks/hd-ws4.hdd`
-Do not use the `.dsk` extension for a harddisk image as it will be confused with a floppy disk image
+do not use the `.dsk` extension for a harddisk image as it will be confused with a floppy disk image
 
 ::: tip
 If you change harddisk image you must **reboot** the IMSAI8080esp to load the new image
@@ -401,6 +400,35 @@ The harddisk cannot be made a bootable device, the bootrom doesn't support this.
 ::: warning
 There is no UI for changing hard disk images, the required image must be set using the environment variable `HARDDISK` in the `boot.conf` file and then the ESP32 hard reset to reload the environment.
 :::
+
+### Performance parameters
+
+The *Performance parameters* exist only for the two devices `TTY:` (SIO1) and `LPT:` and apply only to websocket communication to the *Desktop UI*
+
+They specify a time in milliseconds (ms) during which output to the device will be buffered (up to the next line feed character) and transmitted in a single (websocket) packet. This can greatly improve performance of both the TTY: and LPT: devices. If used, recommended optimal settings are:
+
+```conf
+#Performance parameters
+SIO1.netsrv.buffer_delay=33
+LPT.netsrv.buffer_delay=33
+```
+
+### Modem initialization string
+
+This string will be processed by the 'AT' Modem when it is initialised and reset (ie. with the command `ATZ`)
+
+For example, to initialize the modem for:
+- auto-answer after 1 ring (`ATS0=1`)
+- enable telnet protocol (`ATS15=1`)
+- enable answer mode (ie. listen) in "daemon" mode (`AT&A1`)
+- with the commands conncatenated into a single command string `ATS0=1S15=1&A1`
+
+add the following line:
+
+```conf
+#Modem initialization string
+MODEM.init=ATS0=1S15=1&A1
+```
 
 ### SIO-2 port mappings
 
@@ -421,38 +449,21 @@ the purpose of the HAL is to:
 - simplify the addition of new character mode devices in future
 eg. additional hardware UART; network sockets; additional telnet listeners; new virtual peripherals on the desktop UI
 - enable the user to assign specific devices to each of the four (4) virtual SIO-2 serial ports
-- details of configuring the SIO port mappings will be published later
-
-### Modem initialization string
-
-This string will be processed by the 'AT' Modem when it is initialised and reset (ie. with the command `ATZ`)
-
-For example, to initialize the modem for:
-- auto-answer after 1 ring (`ATS0=1`)
-- enable telnet protocol (`ATS15=1`)
-- enable answer mode (ie. listen) in "daemon" mode (`AT&A1`)
-- with the commands concatenated into a single command string `ATS0=1S15=1&A1`
-
-add the following line:
-
-```conf
-#Modem initialization string
-MODEM.init=ATS0=1S15=1&A1
-```
+- details of configuring the SIO port mappings will be published soon
 
 ## System.conf file
 
 The **system.conf** file is located on the microSD card with the path `/imsai/conf/system.conf`
 
 ::: warning
-Some settings in this file are legacy, maintained for source code compatibility with the *Z80PACK, imsaisim* machine. Only the parameters documented here have any effect on the **IMSAI8080esp**.
+This is a legacy configuration file, maintained for source code compatibility with the *Z80PACK, imsaisim* machine. Only the parameters documented here have any effect on the **IMSAI8080esp**.
 :::
 
 ### SIO flags
 
-The **SIO flags** affect the behavior of the the four *virtual* SIO serial ports that are (by default) mapped to *physical* UARTs on the ESP32.
+The **SIO flags** affect the behavior of the the two *virtual* SIO serial ports that are (by default) mapped to *physical* UARTs on the ESP32.
 
-These four *virtual* serial ports can:
+These two *virtual* serial ports can:
 
 * force upper case
 * strip the parity bit (the MSB in each character byte) - the default for the CP/M console (SIO1)
@@ -466,35 +477,17 @@ If the *virtual* baud rate is set to 0 (zero) then no rate limit is applied by t
 For example:
 
 ```config
-# SIO 1 Channel A, Ports 2/3 connected to terminal UART0/RS232-1/USB (default)
-sio1a_upper_case	0
-sio1a_strip_parity	0
-sio1a_drop_nulls	1
-sio1a_baud_rate		115200 
-# typical baud rate values are 110, 300, 1200, 2400, 4800, 9600,
-# 19200, 38400, 57600, 115200 - 0 = unlimited baud rate
+# SIO 1 Channel A, Ports 2/3 connected to UART0/USB/RS232-1 (default)
+sio1a_upper_case		0
+sio1a_strip_parity		1
+sio1a_drop_nulls		1
+sio1a_baud_rate			9600
 
-# SIO 1 Channel B, Ports 4/5 connected to VIO keyboard
-sio1b_upper_case	0
-sio1b_strip_parity	0
-sio1b_drop_nulls	0
-sio1b_baud_rate		1200 
-
-# SIO 2 Channel A, Ports 34/35 connected to UART1/RS232-2 (default)
-# use 8bit here, so that serial file transfers work
-sio2a_upper_case	0
-sio2a_strip_parity	0
-sio2a_drop_nulls	0
-sio2a_baud_rate		9600 
-# typical baud rate values are 110, 300, 1200, 2400, 4800, 9600,
-# 19200, 38400, 57600, 115200 - 0 = unlimited baud rate
-
-# SIO 2 Channel B, ports 36/37 connected to 'AT' telnet modem (default)
-# use 8bit here, so that serial file transfers work
-sio2b_upper_case	0
-sio2b_strip_parity	0
-sio2b_drop_nulls	0
-sio2b_baud_rate		2400 
+# SIO 2 Channel A, Ports 34/35, connected to UART1/RS232-2 (default)
+#sio2a_upper_case		0
+#sio2a_strip_parity		1
+#sio2a_drop_nulls		1
+sio2a_baud_rate			19200
 ```
 
 :::tip
@@ -508,53 +501,16 @@ sio1a_drop_nulls		0
 ```
 :::
 
-### Memory maps
+### RAM size
 
-The only other parameters that effect the **IMSAI 8080esp** are the `[MEMORY n]` sections:
+The only other parameter that effects the **IMSAI 8080esp** is the last line:
 
-```conf
-# <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-# memory configurations in pages a 256 bytes
-#       start,size (numbers in decimal, hexadecimal, octal)
-# up to 7 memory sections allowed
-# up to 6 ram/rom statements per section allowed
-# <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-
-[MEMORY 1]
-# Default memory configuration used in most situations with MPU-A ROM:
-# 256 pages RAM, 8 pages ROM (replaces or overlays RAM)
-ram         0,256
-rom         0xd8,8,mpu-a-rom.hex
-# Start address of the boot ROM
-boot        0xd800
-
-[MEMORY 2]
-# Memory configuration for running MPU-A ROM and VIO ROM:
-# 240 pages RAM, 8 pages ROM (replaces or overlays RAM)
-# 8 pages of RAM and 8 pages of ROM for the VIO from 0xf000
-ram         0,0xf0
-rom         0xd8,8,mpu-a-rom.hex
-ram         0xf0,8
-rom         0xf8,8,viofm1.hex
-# Start address of the boot ROM
-boot        0xd800
-
-[MEMORY 3]
-# Memory configuration for running with MEMON80 ROM:
-# 248 pages RAM, 8 pages ROM
-ram         0,0xf8
-rom         0xf8,8,memon80.hex
-# Start address of the boot ROM
-boot        0xf800
-
-[MEMORY 4]
-# Memory configuration for running ROM based XYBASIC:
-# 16K ROM, 48K RAM
-rom         0,64,xybasic.hex
-ram         64,192
-# Start address of the boot ROM
-boot        0x0000
+```config
+ram            64
 ```
-::: tip
-A memory map is selected by setting the NVS_MEMORY_MAP bits in the [Startup configuration, NVS](#startup-configuration-non-volatile-storage-nvs) for details.
+
+This still sets the maximum amount of RAM allocated to the simulated machine in KB.
+
+:::danger
+Changing this value is not tested and is likely to result in the machine failing to work as expected.
 :::
