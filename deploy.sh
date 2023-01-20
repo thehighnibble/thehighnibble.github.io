@@ -13,6 +13,7 @@ cd docs/.vuepress/dist
 echo 'thehighnibble.com' > CNAME
 
 git init
+git branch -m main master
 git add -A
 git commit -m 'deploy'
 
