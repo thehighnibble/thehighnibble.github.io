@@ -348,3 +348,5 @@ less than 0.2 kg
 ## [Bill-of-Materials](bom/)
 
 ## [Operation Manual](operation/)
+
+## [Firmware Install & Console Logs](maint/)

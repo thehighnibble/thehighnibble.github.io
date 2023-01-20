@@ -2,6 +2,9 @@ module.exports = {
     title: 'The High Nibble',
     ga: 'UA-138596150-1',
     evergreen: true,
+    head: [
+      ['script', { type: 'module', src: 'https://unpkg.com/esp-web-tools@9.2.0/dist/web/install-button.js?module' }]
+    ],
     themeConfig: {
       repo: 'thehighnibble/firmware',
       
