@@ -1,0 +1,14 @@
+{
+    "name": "the full S-132 image",
+    "version": "V1.6.0-rc.4W",
+    "new_install_prompt_erase": false,
+    "builds": [
+      {
+        "chipFamily": "ESP32",
+        "parts": [
+          { "path": "/binaries/S132bundle.bin", "offset": 0 }
+        ]
+      }
+    ]
+  }
+  
