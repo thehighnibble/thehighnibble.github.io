@@ -55,12 +55,18 @@ Each function of the S-132 can be selected by a keyboard **hot-key** (as with th
   - view system state for the guest/host/environment/tasks & config files
   - set S-132 specific settings
 - `<ctrl><alt><F7>` = **D7AIO:** - Cromemco D+7A Input/Output display
-
 - `<ctrl><alt><F9>` = **CPA:** - `RUN` - lift CP-A frontpanel switch to the `RUN` position
 - `<ctrl><alt><F10>` = **CPA:** - `STOP` - press CP-A frontpanel switch to the `STOP` position
 - `<ctrl><alt><F11>` = **CPA:** - `RESET` - lift CP-A frontpanel switch to the `RESET` position
 - `<ctrl><alt><F12>` = **CPA:** - `EXT.CLR` - press CP-A frontpanel switch to the `EXT.CLR` position
 
+## Availability
+
+The S-132 is currently in pre-production testing and should be available before March 2023
+
+While you are waiting, checkout the introductory video 
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/4TmmvyEFCsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## [Bill-of-Materials (Draft)](bom/)
 
