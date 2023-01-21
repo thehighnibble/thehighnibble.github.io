@@ -39,9 +39,6 @@ This install process is not suitable for the **ESP32-WROVER-E** module at this t
 If you have an ESP32-WROVER-E you must use the Espressif `esptool.py` and `espefuse.py` tools to setup and install the firmware to be compatible with the S-132
 :::
 
-<esp-web-install-button manifest="/manifests/s132-manifest.json">
-</esp-web-install-button>
-
 ### Note:
 - The **DEVICE RESET** function on the *LOGS & CONSOLE* screen does not work with the S-132
 - When you click **INSTALL** on the *Confirm Installation* dialog 
@@ -51,3 +48,6 @@ If you have an ESP32-WROVER-E you must use the Espressif `esptool.py` and `espef
     - release the `Reset` button **first**, and about 1 second later
     - release the `Prog` button
 - If you abort an install by pressing the `<ESC>` key on you keyboard you may not be able to reconnect to the ESP32, with a message about the *serial port is already open*. You will need to **reload** the web page to release the serial port
+
+<esp-web-install-button manifest="/manifests/s132-manifest.json">
+</esp-web-install-button>
