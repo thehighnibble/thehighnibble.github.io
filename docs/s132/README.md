@@ -26,7 +26,7 @@ With the S-132 attached to the IMSAI8080 or Cromemco Z-1 replica you have all th
 - [Cromemco Dazzler S-100 card](http://www.s100computers.com/Hardware%20Folder/Cromemco/Dazzler/Dazzler.htm)
 - [Cromemco D+7A Input/Output S-100 card](http://www.s100computers.com/Hardware%20Folder/Cromemco/D+7IO/D+7IO.htm) (40-pin header)
   - 8 digital inputs (5V TTY level - buffered by a 74HC165)
-  - 8 digital outputs (5V TTY level - buffered by a 75HC595)
+  - 8 digital outputs (5V TTY level - buffered by a 74HC595)
   - 7 analog inputs (0-5V - digitized by an MCP3008 ADC)
   - 2 analog outputs (0-3.3V - produced by the 2 onboard DACs on the ESP32)
 - pluggable adapter boards that provide, alternately:  
@@ -35,9 +35,9 @@ With the S-132 attached to the IMSAI8080 or Cromemco Z-1 replica you have all th
   - a prototying PCB for your own designs 
 
 Additionally, the S-132 adds a System Menu (SYS:) where you can
-• mount/eject disk images from the 4 emulated floppy disk drives (DSK:A: - DSK:D:)
-• view and control the Run/Stop/Reset/Ext.Clr state of the front panel (CPA:)
-• view all the system information normally found in the SYS: device on the *Web Desktop*
+- mount/eject disk images from the 4 emulated floppy disk drives (DSK:A: - DSK:D:)
+- view and control the Run/Stop/Reset/Ext.Clr state of the front panel (CPA:)
+- view all the system information normally found in the SYS: device on the *Web Desktop*
 
 Lastly, the S-132 has a DC barrel jack and a selectable LM7805 5V regulator allowing you the option of powering your IMSAI8080/Cromemco Z-1, along with the S-132, from a standard DC power supply (from 5V to 12V).
 
