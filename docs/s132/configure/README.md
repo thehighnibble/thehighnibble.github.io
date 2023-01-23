@@ -55,7 +55,7 @@ To make the S-132 the first (and only) preference for the TTY: and VIO: devices,
 ``` conf
 ### SIO-2 default port mappings (HAL)
 SIO1.portA.device=S132TTY,WEBTTY,UART0
-SIO1.portB.device=S132VIO,VIOKBD,
+SIO1.portB.device=S132VIO,VIOKBD
 ```
 
 To make the S-132 the first preference for the TTY: & VIO: devices and also simultaneously use the Web Desktop devices if connected, use:
@@ -63,7 +63,7 @@ To make the S-132 the first preference for the TTY: & VIO: devices and also simu
 ``` conf
 ### SIO-2 default port mappings (HAL)
 SIO1.portA.device=S132TTY+,WEBTTY,UART0
-SIO1.portB.device=S132VIO+,VIOKBD,
+SIO1.portB.device=S132VIO+,VIOKBD
 ```
 
 To allow the Web Desktop to capture the TTY: and VIO: devices with priority ove the S-132, use:
