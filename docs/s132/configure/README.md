@@ -52,7 +52,7 @@ You can use the Web Desktop, or mount the µSD card in a PC and edit the `/imsai
 
 To make the S-132 the first (and only) preference for the TTY: and VIO: devices, use:
 
-``` conf
+``` editorconfig
 ### SIO-2 default port mappings (HAL)
 SIO1.portA.device=S132TTY,WEBTTY,UART0
 SIO1.portB.device=S132VIO,VIOKBD
@@ -60,7 +60,7 @@ SIO1.portB.device=S132VIO,VIOKBD
 
 To make the S-132 the first preference for the TTY: & VIO: devices and also simultaneously use the Web Desktop devices if connected, use:
 
-``` conf
+``` editorconfig
 ### SIO-2 default port mappings (HAL)
 SIO1.portA.device=S132TTY+,WEBTTY,UART0
 SIO1.portB.device=S132VIO+,VIOKBD
@@ -68,7 +68,7 @@ SIO1.portB.device=S132VIO+,VIOKBD
 
 To allow the Web Desktop to capture the TTY: and VIO: devices with priority ove the S-132, use:
 
-``` conf
+``` editorconfig
 ### SIO-2 default port mappings (HAL)
 SIO1.portA.device=WEBTTY,S132TTY,UART0
 SIO1.portB.device=VIOKBD,S132VIO
@@ -83,7 +83,7 @@ You can use the Web Desktop, or mount the µSD card in a PC and edit the `/crome
 
 To make the S-132 the first (and only) preference for the TTY: devices, use:
 
-``` conf
+``` editorconfig
 ### TU-ART default device mappings (HAL)
 TUART0.deviceA.device=S132TTY,WEBTTY,MODEM,UART0
 TUART1.deviceA.device=S132TTY2,WEBTTY2,SCKTSRV1,UART1
@@ -92,7 +92,7 @@ TUART1.deviceB.device=S132TTY3,WEBTTY3,SCKTSRV2,UART2
 
 To make the S-132 the first preference for the TTY: devices and also simultaneously use the Web Desktop devices if connected, use:
 
-``` conf
+``` editorconfig
 ### TU-ART default device mappings (HAL)
 TUART0.deviceA.device=S132TTY+,WEBTTY,MODEM,UART0
 TUART1.deviceA.device=S132TTY2+,WEBTTY2,SCKTSRV1,UART1
@@ -101,7 +101,7 @@ TUART1.deviceB.device=S132TTY3+,WEBTTY3,SCKTSRV2,UART2
 
 To allow the Web Desktop to capture the TTY: devices with priority ove the S-132, use:
 
-``` conf
+``` editorconfig
 ### TU-ART default device mappings (HAL)
 TUART0.deviceA.device=WEBTTY,S132TTY,MODEM,UART0
 TUART1.deviceA.device=WEBTTY2,S132TTY2,SCKTSRV1,UART1
