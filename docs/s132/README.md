@@ -68,6 +68,8 @@ While you are waiting, checkout the introductory video
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/4TmmvyEFCsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## [Bill-of-Materials (Draft)](bom/)
+## [Configuration (draft)](configure/)
+
+## [Bill-of-Materials (draft)](bom/)
 
 ## [Firmware Install & Console Log](maint/)
