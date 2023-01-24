@@ -3,6 +3,10 @@ module.exports = {
     ga: 'UA-138596150-1',
     evergreen: true,
     head: [
+      ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-JVDLCQSGXK' }],
+      ['script', {}, [
+        "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-JVDLCQSGXK');"
+      ]],
       ['script', { type: 'module', src: 'https://unpkg.com/esp-web-tools@9.2.0/dist/web/install-button.js?module' }]
     ],
     themeConfig: {
