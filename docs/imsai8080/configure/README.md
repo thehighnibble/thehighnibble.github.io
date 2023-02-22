@@ -358,13 +358,13 @@ UART1=9600 cs7 cstopb parenb parodd # ie. 9600, 7O2
 
 ### Performance parameters
 
-The *Performance parameters* exist only for the two devices `TTY:` (SIO1) and `LPT:` and apply only to websocket communication to the *Desktop UI*
+The *Performance parameters* exist only for the two devices `TTY:` (default: SIO1A) and `LPT:` and apply only to websocket communication to the *Desktop UI*
 
 They specify a time in milliseconds (ms) during which output to the device will be buffered (up to the next line feed character) and transmitted in a single (websocket) packet. This can greatly improve performance of both the TTY: and LPT: devices. If used, recommended optimal settings are:
 
 ```conf
 ### Performance parameters
-SIO1.netsrv.buffer_delay=33
+TTY.netsrv.buffer_delay=33
 LPT.netsrv.buffer_delay=33
 ```
 
