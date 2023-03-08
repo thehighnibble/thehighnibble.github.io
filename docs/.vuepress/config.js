@@ -26,7 +26,7 @@ module.exports = {
         { text: 'Cromemco Z-1', link: '/cromemcoZ1/' },
         { text: 'VT132', link: '/vt132/' },
         { text: 'S-132', link: '/s132/' },
-        { text: 'Forum', link: 'http://bit.ly/IMSAI8080esp' }
+        { text: 'Forum', link: 'https://github.com/orgs/thehighnibble/discussions' }
       ]
       // ,
       // sidebarDepth: 2,

@@ -115,7 +115,9 @@ You can stay up-to-date with news about additions to this site, or new YouTube v
 
 ## Forum
 
-The [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp) has been set up in Google Groups. It is open to everyone to read the posts but you must apply to join the group if you wish to post.
+[TheHighNibble forum](https://github.com/orgs/thehighnibble/discussions) has been set up on GitHub. The forum is public and readable by anyone but if you wish to post you need to become a member.
+
+Membership requires you to have GitHub account. Email to [info@thehighnibble.com](mailto://info@thehighnibble.com) with your GitHub name and I will send you an invite to join the discussion forum.
 
 ## Specifications
 

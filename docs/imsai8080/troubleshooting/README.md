@@ -5,7 +5,7 @@ sidebar: auto
 # Troubleshooting (Draft)
 
 ::: tip
-If you experience problems that are not covered in this trouble shooting guide, please post them to the [IMSAI 8080esp forum](http://bit.ly/IMSAI8080esp). Maybe someone else has already solved that problem and can help you if I am asleep or unavailable. Also, any problem you have is likely to be experienced by someone else and so, the discussion and resolution via the forum can act as a knowledge base until I can update this guide to include notes on the problem.
+If you experience problems that are not covered in this trouble shooting guide, please post them to [TheHighNibble forum](https://github.com/orgs/thehighnibble/discussions). Maybe someone else has already solved that problem and can help you if I am asleep or unavailable. Also, any problem you have is likely to be experienced by someone else and so, the discussion and resolution via the forum can act as a knowledge base until I can update this guide to include notes on the problem.
 :::
 
 ## During assembly
@@ -153,7 +153,9 @@ You should be able to repeat any of the above tests but more importantly you sho
 ::: tip
 There is a growing community of fellow IMSAI 8080esp owners and interested parties, sharing with and helping each other on the **IMSAI 8080esp Forum**.
 
-If you haven't visited it yet, head over to the [IMSAI 8080esp Forum](http://bit.ly/IMSAI8080esp). You need to **request to join** before you can post, but you can freely browse the exiting posts while you wait to be added.
+If you haven't visited it yet, head over to [TheHighNibble forum](https://github.com/orgs/thehighnibble/discussions). The forum is public and readable by anyone but if you wish to post you need to become a member.
+
+Membership requires you to have GitHub account. Email to [info@thehighnibble.com](mailto://info@thehighnibble.com) with your GitHub name and I will send you an invite to join the discussion forum.
 
 Remember I am one person, I have a day job, I need sleep and I'm in Sydney, Australia (UTC+10). So I could be at work or asleep when you most need support. The **IMSAI 8080esp Forum** on the other hand has members located all around the world, in different timezones and with great experience. I highly recommend the forum.
 :::

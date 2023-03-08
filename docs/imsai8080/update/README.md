@@ -9,7 +9,7 @@ sidebar: auto
 ::: warning
 While every effort is made to ensure any new release of firmware and image software is ready for use, experience and [Murphy's Law](https://en.wikipedia.org/wiki/Murphy%27s_law) dictate that there will be problems from time to time.
 
-If you don't like risk and don't count yourself as an [early adopter](https://en.wikipedia.org/wiki/Early_adopter) then follow the [forum](http://bit.ly/IMSAI8080esp) and look for a clear sign of positive reports about a new release before proceeding with any update.
+If you don't like risk and don't count yourself as an [early adopter](https://en.wikipedia.org/wiki/Early_adopter) then follow the [TheHighNibble forum](https://github.com/orgs/thehighnibble/discussions) and look for a clear sign of positive reports about a new release before proceeding with any update.
 
 The worst that can happen is that you will need to install the **Espressif** [esptool.py](https://github.com/espressif/esptool) on your Windows/Mac/Linux PC to be able to re-flash your ESP32 to bring your IMSAI8080esp back to life.  
 :::
