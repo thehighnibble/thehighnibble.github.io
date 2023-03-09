@@ -17,6 +17,11 @@ footer: The High Nibble @TheHighNibble  │  Copyright © The High Nibble Pty Lt
     <a class="nav-link action-button action-button2" href="/vt132/">VT132 details →</a>
 </p>
 </div>
+<div class="hero">
+<p class="action">
+    <a class="nav-link action-button action-button4" href="/s132/">S-132 details →</a>
+</p>
+</div>
 <br/>
 <br/>
 <div class='socials'>

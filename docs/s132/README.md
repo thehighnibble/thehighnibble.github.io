@@ -62,9 +62,35 @@ Each function of the S-132 can be selected by a keyboard **hot-key** (as with th
 
 ## Availability
 
-The S-132 is currently in pre-production testing and should be available before March 2023
+The S-132 is available to order as of March 2023.
 
-While you are waiting, checkout the introductory video 
+### Pricing 
+
+- USD$55 for the base kit
+  - all functions included with VGA output, PS/2 keyboard input & DC power input
+  - with only the main PCB (green) and the parts for that
+  - ie. no adapter PCBs or joysticks
+- plus USD$5 for USB-HID keyboard input (replaces PS/2 keyboard input)
+- plus USD$40 for the full adapter PCB kit including all parts
+  - Parallel printer adapter PCB (red) & DB-25 Centronics printer port
+  - Prototype adapter PCB (also green)
+  - Joystick adapter PCBs (yellow) + 2 analog joysticks, buttons, cables and connectors
+
+So a full package is USD$100 but you can choose from:
+- just the base kit @ USD$55, or
+- base + usb @ USD$60, or 
+- base + adapters @ USD$95, or 
+- base + usb + adapters @ USD$100
+
+### To Order
+
+I am accepting orders via email. If you send email to [info@thehighnibble.com](mailto:info@thehighnibble.com) with your choice of configuration, shipping name & address, I will respond to you with a PayPal invoice with the total price including shipping and transaction fees.
+
+::: warning
+Please only pay against the PayPal invoice when I send it to you. Do not try to pay directly to me via PayPal as this will only delay your order.
+:::
+
+While you are waiting for your S-132 kit, checkout the introductory video 
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/4TmmvyEFCsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
