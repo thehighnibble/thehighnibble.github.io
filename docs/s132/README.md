@@ -60,6 +60,8 @@ Each function of the S-132 can be selected by a keyboard **hot-key** (as with th
 - `<ctrl><alt><F11>` = **CPA:** - `RESET` - lift CP-A frontpanel switch to the `RESET` position
 - `<ctrl><alt><F12>` = **CPA:** - `EXT.CLR` - press CP-A frontpanel switch to the `EXT.CLR` position
 
+### [Pinouts for the D+7A I/O connector](pinouts/)
+
 ## Availability
 
 The S-132 is available to order as of March 2023.
