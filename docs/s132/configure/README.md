@@ -50,6 +50,13 @@ Alteratively, the S-132 can provide power to the connected IMSAI8080 or Cromemco
 You must edit the **HAL** settings in the `boot.conf` file.
 You can use the Web Desktop, or mount the µSD card in a PC and edit the `/imsai/conf/boot.conf` file directly.
 
+Enable and initialize the S-132  
+
+``` editorconfig
+### Enable S-132
+S132.init=1
+```
+
 To make the S-132 the first (and only) preference for the TTY: and VIO: devices, use:
 
 ``` editorconfig
@@ -80,6 +87,13 @@ For more information on the `boot.conf` see [HAL configuration for the IMSAI8080
 
 You must edit the **HAL** settings in the `boot.conf` file.
 You can use the Web Desktop, or mount the µSD card in a PC and edit the `/cromemco/conf/boot.conf` file directly.
+
+Enable and initialize the S-132  
+
+``` editorconfig
+### Enable S-132
+S132.init=1
+```
 
 To make the S-132 the first (and only) preference for the TTY: devices, use:
 
