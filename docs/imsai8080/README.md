@@ -56,6 +56,7 @@ To this I added a simulated GUI desktop that you access over Wi-Fi from an everg
 - **DZLR:** - implementation of the Cromemco Dazzler graphics display
 - **ACC:** - implementation the Cromemco 88-CCC Cyclops Camera Controller and 88-ACC Cyclops camera (using the web camera attached to the machine running the browser)
 - **JS1:** - implementation of the Cromemco D+7A I/O including JS-1 joystick emulation (from connected USB joystick)
+- **PTR:** & **TAPE:** - paper tape reader/punch and paper tape library for local storage of paper tapes. A file can also be copied (drag-and-drop) from your local machine to the the reader or the library. 
 
 You can see what they look like in these screen-shots.
 
@@ -87,7 +88,7 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 The first batches of IMSAI 8080 replicas shipped in June 2019.
 
-Please be assured that I am continuing to make kits in 2022 and will continue to do so until I can no longer source the parts.
+Please be assured that I am continuing to make kits in 2023 and will continue to do so until I can no longer source the parts.
 
 ### Expression of interest
 
@@ -171,5 +172,5 @@ less than 2.3 kg
 
 - Add a UI on the desktop GUI for the virtual 'AT' modem
 - Add basic escape code support for formatting output on the LPT: line printer
-- Hardware based VIO, Dazzler, VT100 terminal with VGA output and PS/2 (and maybe USB) keyboard input
+- ~~Hardware based VIO, Dazzler, VT100 terminal with VGA output and PS/2 (and maybe USB) keyboard input~~ Done, see: [S-132 Add-on](/s132/)
 - Hardware based interface for the replica Cromemco Cyclops ACC: digital camera

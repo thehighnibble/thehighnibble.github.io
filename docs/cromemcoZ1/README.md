@@ -80,11 +80,8 @@ The Cromemco Z-1 replica is available to order as of April 2022.
 ::: warning Please note:
 The hardware kit is available complete with the Cromemco Z-1 facia panel (see: the [Bill-of-Materials](#bill-of-materials).
 
-However, the Cromemco Z-1 firmware is currently in **beta**.
+~~However, the Cromemco Z-1 firmware is currently in **beta**.~~ The Cromemco Z-1 firmware has been in production since October 2022, see the [release notes for v1.10.0 on GitHub](https://github.com/thehighnibble/firmware/releases/tag/v1.10.0)
 
-Kits are shipping with the Cromemco Z-1 beta firmware installed.
-
-Once the production Cromemco Z-1 firmware is released, the ESP32 can be reflashed (using [Over The Air](../imsai8080/update/#updating-the-firmware) updates) with the Cromemco Z-1 firmware.
 :::
 
 ### Expression of interest
@@ -179,9 +176,13 @@ I will only supply one facia with the kit, please don't ask for both.
 
 ## Updating Software
 
-Once the production Cromemco Z-1 firmware is released, the ESP32 can be reflashed (using [Over The Air](../imsai8080/update/#updating-the-firmware) updates) with the Cromemco Z-1 firmware.
+The ESP32 can be reflashed (using [Over The Air](../imsai8080/update/#updating-the-firmware) updates) with the Cromemco Z-1 firmware.
 
-Both the IMSAI 8080 replica and the Cromemco Z-1 replica will be able to run either firmware, and can be reflashed using the OTA method linked above.
+::: tip 
+Both the IMSAI 8080 replica and the Cromemco Z-1 replica are able to run either firmware. To switch from one to the other simply update using the OTA method linked above with the firmware for the desired machine.
+
+The microSD card image has separate folders for maintaining the files for each machine, and each machine also maintains its own [Startup Configuration in Non-volatile storage, NVS](configure/#startup-configuration-non-volatile-storage-nvs)
+:::
 
 ## [Troubleshooting (draft)](../imsai8080/troubleshooting/)
 
