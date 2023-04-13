@@ -100,4 +100,6 @@ While you are waiting for your S-132 kit, checkout the introductory video
 
 ## [Bill-of-Materials (draft)](bom/)
 
+## [Build notes (draft)](build/)
+
 ## [Firmware Install & Console Log](maint/)
