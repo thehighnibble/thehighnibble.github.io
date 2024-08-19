@@ -1,6 +1,6 @@
 module.exports = {
     title: 'The High Nibble',
-    ga: 'UA-138596150-1',
+    // ga: 'UA-138596150-1',
     evergreen: true,
     head: [
       ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-JVDLCQSGXK' }],
