@@ -75,12 +75,17 @@ Like the IMSAI 8080 replica, the Cromemco Z-1 replica also comes with a web base
 
 ## Availability
 
-The Cromemco Z-1 replica is available to order as of April 2022.
+The Cromemco Z-1 replica has been available to order and in production since October 2022.
 
 ::: warning Please note:
 The hardware kit is available complete with the Cromemco Z-1 facia panel (see: the [Bill-of-Materials](#bill-of-materials).
 
-~~However, the Cromemco Z-1 firmware is currently in **beta**.~~ The Cromemco Z-1 firmware has been in production since October 2022, see the [release notes for v1.10.0 on GitHub](https://github.com/thehighnibble/firmware/releases/tag/v1.10.0)
+:::
+
+::: danger Also, please note:
+As of July 2024, kits are currently out of production because of parts availability. I am working to source replacement parts but a change in the BOM will require a redesign of the PCB and I don't currently have an ETA on when the redesign will be complete and tested.
+
+Please send me your expresion of interest (see below) and I will keep you up-to-date via email.
 
 :::
 

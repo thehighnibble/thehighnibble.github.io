@@ -41,7 +41,7 @@ The stock **imsaisim** machine from **z80pack** is configured with:
 - An RTC to support CP/M 3.0 (Plus)
 - A range of disk images with different operating systems, applications, games, demos...
 
-The best reference for the **imsaisim** machine is Udo Munk's [z80pack](http://bit.ly/z80pack) site.
+The best reference for the **imsaisim** machine is Udo Munk's [z80pack](http://www.icl1900.co.uk/unix4fun/z80pack/) site.
 
 To this I added a simulated GUI desktop that you access over Wi-Fi from an evergreen browser (Chrome & Firefox, but not Safari) that includes the following virtual/emulated devices (some that I just made up)
 
@@ -88,7 +88,12 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 The first batches of IMSAI 8080 replicas shipped in June 2019.
 
-Please be assured that I am continuing to make kits in 2023 and will continue to do so until I can no longer source the parts.
+::: danger Please note:
+As of July 2024, kits are currently out of production because of parts availability. I am working to source replacement parts but a change in the BOM will require a redesign of the PCB and I don't currently have an ETA on when the redesign will be complete and tested.
+
+Please send me your expresion of interest (see below) and I will keep you up-to-date via email.
+
+:::
 
 ### Expression of interest
 
