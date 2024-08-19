@@ -162,7 +162,7 @@ See each section below for details.
     - keyboard country/language selection
     - personality selection
       - personality (escape code and keyboard code translation) support for:
-        - ANSI/VT100, ADM-3A, ADM-31, Hazeltine 1500, Osborne 1, Kaypro, VT52
+        - ANSI/VT100, ADM-3A, ADM-31, Cromemco 3102, Hazeltine 1500, Osborne 1, Kaypro, VT52
         - WordStar/VT100 - VT100 terminal with WordStar navigation keys for compatibility with many CP/M applications
         - details on the [Setup-D screen](operation/vt100/operator/setup-d/#personality-support)
   - all Set-up screens include optional help by pressing 'F1' key (enhanced)

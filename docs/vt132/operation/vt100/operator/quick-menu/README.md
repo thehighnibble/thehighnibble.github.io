@@ -74,7 +74,7 @@ The available actions are:
 
 ![QuickMenu Terminal](./QM_Personalities.jpg)
 
-- **Emulation mode** - selects between the eight (8) personalities also selectable from **Setup-D**
+- **Emulation mode** - selects between the nine (9) personalities also selectable from **Setup-D**
 - **7-bit NRCS characters** - selects between MCS and NRCS modes, also selectable from **Setup-D**
 
 ## ASCII Emulation menu

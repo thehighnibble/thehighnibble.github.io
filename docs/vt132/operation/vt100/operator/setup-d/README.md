@@ -8,7 +8,7 @@ sidebar: auto
 
 The `SET-UP D` screen is an enhancement that the VT132 adds to the original VT100 functionality.
 
-The VT132 implements multinational character support (derived from the VT220), international keyboard support and personality support for a range of other terminals of the era (available from the FabGL library), these features are accessible and configurable through the`SET-UP D` screen.
+The VT132 implements multinational character support (derived from the VT220), international keyboard support and personality support for a range of other terminals of the era, these features are accessible and configurable through the`SET-UP D` screen.
 
 ![SET-UP-D-MCS](./SetupD_mcs.jpg)
 
@@ -94,7 +94,7 @@ At least with the VT132 you get to choose.
 
 ## Personality Support
 
-The FabGL library with which the VT132 is built provides a number of 'Personalities' for different terminals of the era.
+The teminal emulation provides a number of 'Personalities' for different terminals of the era.
 
 It maps the escape sequences that control these terminals to the equivalent escape sequences for the VT100.
 
@@ -106,6 +106,7 @@ The available personalities are:
 - WordStar/VT100 (same as above but with WordStar cursor navigation key mappings)
 - ADM-3A
 - ADM-31
+- Cromemco 3102
 - Hazeltine 1500
 - Osborne 1
 - Kaypro

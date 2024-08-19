@@ -1,12 +1,12 @@
 {
     "name": "the full VT132 image",
-    "version": "V1.5.0 (latest)",
+    "version": "V1.7.0 (latest)",
     "new_install_prompt_erase": false,
     "builds": [
       {
         "chipFamily": "ESP32",
         "parts": [
-          { "path": "/binaries/VT132bundle-v1.5.0.bin", "offset": 0 }
+          { "path": "/binaries/VT132bundle-v1.7.0.bin", "offset": 0 }
         ]
       }
     ]
