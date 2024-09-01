@@ -62,6 +62,15 @@ Each function of the S-132 can be selected by a keyboard **hot-key** (as with th
 
 ### [Pinouts for the D+7A I/O connector](pinouts/)
 
+### Firmware Updates
+
+- Firmware updates are hosted on [GitHub](https://github.com/thehighnibble/s-132)
+- The current production firmware can always be found at [github.com/thehighnibble/s-132/releases/latest](https://github.com/thehighnibble/s-132/releases/latest)
+- Firmware updates can be performed directly on the S-132 from the System Menu (see **SYS:** above) but require an update file to first be uploaded via the IMSAI8080 or Cromemco Z-1 replica (Web) Desktop UI. 
+
+The process for Firmware Updates is covered in the [Firmware Update Guide](update/)
+
+
 ## Availability
 
 The S-132 is available to order as of March 2023.

@@ -248,7 +248,7 @@ See each section below for details.
 ### Over-the-Air (OTA) Firmware Updates
 
 - Firmware updates are hosted on [GitHub](https://github.com/thehighnibble/vt132)
-- The current production firmware (V1.2.0) can always be found at [github.com/thehighnibble/vt132/releases/latest](https://github.com/thehighnibble/vt132/releases/latest)
+- The current production firmware can always be found at [github.com/thehighnibble/vt132/releases/latest](https://github.com/thehighnibble/vt132/releases/latest)
 - OTA Updates can be performed directly from the VT132 over Wi-Fi with only power, a VGA monitor and keyboard connected, no connected host (eg. RC2014 or PC) is required
 
 The process for OTA Updates is covered in the [OTA Firmware Update Guide](operation/ota/)
