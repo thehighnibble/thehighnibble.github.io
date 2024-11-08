@@ -88,10 +88,10 @@ The desktop GUI is developed to work with the latest version of the Google Chrom
 
 The first batches of IMSAI 8080 replicas shipped in June 2019.
 
-::: danger Please note:
-As of July 2024, kits are currently out of production because of parts availability. I am working to source replacement parts but a change in the BOM will require a redesign of the PCB and I don't currently have an ETA on when the redesign will be complete and tested.
+::: tip Update 
+As of November 2024, kits are available again.
 
-Please send me your expresion of interest (see below) and I will keep you up-to-date via email.
+The good news is that the redesign has done away with the need for any SMT components so all the soldering is now exclusively through-hole.
 
 :::
 
@@ -101,7 +101,7 @@ I accept expressions of interest via email. If you send email to [info@thehighni
 
 Once a kit is available for you within the month, I will contact you to confirm your order.
 
-The price for the kit is USD$280 and in addition you also pay for postage and any PayPal transaction fees.
+The price for the kit is USD$300 and in addition you also pay for postage and any PayPal transaction fees.
 
 ## News & Updates
 
