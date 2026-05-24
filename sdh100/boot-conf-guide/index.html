@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SDH-100 boot.conf Configuration Guide | The High Nibble</title>
+    <meta name="description" content="">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-JVDLCQSGXK"></script>
+  <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JVDLCQSGXK');</script>
+  <script type="module" src="https://unpkg.com/esp-web-tools@9.2.0/dist/web/install-button.js?module"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.e5a2f529.css" as="style"><link rel="preload" href="/assets/js/app.abda19b8.js" as="script"><link rel="preload" href="/assets/js/33.52794f7f.js" as="script"><link rel="prefetch" href="/assets/js/10.7401911e.js"><link rel="prefetch" href="/assets/js/11.a2ebd31b.js"><link rel="prefetch" href="/assets/js/12.108ff4ce.js"><link rel="prefetch" href="/assets/js/13.446365aa.js"><link rel="prefetch" href="/assets/js/14.7fdd1f85.js"><link rel="prefetch" href="/assets/js/15.1dbfd5a1.js"><link rel="prefetch" href="/assets/js/16.bb30e5da.js"><link rel="prefetch" href="/assets/js/17.431bbb35.js"><link rel="prefetch" href="/assets/js/18.13b03459.js"><link rel="prefetch" href="/assets/js/19.2a041cff.js"><link rel="prefetch" href="/assets/js/2.bb685c55.js"><link rel="prefetch" href="/assets/js/20.b28c3ec1.js"><link rel="prefetch" href="/assets/js/21.205e4038.js"><link rel="prefetch" href="/assets/js/22.d9f8076e.js"><link rel="prefetch" href="/assets/js/23.130f685c.js"><link rel="prefetch" href="/assets/js/24.6f69a074.js"><link rel="prefetch" href="/assets/js/25.98001104.js"><link rel="prefetch" href="/assets/js/26.d75a4b9a.js"><link rel="prefetch" href="/assets/js/27.d63ad0e7.js"><link rel="prefetch" href="/assets/js/28.0b72a242.js"><link rel="prefetch" href="/assets/js/29.520b4aeb.js"><link rel="prefetch" href="/assets/js/3.7e63d622.js"><link rel="prefetch" href="/assets/js/30.1d567b9a.js"><link rel="prefetch" href="/assets/js/31.8440cf5e.js"><link rel="prefetch" href="/assets/js/32.03696955.js"><link rel="prefetch" href="/assets/js/34.c1d1837c.js"><link rel="prefetch" href="/assets/js/35.42a63d9e.js"><link rel="prefetch" href="/assets/js/36.c2ceca80.js"><link rel="prefetch" href="/assets/js/37.69676fc2.js"><link rel="prefetch" href="/assets/js/38.74afb808.js"><link rel="prefetch" href="/assets/js/39.f1aae372.js"><link rel="prefetch" href="/assets/js/4.8e9414b8.js"><link rel="prefetch" href="/assets/js/5.96d04688.js"><link rel="prefetch" href="/assets/js/6.55da8841.js"><link rel="prefetch" href="/assets/js/7.b6065cb1.js"><link rel="prefetch" href="/assets/js/8.7b8a139e.js"><link rel="prefetch" href="/assets/js/9.53b5178a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e5a2f529.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">The High Nibble</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/imsai8080/" class="nav-link">IMSAI 8080</a></div><div class="nav-item"><a href="/cromemcoZ1/" class="nav-link">Cromemco Z-1</a></div><div class="nav-item"><a href="/vt132/" class="nav-link">VT132</a></div><div class="nav-item"><a href="/s132/" class="nav-link">S-132</a></div><div class="nav-item"><a href="/sdh100/" class="nav-link router-link-active">SDH-100</a></div><div class="nav-item"><a href="https://github.com/orgs/thehighnibble/discussions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Forum
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/thehighnibble/firmware" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/imsai8080/" class="nav-link">IMSAI 8080</a></div><div class="nav-item"><a href="/cromemcoZ1/" class="nav-link">Cromemco Z-1</a></div><div class="nav-item"><a href="/vt132/" class="nav-link">VT132</a></div><div class="nav-item"><a href="/s132/" class="nav-link">S-132</a></div><div class="nav-item"><a href="/sdh100/" class="nav-link router-link-active">SDH-100</a></div><div class="nav-item"><a href="https://github.com/orgs/thehighnibble/discussions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Forum
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/thehighnibble/firmware" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>SDH-100 boot.conf Configuration Guide</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/sdh100/boot-conf-guide/#about-the-file" class="sidebar-link">About the file</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#syntax-notation" class="sidebar-link">Syntax notation</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#annotated-showcase-boot-conf" class="sidebar-link">Annotated showcase boot.conf</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sdh100/boot-conf-guide/#boot-logging" class="sidebar-link">Boot logging</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#boot-log" class="sidebar-link">BOOT_LOG</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#serial-ports" class="sidebar-link">Serial ports</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#uart0" class="sidebar-link">UART0</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#uart1" class="sidebar-link">UART1</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#memory-and-rom" class="sidebar-link">Memory and ROM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#rom-load" class="sidebar-link">ROM_LOAD</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#ram-map" class="sidebar-link">RAM_MAP</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#ram-set" class="sidebar-link">RAM_SET</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#mem-test" class="sidebar-link">MEM_TEST</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#boot-jump" class="sidebar-link">BOOT_JUMP</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#disk-drives" class="sidebar-link">Disk drives</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#harddisk" class="sidebar-link">HARDDISK</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#fdc-transport" class="sidebar-link">FDC.transport</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#fdc-uart-drives" class="sidebar-link">FDC.uart.drives</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#printer" class="sidebar-link">Printer</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#lpt-iobase" class="sidebar-link">LPT.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#lpt-device" class="sidebar-link">LPT.device</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#imsai-vio" class="sidebar-link">IMSAI VIO</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#vio-iobase" class="sidebar-link">VIO.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#vio-membase" class="sidebar-link">VIO.membase</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#sio-controller" class="sidebar-link">SIO controller</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#sio-iobase" class="sidebar-link">SIO.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#sio-a-baud" class="sidebar-link">SIO.A.baud</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#sio-b-baud" class="sidebar-link">SIO.B.baud</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#other-i-o-port-bases" class="sidebar-link">Other I/O port bases</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#dzlr-iobase" class="sidebar-link">DZLR.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#d7aio-iobase" class="sidebar-link">D7AIO.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#timer-iobase" class="sidebar-link">TIMER.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#sdh-iobase" class="sidebar-link">SDH.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#apu-iobase" class="sidebar-link">APU.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#fif-iobase" class="sidebar-link">FIF.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#mmu-iobase" class="sidebar-link">MMU.iobase</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#rtc-iobase" class="sidebar-link">RTC.iobase</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#usb-host-integration" class="sidebar-link">USB host integration</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#usb-disk" class="sidebar-link">USB.disk</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#usb-tty" class="sidebar-link">USB.tty</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#usb-uc1" class="sidebar-link">USB.uc1</a></li><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#usb-debug" class="sidebar-link">USB.debug</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#monitor" class="sidebar-link">Monitor</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/boot-conf-guide/#mon-break" class="sidebar-link">MON.break</a></li></ul></li><li><a href="/sdh100/boot-conf-guide/#common-pitfalls-and-interactions" class="sidebar-link">Common pitfalls and interactions</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="sdh-100-boot-conf-configuration-guide"><a href="#sdh-100-boot-conf-configuration-guide" class="header-anchor">#</a> SDH-100 boot.conf Configuration Guide</h1> <h2 id="about-the-file"><a href="#about-the-file" class="header-anchor">#</a> About the file</h2> <p>The firmware reads <code>/CONF/boot.conf</code> from the microSD card once at
+boot.</p> <div class="tip custom-block"><p class="custom-block-title">First-time setup</p> <p>If the file is missing, boot halts before the bus comes up, the SD
+card is presented as a USB mass-storage volume, and the board waits
+there until a valid file is copied and power is cycled.</p></div> <p>The format is one directive per line, in the form <code>KEY=VALUE</code>.</p> <ul><li>A line whose first character is <code>#</code> is a comment and is skipped.</li> <li>A <code>#</code> after the value also starts an inline comment; everything
+from <code>#</code> to the end of the line is discarded.</li> <li>Blank lines are ignored.</li> <li>Whitespace around the <code>=</code> is significant on the <strong>key</strong> side: a
+leading space turns <code>FDC.transport</code> into <code>FDC.transport</code>, which
+the firmware will not recognise. Values tolerate trailing spaces in
+most cases but it is safest to leave none.</li> <li>If the same key appears twice, the last value wins.</li></ul> <div class="warning custom-block"><p class="custom-block-title">Silent typos and case sensitivity</p> <ul><li>Keys are case sensitive. Write <code>FDC.transport</code>, not
+<code>fdc.transport</code> or <code>FDC.TRANSPORT</code>. Values are usually
+case-insensitive but a few are not -- the sections below call out
+any that are.</li> <li>Unknown keys are silently ignored. A typo in a directive name does
+not produce an error -- it produces a missing setting.</li></ul></div> <div class="warning custom-block"><p class="custom-block-title">Edits take effect on next boot only</p> <p>Settings are applied during boot. Editing <code>boot.conf</code> while the board
+is running has no effect until the next reset.</p></div> <h3 id="syntax-notation"><a href="#syntax-notation" class="header-anchor">#</a> Syntax notation</h3> <p>Each directive in the reference below is preceded by a one-line
+grammar. The notation is:</p> <ul><li>Literal tokens (<code>AUTO</code>, <code>cs8</code>, <code>default</code>, <code>PASS</code>, ...) appear
+exactly as shown.</li> <li><code>&lt;name&gt;</code> marks a value you supply (a number, an address, a
+filename, etc.).</li> <li><code>A|B|C</code> means choose one of the listed alternatives.</li> <li><code>[...]</code> marks an optional fragment.</li> <li><code>[,X...]</code> indicates the fragment may repeat, comma-separated.</li> <li>Spaces in the grammar are for readability only -- the value itself
+contains no spaces.</li></ul> <h2 id="annotated-showcase-boot-conf"><a href="#annotated-showcase-boot-conf" class="header-anchor">#</a> Annotated showcase boot.conf</h2> <p>The file below exercises every directive the firmware recognises. It
+is intentionally maximal -- a real installation typically only sets
+the lines it needs and lets the rest default. Use this as a
+copy-and-cut starting point.</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment">### boot.conf -- SDH-100 configuration</span>
+
+<span class="token comment">### --- Boot logging ---------------------------------------------</span>
+<span class="token comment"># BOOT_LOG=QUIET           # suppress UART/S-132 console boot log</span>
+<span class="token comment"># BOOT_LOG=TEXT            # strip ANSI colour escapes</span>
+<span class="token key attr-name">BOOT_LOG</span><span class="token punctuation">=</span><span class="token value attr-value">TEXT              # plain-text colour-free boot log</span>
+
+<span class="token comment">### --- Serial ports ---------------------------------------------</span>
+<span class="token key attr-name">UART0</span><span class="token punctuation">=</span><span class="token value attr-value">115200,cs8           # console UART (S-100 SIO Port A path)</span>
+<span class="token key attr-name">UART1</span><span class="token punctuation">=</span><span class="token value attr-value">115200,cs8,parenb    # SIO Port B path -- enable even parity</span>
+
+<span class="token comment">### --- Memory map -----------------------------------------------</span>
+<span class="token key attr-name">ROM_LOAD</span><span class="token punctuation">=</span><span class="token value attr-value">memon80.hex       # one or more Intel-HEX images from /ROMS/</span>
+<span class="token comment"># ROM_LOAD=mpu-a-rom.hex,viofm1.hex</span>
+
+<span class="token key attr-name">RAM_MAP</span><span class="token punctuation">=</span><span class="token value attr-value">AUTO               # fill every empty page with emulated RAM</span>
+<span class="token comment"># RAM_MAP=00:7F             # alternative: explicit page ranges</span>
+<span class="token comment"># RAM_MAP=00:7F,80:DF</span>
+<span class="token key attr-name">RAM_SET</span><span class="token punctuation">=</span><span class="token value attr-value">0x00               # fill emulated RAM with this byte</span>
+<span class="token key attr-name">MEM_TEST</span><span class="token punctuation">=</span><span class="token value attr-value">RUN               # one walking test pass after init</span>
+<span class="token comment"># MEM_TEST=RUNLOOP          # ...or loop forever (development use)</span>
+<span class="token key attr-name">BOOT_JUMP</span><span class="token punctuation">=</span><span class="token value attr-value">0xF800           # plant JP F800h at 0000h before release</span>
+
+<span class="token comment">### --- Disk drives ----------------------------------------------</span>
+<span class="token key attr-name">HARDDISK</span><span class="token punctuation">=</span><span class="token value attr-value">blank             # /DISKS/blank.hdd as the large disk</span>
+<span class="token key attr-name">FDC.transport</span><span class="token punctuation">=</span><span class="token value attr-value">USB          # USB or UART (UART claims UART1)</span>
+<span class="token comment"># FDC.uart.drives=A:CPM22.FDC,B:UTILITY.FDC</span>
+
+<span class="token comment">### --- Printer -------------------------------------------------</span>
+<span class="token key attr-name">LPT.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0xF6</span>
+<span class="token key attr-name">LPT.device</span><span class="token punctuation">=</span><span class="token value attr-value">S132            # S132 | FILE | PARALLEL</span>
+
+<span class="token comment">### --- IMSAI VIO ----------------------------------------------</span>
+<span class="token key attr-name">VIO.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0x04 -- VIO command/data</span>
+<span class="token key attr-name">VIO.membase</span><span class="token punctuation">=</span><span class="token value attr-value">default        # 0xF000 -- VIO 2 KB video window</span>
+
+<span class="token comment">### --- SIO controller -----------------------------------------</span>
+<span class="token key attr-name">SIO.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0x00 -- SIO-2 base (Port A and Port B)</span>
+<span class="token comment"># SIO.A.baud=9600           # software-throttle SIO Port A</span>
+<span class="token comment"># SIO.B.baud=9600           # software-throttle SIO Port B</span>
+
+<span class="token comment">### --- Other I/O port bases ------------------------------------</span>
+<span class="token key attr-name">DZLR.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default        # 0x0E -- Cromemco Dazzler</span>
+<span class="token key attr-name">D7AIO.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default       # 0x18 -- 8-port digital/analogue I/O</span>
+<span class="token key attr-name">TIMER.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default       # 0xA0 -- interval timer / control port</span>
+<span class="token key attr-name">SDH.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0xA1 -- SDH host co-routine port</span>
+<span class="token key attr-name">APU.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0xA2 -- Am9511 APU</span>
+<span class="token key attr-name">FIF.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0xFD -- IMSAI FIF floppy controller</span>
+<span class="token key attr-name">MMU.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0x40 -- IMSAI MMU bank switch</span>
+<span class="token key attr-name">RTC.iobase</span><span class="token punctuation">=</span><span class="token value attr-value">default         # 0x41 -- DS3231 real-time clock</span>
+
+<span class="token comment">### --- USB host integration ------------------------------------</span>
+<span class="token key attr-name">USB.disk</span><span class="token punctuation">=</span><span class="token value attr-value">AUTOMOUNT         # auto-present microSD as MSC volume</span>
+<span class="token key attr-name">USB.tty</span><span class="token punctuation">=</span><span class="token value attr-value">PASS               # bridge USB CON CDC &lt;-&gt; SIO Port A</span>
+<span class="token comment"># USB.uc1=PASS              # bridge USB AUX CDC &lt;-&gt; SIO Port B</span>
+<span class="token key attr-name">USB.debug</span><span class="token punctuation">=</span><span class="token value attr-value">TRUE             # log USB connect / disconnect events</span>
+
+<span class="token comment">### --- Monitor ------------------------------------------------</span>
+<span class="token comment"># MON.break=NMI            # break via Z80 NMI vector (Z80 only)</span>
+
+<span class="token comment">### END</span>
+</code></pre></div><p>The remainder of this document explains every directive in detail.</p> <h2 id="boot-logging"><a href="#boot-logging" class="header-anchor">#</a> Boot logging</h2> <h3 id="boot-log"><a href="#boot-log" class="header-anchor">#</a> <code>BOOT_LOG</code></h3> <p><code>BOOT_LOG=QUIET|TEXT|QUIET,TEXT</code></p> <p>Controls how boot-time log output is rendered on the console serial
+ports. Accepts the keywords <code>QUIET</code> and <code>TEXT</code>, separately or
+combined with a comma or space (<code>BOOT_LOG=QUIET,TEXT</code>). <code>QUIET</code>
+suppresses log output on UART0 and on the S-132 console, but leaves
+the USB MON CDC channel untouched, so the boot log is still
+available there for diagnosis. <code>TEXT</code> strips the ANSI colour-escape
+sequences that the firmware normally emits, which matters when the
+console is a paper teletype, an early CRT terminal that prints
+escape sequences as gibberish, or a logger that captures raw bytes
+to a file. The directive only affects the boot phase; once the
+firmware finishes initialising and reports <code>SDH-100 Running...</code>, the
+boot log stops emitting and the runtime log channel takes over with
+its own conventions. If you find yourself wanting clean text in
+captured logs, set <code>BOOT_LOG=TEXT</code> permanently -- it has no downside
+on a colour-capable terminal beyond the loss of a few highlights.</p> <h2 id="serial-ports"><a href="#serial-ports" class="header-anchor">#</a> Serial ports</h2> <h3 id="uart0"><a href="#uart0" class="header-anchor">#</a> <code>UART0</code></h3> <p><code>UART0=&lt;baud&gt;[,cs7|cs8][,cstopb][,parenb[,parodd]]</code></p> <p>Configures the S-100 SIO Port A path on UART0 of the RP2350B. The
+value is an stty-style list of tokens separated by spaces or commas:
+a bare integer is the baud rate; <code>cs8</code> and <code>cs7</code> set the data-bit
+width; <code>cstopb</code> selects two stop bits; <code>parenb</code> enables even parity;
+<code>parodd</code> switches to odd parity (only valid in combination with
+<code>parenb</code>). The default if the line is missing or empty is
+<code>115200,cs8</code> -- 115200 baud, 8 data bits, 1 stop bit, no parity. The
+SDH-100 always reinitialises UART0 at boot, so commenting the line
+out is the same as leaving it at the default; deleting the directive
+has no special meaning. UART0 is not configured here when an S-132
+console is detected -- the S-132 owns the console TTY in that
+case, and its own settings apply. UART0 is also the primary
+console for the boot log when <code>BOOT_LOG=QUIET</code> is not in force, so
+choose a baud rate your terminal can actually keep up with during
+the rapid boot-time output.</p> <h3 id="uart1"><a href="#uart1" class="header-anchor">#</a> <code>UART1</code></h3> <p><code>UART1=&lt;baud&gt;[,cs7|cs8][,cstopb][,parenb[,parodd]]</code></p> <p>Configures UART1 of the RP2350B with exactly the same syntax as
+<code>UART0</code>. UART1 backs the S-100 SIO Port B path under normal use --
+hooked, for example, to a second terminal, a serial printer, or a
+modem. Default is again <code>115200,cs8</code>. The interaction worth knowing
+is that <code>FDC.transport=UART</code> claims UART1 exclusively at 2 000 000
+baud and reroutes it to the floppy controller protocol; in that
+configuration any baud rate or framing you set here is silently
+overridden, and SIO Port B emulation stops responding. If you need
+SIO Port B for terminal use, leave <code>FDC.transport=USB</code> (the default)
+or omit the line. Like UART0, UART1 is reinitialised on every boot
+even if you delete the directive, so there is no way to leave the
+hardware UART unmanaged.</p> <h2 id="memory-and-rom"><a href="#memory-and-rom" class="header-anchor">#</a> Memory and ROM</h2> <h3 id="rom-load"><a href="#rom-load" class="header-anchor">#</a> <code>ROM_LOAD</code></h3> <p><code>ROM_LOAD=&lt;file&gt;[,&lt;file&gt;...]</code></p> <p>Names one or more Intel-HEX files in <code>/ROMS/</code> that the firmware
+loads into shadow memory and marks read-only before the CPU is
+released. The value is a comma-separated list of filenames -- for
+example <code>ROM_LOAD=memon80.hex</code> or
+<code>ROM_LOAD=mpu-a-rom.hex,viofm1.hex</code>. Each file is loaded at the
+addresses encoded in its hex records, so the load address is part of
+the file, not part of the directive. Pages that receive HEX data
+become ROM in the live memory map and survive resets initiated by
+the bus until the next power cycle. If the directive is absent the
+firmware logs a warning and brings the bus up with no emulated ROM,
+which is normal when you intend to run on physical S-100 RAM/ROM
+boards alone. ROM data placed at the reset vector by <code>ROM_LOAD</code> is
+overwritten by <code>BOOT_JUMP</code> if both are set; <code>BOOT_JUMP</code> runs later.</p> <h3 id="ram-map"><a href="#ram-map" class="header-anchor">#</a> <code>RAM_MAP</code></h3> <p><code>RAM_MAP=AUTO|&lt;start&gt;:&lt;end&gt;[,&lt;start&gt;:&lt;end&gt;...]</code></p> <p>Decides which 256-byte pages of the 64 KB CPU address space the
+SDH-100 will provide as emulated RAM. The value is either the literal
+keyword <code>AUTO</code> or a comma-separated list of <code>START:END</code> page-number
+pairs in hexadecimal -- for example <code>RAM_MAP=00:7F,80:DF</code>. Page
+numbers are the high byte of the address, so <code>00:7F</code> covers
+addresses <code>0000h-7FFFh</code> (32 KB) and <code>00:FF</code> covers the entire 64 KB.
+<code>AUTO</code> is the easiest choice and is the right default for most
+systems: the firmware first scans the bus for physical memory cards
+and any ROM you loaded, then fills every remaining page with emulated
+RAM. Manual ranges are useful when you want to leave a hole for a
+device that is not yet plugged in, when you intentionally want
+unmapped pages to NACK to test software, or when you want to run
+with a smaller RAM footprint for diagnostics. Pages outside the
+declared ranges return <code>FFh</code> to the CPU and produce no read or write
+side-effects. If the directive is absent the firmware logs a warning
+and provides no emulated RAM at all -- a configuration only useful
+when every page in the system comes from physical S-100 cards.</p> <h3 id="ram-set"><a href="#ram-set" class="header-anchor">#</a> <code>RAM_SET</code></h3> <p><code>RAM_SET=&lt;byte&gt;</code></p> <p>Picks the byte value used to fill emulated RAM at boot. Accepts any
+form <code>strtol</code> understands, including <code>0xAA</code>, <code>170</code>, or <code>0252</code>. Only
+the low eight bits matter -- <code>RAM_SET=0x1234</code> is the same as
+<code>RAM_SET=0x34</code>. If the line is absent, RAM is filled with
+pseudo-random bytes from the firmware's PRNG, which is the right
+choice when you want unmapped variables and untouched stack regions
+to be detectable by software that checks for known patterns or that
+crashes on uninitialised reads. Setting <code>RAM_SET=0x00</code> makes the
+emulated RAM look like cleared dynamic RAM -- familiar for CP/M
+loaders and most BASICs. <code>RAM_SET=0xFF</code> mirrors what an unattached
+data bus normally pulls up to and is useful when you want freshly
+booted RAM to look exactly like physical EPROM holes. The value
+applies only to pages declared as emulated RAM (<code>AUTO</code>-filled or
+listed explicitly); pages backed by physical S-100 RAM keep whatever
+they hold, and ROM pages keep their HEX-loaded content.</p> <h3 id="mem-test"><a href="#mem-test" class="header-anchor">#</a> <code>MEM_TEST</code></h3> <p><code>MEM_TEST=RUN|RUNLOOP</code></p> <p>Runs a walking-pattern test across every shadow-RAM page after the
+memory map is built and before the CPU is released. The keyword
+<code>RUN</code> performs a single pass; <code>RUNLOOP</code> performs the test in an
+infinite loop and forces the SD card to remain visible as a USB MSC
+volume so you can pull a log file off the board mid-run. The pattern
+sequence is <code>AAh, 55h, FFh, 00h, F0h, 0Fh, 5Ah, A5h, 33h, CCh</code>
+applied to every byte; failures are reported in the boot log with
+the failing address and the expected and observed bytes. The test
+runs while the SDH-100 has been granted the bus, so the CPU is held
+off and not yet fetching from any of the pages under test -- a long
+test does delay the <code>SDH-100 Running...</code> banner. In daily use the test is unnecessary;
+<code>RUN</code> is most useful as a one-shot acceptance check after a hardware
+modification or when chasing intermittent crashes that smell like
+RAM. <code>RUNLOOP</code> is meant for development, not normal operation. If
+the directive is absent or set to anything that does not contain
+<code>RUN</code> (note: <code>MEM_TEST=LOOP</code> on its own does not run the test), the
+test is skipped.</p> <h3 id="boot-jump"><a href="#boot-jump" class="header-anchor">#</a> <code>BOOT_JUMP</code></h3> <p><code>BOOT_JUMP=&lt;addr&gt;</code></p> <p>Plants a three-byte unconditional jump (<code>C3 lo hi</code>) at addresses
+<code>0000h-0002h</code> immediately before releasing the CPU from HOLD. The
+value is a 16-bit address in any base <code>strtol</code> accepts, typically
+hex (<code>BOOT_JUMP=0xF800</code>). The firmware writes the bytes both into
+shadow RAM and, if the page at zero is also present in physical RAM,
+into the physical SRAM via DMA -- so the CPU sees the jump on its
+first fetch regardless of whether <code>0000h</code> is mapped to a SDH-100
+page or to a real RAM card. The directive runs after <code>ROM_LOAD</code> and
+after <code>MEM_TEST</code>, so it overrides anything the HEX file placed at
+the reset vector. The most common application is to land directly
+into a monitor or BIOS that loads at a high address (<code>MEMMON80</code> at
+<code>F800h</code>, a CP/M loader at <code>EE00h</code>, etc.) without having to write a
+two-byte stub into the ROM image first. Invalid values -- non-numeric
+text, addresses above <code>FFFFh</code>, or trailing garbage -- are rejected
+with a warning and no jump is injected, which leaves whatever the
+HEX file or memory pattern put at the reset vector intact. If the
+directive is absent no bytes are written.</p> <h2 id="disk-drives"><a href="#disk-drives" class="header-anchor">#</a> Disk drives</h2> <h3 id="harddisk"><a href="#harddisk" class="header-anchor">#</a> <code>HARDDISK</code></h3> <p><code>HARDDISK=blank|&lt;name&gt;</code></p> <p>Mounts a hard-disk image at the large-disk slot of the IMSAI floppy
+controller. The value is the basename of a <code>.hdd</code> file in <code>/DISKS/</code>;
+the <code>.hdd</code> extension is appended automatically, so
+<code>HARDDISK=cpm68k</code> mounts <code>/DISKS/cpm68k.hdd</code>. The reserved value
+<code>blank</code> mounts the firmware's standard 4 MB blank image, which is
+formatted by the host operating system on first use. The drive
+appears at the floppy controller's &quot;I:&quot; slot (large disk index) and
+follows the same sector geometry the FIF expects of a hard-disk
+image. If the directive is absent no large-disk image is mounted and
+software that probes for it sees an empty drive. Unlike floppy
+drives, the hard-disk slot is set once at boot -- there is no boot
+configuration to swap it at runtime, though host commands can change
+it later via the SDH co-routine port.</p> <h3 id="fdc-transport"><a href="#fdc-transport" class="header-anchor">#</a> <code>FDC.transport</code></h3> <p><code>FDC.transport=USB|UART</code></p> <p>Selects the channel the IMSAI floppy controller emulator uses to
+talk to the host. <code>FDC.transport=USB</code> (the default) routes FDC
+traffic over the dedicated USB FDC CDC class device, where it is
+served by a USB host application that streams disk images. <code>UART</code>
+hands the floppy protocol to UART1 at a fixed 2 000 000 baud, 8N1,
+for installations where a USB host is impractical and a wired serial
+link is available instead. The value is matched on its first four
+characters case-insensitively, so <code>USB</code>, <code>usb</code>, and <code>UART</code> all work.
+The most important consequence of <code>UART</code> mode is that SIO Port B
+becomes unavailable: UART1 is fully consumed by the floppy protocol,
+and any software that drives Port B will see it as silent.
+<code>USB.uc1=PASS</code> is also incompatible with <code>FDC.transport=UART</code> for
+the same reason. New as of 0.18.0; releases before that always used
+USB and accepted no override.</p> <h3 id="fdc-uart-drives"><a href="#fdc-uart-drives" class="header-anchor">#</a> <code>FDC.uart.drives</code></h3> <p><code>FDC.uart.drives=&lt;drive&gt;:&lt;image&gt;[,&lt;drive&gt;:&lt;image&gt;...]</code></p> <p>Pre-populates the floppy controller's drive map at boot, but only
+when <code>FDC.transport=UART</code>. The value is a comma-separated list of
+<code>drive:image</code> pairs, where the drive letter is <code>A</code> through <code>D</code> and
+the image is a filename in <code>/DISKS/</code>. For example,
+<code>FDC.uart.drives=A:CPM22.FDC,B:UTILITY.FDC</code> mounts those two images
+on drives A and B at the first successful FDC handshake. Whitespace
+inside an entry is tolerated. Entries that fail to parse, or images
+that the FDC layer rejects, are logged and skipped without aborting
+the rest of the list. Only the first successful FDC handshake
+applies the map; subsequent FDC resets do not re-apply it, and any
+runtime drive changes made through host commands persist
+independently. The directive is silently ignored when transport is
+USB -- a USB host is expected to manage its own image catalogue. If
+you switch from UART back to USB transport, leaving the
+<code>FDC.uart.drives</code> line in place is harmless.</p> <h2 id="printer"><a href="#printer" class="header-anchor">#</a> Printer</h2> <h3 id="lpt-iobase"><a href="#lpt-iobase" class="header-anchor">#</a> <code>LPT.iobase</code></h3> <p><code>LPT.iobase=default|&lt;port&gt;</code></p> <p>Sets the I/O port base for the parallel-printer interface. The value
+is <code>default</code> (which selects port <code>F6h</code>) or a hex/decimal port
+number. The directive must be present for the printer to be
+registered at all -- if you remove the line entirely, the printer
+disappears from the I/O map and software targeting it sees no
+response. When you change the base, the device occupies a single
+port; the strobe and status lines are generated internally and do
+not consume additional ports. The directive interacts with
+<code>LPT.device</code>: changing the base does not change <em>what</em> the printer
+output is doing, only <em>which port</em> gets writes routed to it.</p> <h3 id="lpt-device"><a href="#lpt-device" class="header-anchor">#</a> <code>LPT.device</code></h3> <p><code>LPT.device=FILE|PARALLEL|S132</code></p> <p>Routes printer output to one of three sinks. Accepts <code>FILE</code>,
+<code>PARALLEL</code>, or <code>S132</code>, case-insensitive but with no surrounding
+whitespace. <code>FILE</code> -- the default if the directive is absent --
+buffers writes and appends them to <code>/lpt.txt</code> on the SD card,
+flushing after a second of inactivity, which is the simplest
+configuration for capturing CP/M <code>LST:</code> output for later review on a
+laptop. <code>PARALLEL</code> drives a physical Centronics-style printer through
+the on-board MCP23017 I2C I/O expander; if the chip is not detected
+on the I2C bus the firmware logs an error and falls back to <code>FILE</code>
+silently, so a stale <code>PARALLEL</code> setting on a board without the I2C
+add-on does not stop the system booting. <code>S132</code> routes printer
+writes through the S-132 D7AIO channel, which is useful
+when the S-132 is connected to a host that wants to render printer
+output on its own screen. Unrecognised values fall back to <code>FILE</code>
+with a warning. There is no way to log to multiple sinks at once.</p> <h2 id="imsai-vio"><a href="#imsai-vio" class="header-anchor">#</a> IMSAI VIO</h2> <h3 id="vio-iobase"><a href="#vio-iobase" class="header-anchor">#</a> <code>VIO.iobase</code></h3> <p><code>VIO.iobase=default|&lt;port&gt;</code></p> <p>Sets the I/O port base for the VIO video controller's command and
+data ports. The value is <code>default</code> (port <code>04h</code>, occupying <code>04h-05h</code>)
+or a hex/decimal port number. The VIO command interface is two
+ports wide regardless of base. Note that this directive is
+<strong>independent</strong> of <code>VIO.membase</code> -- moving the I/O base does not
+move the video memory window, and vice versa. A working
+configuration requires both bases to be consistent with whatever
+software you are running.</p> <h3 id="vio-membase"><a href="#vio-membase" class="header-anchor">#</a> <code>VIO.membase</code></h3> <p><code>VIO.membase=default|&lt;addr&gt;</code></p> <p>Sets the base address of the VIO's 2 KB video memory window in the
+CPU address space. The value is <code>default</code> (<code>F000h</code>, covering
+<code>F000h-F7FFh</code>) or a hex address that you have made sure does not
+overlap any ROM, RAM, or device window. Moving this is most often
+useful when you load a ROM at the same high addresses the VIO
+normally occupies and you want to push the video buffer down to
+<code>E800h</code> or similar. The window is always exactly 2 KB; you can move
+it but you cannot resize it.</p> <h2 id="sio-controller"><a href="#sio-controller" class="header-anchor">#</a> SIO controller</h2> <h3 id="sio-iobase"><a href="#sio-iobase" class="header-anchor">#</a> <code>SIO.iobase</code></h3> <p><code>SIO.iobase=default|&lt;port&gt;</code></p> <p>Default <code>00h</code>. Registers the SIO-2 controller, which provides Port A
+at <code>base+02h</code>/<code>base+03h</code> (data and command) and Port B at
+<code>base+22h</code>/<code>base+23h</code>. The data port at <code>base+00h</code> itself is left
+unassigned. Moving this base shifts both ports; software that
+hard-codes <code>02h</code>-style port numbers must be rebuilt or patched.</p> <h3 id="sio-a-baud"><a href="#sio-a-baud" class="header-anchor">#</a> <code>SIO.A.baud</code></h3> <p><code>SIO.A.baud=&lt;baud&gt;</code></p> <p>Imposes a software baud-rate ceiling on SIO Port A. The value is a
+decimal baud rate -- e.g. <code>SIO.A.baud=9600</code> -- and it works by
+delaying every character through Port A by the equivalent of
+<code>10/baud</code> seconds (10 bits per character, the worst-case framing).
+The throttle is purely software: the underlying hardware UART still
+runs at whatever <code>UART0</code> configured, so the terminal on the wire
+sees no change. What does change is what the CPU sees -- a Z80 / 8080
+program polling the SIO status will observe characters arriving and
+the transmit-ready flag clearing at the rate you set, which matters
+when you are running CP/M software written for a real 9600-baud
+terminal that loses data when characters arrive faster than its
+echo buffer can handle. If the directive is absent or set to zero,
+no throttle is applied and characters move at full firmware speed.</p> <h3 id="sio-b-baud"><a href="#sio-b-baud" class="header-anchor">#</a> <code>SIO.B.baud</code></h3> <p><code>SIO.B.baud=&lt;baud&gt;</code></p> <p>Same throttle as <code>SIO.A.baud</code>, applied to SIO Port B. Note that this
+directive has no effect when <code>FDC.transport=UART</code> -- in that
+configuration the SIO Port B emulation is suppressed entirely
+because UART1 has been claimed by the floppy controller. If you
+configure both, the floppy controller wins and the throttle is
+silently ignored until you switch transport back.</p> <h2 id="other-i-o-port-bases"><a href="#other-i-o-port-bases" class="header-anchor">#</a> Other I/O port bases</h2> <p>The directives below all set the I/O port base for an emulated
+device. Each accepts <code>default</code> (the value listed) or a hex/decimal
+port number; each is a one-line entry in the same form as the
+others. <strong>The directive must be present for the device to be
+registered.</strong> Deleting an entry does not move the device to a
+default port -- it removes the device from the I/O map entirely.
+That is intentional and lets you turn devices off cleanly, but it
+also means accidentally commenting out a line silently disables the
+device. The defaults are listed both in the showcase sample above
+and below.</p> <div class="warning custom-block"><p class="custom-block-title">Port-base collisions silently drop the second device</p> <p>If two devices end up assigned to the same base port, the firmware
+logs an error and skips registration of the second one; the first
+device wins. Always verify ranges do not overlap when moving bases.</p></div> <h3 id="dzlr-iobase"><a href="#dzlr-iobase" class="header-anchor">#</a> <code>DZLR.iobase</code></h3> <p><code>DZLR.iobase=default|&lt;port&gt;</code></p> <p>Default <code>0Eh</code>. Registers the Cromemco Dazzler at <code>base+00h</code> and
+<code>base+01h</code>. Move this if you have a real Dazzler board on the bus
+that you want the SDH-100 to leave alone, or if your software
+expects the Dazzler at a non-standard port.</p> <h3 id="d7aio-iobase"><a href="#d7aio-iobase" class="header-anchor">#</a> <code>D7AIO.iobase</code></h3> <p><code>D7AIO.iobase=default|&lt;port&gt;</code></p> <p>Default <code>18h</code>. Registers the eight-port digital/analogue I/O block,
+spanning <code>base+00h</code> through <code>base+07h</code>. The eight-port footprint is
+fixed; the base can be moved but the span cannot be reduced. If the
+S-132 is attached, D7AIO traffic at this port is also routed to it
+by default.</p> <h3 id="timer-iobase"><a href="#timer-iobase" class="header-anchor">#</a> <code>TIMER.iobase</code></h3> <p><code>TIMER.iobase=default|&lt;port&gt;</code></p> <p>Default <code>A0h</code>. Registers the interval-timer / hardware control port
+at a single port address. The port carries the periodic interrupt
+control bits and is a common target for CP/M time-of-day patches.</p> <h3 id="sdh-iobase"><a href="#sdh-iobase" class="header-anchor">#</a> <code>SDH.iobase</code></h3> <p><code>SDH.iobase=default|&lt;port&gt;</code></p> <p>Default <code>A1h</code>. Registers the SDH-100 host co-routine command port,
+which CP/M hosted on the SDH-100 uses to issue management commands
+(disk eject, system map query, etc.) into the firmware. Moving this
+breaks any pre-built CP/M binary that uses the co-routine; only move
+it when you have a specific port conflict and a way to rebuild the
+client.</p> <h3 id="apu-iobase"><a href="#apu-iobase" class="header-anchor">#</a> <code>APU.iobase</code></h3> <p><code>APU.iobase=default|&lt;port&gt;</code></p> <p>Default <code>A2h</code>. Registers the Am9511 floating-point APU at
+<code>base+00h</code> (data) and <code>base+01h</code> (status). Software that uses the
+APU expects a fixed port pair, so move this only when something else
+on the bus already occupies <code>A2h-A3h</code>.</p> <h3 id="fif-iobase"><a href="#fif-iobase" class="header-anchor">#</a> <code>FIF.iobase</code></h3> <p><code>FIF.iobase=default|&lt;port&gt;</code></p> <p>Default <code>FDh</code>. Registers the IMSAI FIF floppy controller's command
+port. The FIF emulator interacts with whichever transport
+<code>FDC.transport</code> selects -- moving the base does not change which
+transport is active, only the port the CPU writes commands to.</p> <h3 id="mmu-iobase"><a href="#mmu-iobase" class="header-anchor">#</a> <code>MMU.iobase</code></h3> <p><code>MMU.iobase=default|&lt;port&gt;</code></p> <p>Default <code>40h</code>. Registers the IMSAI MMU bank-switch register at a
+single port address. The MMU register switches the physical bank in
+which the lower 64 KB of address space is served from emulated
+shadow RAM, so software that uses banked memory expects this port to
+be present.</p> <h3 id="rtc-iobase"><a href="#rtc-iobase" class="header-anchor">#</a> <code>RTC.iobase</code></h3> <p><code>RTC.iobase=default|&lt;port&gt;</code></p> <p>Default <code>41h</code>. Registers the DS3231 real-time clock interface at a
+two-port window: a command register at the base address and a data
+register at base+1. Removing the directive removes the RTC from the
+I/O map; software polling for it sees no response, which is the
+correct behaviour when the on-board RTC is not populated.</p> <h2 id="usb-host-integration"><a href="#usb-host-integration" class="header-anchor">#</a> USB host integration</h2> <h3 id="usb-disk"><a href="#usb-disk" class="header-anchor">#</a> <code>USB.disk</code></h3> <p><code>USB.disk=AUTOMOUNT</code></p> <p>Set to <code>AUTOMOUNT</code> to make the SD card visible as a USB mass-storage
+volume whenever a host is connected. Without this directive the
+firmware leaves the MSC volume ejected once boot is finished, which
+is the right behaviour when the SD card is being read concurrently
+by the running CP/M system and you want to avoid the host operating
+system caching a stale view of it. With <code>AUTOMOUNT</code>, the volume is
+re-presented after every soft reset and after the SDH-100 finishes
+its boot. Use it when you are actively iterating on <code>boot.conf</code>,
+disk images, or HEX files from a laptop and do not need the bus to
+be writing to the card concurrently. The directive accepts
+<code>AUTOMOUNT</code> only; any other value disables auto-mount.</p> <h3 id="usb-tty"><a href="#usb-tty" class="header-anchor">#</a> <code>USB.tty</code></h3> <p><code>USB.tty=PASS</code></p> <p>Set to <code>PASS</code> to bridge the USB CON CDC channel to and from SIO
+Port A. With this directive, characters typed into the host's CON
+terminal (most often a <code>screen</code> or <code>picocom</code> session) appear on Port
+A as if they came from a wired terminal, and characters the CPU
+writes to Port A are forwarded to the host CON terminal in addition
+to the physical UART0 path. This lets you use a USB-only host as the
+operating console without a serial cable. The pass-through is
+bidirectional; you do not get to choose direction. With no value or
+any value other than <code>PASS</code>, the bridge is off and the CON channel
+is monitor / log output only.</p> <h3 id="usb-uc1"><a href="#usb-uc1" class="header-anchor">#</a> <code>USB.uc1</code></h3> <p><code>USB.uc1=PASS</code></p> <p>Set to <code>PASS</code> to bridge the USB AUX CDC channel to and from SIO
+Port B in the same way <code>USB.tty=PASS</code> bridges Port A. Useful when
+you want a second host-side terminal for a CP/M session that has a
+secondary console -- for example, a debugger on Port B while normal
+output runs on Port A. The directive is mutually exclusive with
+<code>FDC.transport=UART</code>: the floppy controller and the AUX bridge
+cannot share UART1. If both are set, the floppy controller wins and
+the AUX bridge becomes inactive.</p> <h3 id="usb-debug"><a href="#usb-debug" class="header-anchor">#</a> <code>USB.debug</code></h3> <p><code>USB.debug=TRUE</code></p> <p>Set to <code>TRUE</code> to enable boot-log entries for USB connect and
+disconnect events on the CON, AUX, MON, and FDC CDC channels. This
+is the directive to enable when you suspect a host-side cable or
+driver problem is making the SDH-100 misbehave. The extra log
+entries are visible on whichever channel you are watching the boot
+log on (and on the runtime MON channel), and they carry the channel
+name and the new state so you can correlate them with what the host
+did. Leave it disabled in normal use -- the log is otherwise quiet
+about USB traffic.</p> <h2 id="monitor"><a href="#monitor" class="header-anchor">#</a> Monitor</h2> <h3 id="mon-break"><a href="#mon-break" class="header-anchor">#</a> <code>MON.break</code></h3> <p><code>MON.break=NMI</code></p> <p>Selects how the SDH-100 monitor breaks into a running CPU for the
+R, G, I, O, T, U, and W commands. The default behaviour (directive
+absent or any other value) is to break in via INT and inject an RST
+7 opcode on the INTA cycle, which jumps the CPU to 0x0038 and onto
+the firmware's interrupt trampoline. Setting <code>MON.break=NMI</code>
+switches the break-in path -- both for direct R, G, I, O commands
+and for W watch fires -- to the Z80 NMI input: the firmware drives
+the NMI line, the CPU vectors to 0x0066 where a 2-byte JR redirects
+into the same trampoline at 0x0008, and the rest of the break-in
+proceeds identically. The directive is silently ignored on 8080
+systems because the 8080 has no NMI input -- a warning is logged at
+boot to flag the misconfiguration. The advantage of the
+NMI path is that it is non-maskable: a Z80 program that has
+executed <code>DI</code> (or is mid-block-move with EI deferred, or in a
+tight ISR) can still be broken into via R/G/I/O or by a watch
+fire. The 2-byte JR overlay at 0x0066 sits inside CP/M's default
+FCB range (0x005C-0x007F). For direct R/G/I/O it is only live for
+the tens of microseconds between bus release and the CPU running
+the trampoline -- programs reading the default FCB during that
+window are extraordinarily unlikely to hit it. For W watches, the
+overlay is live for the entire armed period (which can last
+arbitrarily long while the CPU runs waiting for the watch to fire),
+and the firmware refreshes it every time it acquires the bus to
+sample the CPU; this is the trade-off <code>MON.break=NMI</code> opts into in
+exchange for being able to watch DI'd code. Leave the directive
+unset unless you have a concrete need to break into DI'd Z80 code.</p> <h2 id="common-pitfalls-and-interactions"><a href="#common-pitfalls-and-interactions" class="header-anchor">#</a> Common pitfalls and interactions</h2> <p>A few of the boot.conf directives interact in ways that surprise
+people the first time. The notes below collect them in one place.</p> <p><strong>Every <code>.iobase</code> line is non-optional.</strong> If you delete <code>SIO.iobase</code>
+or <code>LPT.iobase</code> or any of the entries listed in <em>Other I/O port
+bases</em>, you do not get the default port -- you get no device at
+all. Use <code>KEY=default</code> to take the default; only remove the line
+entirely if you actually want that device gone.</p> <p><strong><code>FDC.transport=UART</code> disables SIO Port B.</strong> Three things lose their
+function in this mode: SIO Port B emulation, any software targeting
+it, and <code>USB.uc1=PASS</code>. Anything you set on <code>UART1</code> -- baud, parity,
+framing -- is overridden by the 2 000 000-baud, 8N1 configuration
+the floppy controller insists on. Switch back to
+<code>FDC.transport=USB</code> if Port B is needed.</p> <p><strong><code>BOOT_JUMP</code> runs after <code>ROM_LOAD</code>.</strong> If your HEX file lays code at
+<code>0000h</code>, <code>BOOT_JUMP</code> will overwrite the first three bytes of it with
+the jump. That is usually what you want when the HEX is a high
+ROM image and <code>0000h</code> was just collateral; check the layout if it
+is not.</p> <p><strong><code>RAM_MAP=AUTO</code> interacts with both physical hardware and
+<code>ROM_LOAD</code>.</strong> The auto-fill happens after the bus is scanned for
+physical memory, so any S-100 RAM card you have plugged in claims
+its address range first; only pages that are still empty become
+emulated RAM. The same applies to ROM pages claimed by <code>ROM_LOAD</code>.</p> <p><strong><code>RAM_SET</code> only fills emulated RAM.</strong> Pages backed by real RAM
+cards keep whatever was already there. ROM pages keep the HEX
+contents. If you <code>RAM_SET=0xFF</code> and then dump page <code>00h</code> and find
+non-FF data, the page is on a physical RAM card, not on the
+SDH-100.</p> <p><strong><code>MEM_TEST=LOOP</code> on its own does nothing.</strong> The test only runs if
+the value contains the substring <code>RUN</code>. Use <code>RUN</code> for a single pass
+or <code>RUNLOOP</code> for a continuous loop; do not use <code>LOOP</code> alone.</p> <p><strong>Inline comments end at <code>#</code>.</strong> Everything from the first <code>#</code> on a
+value line is discarded. This is convenient for annotating values
+but it means a value cannot contain a literal <code>#</code>. None of the
+directives the firmware honours need one, so this is rarely a
+limit in practice.</p> <p><strong>A typo is a missing setting, not an error.</strong> The parser does not
+warn on unknown keys. If a directive seems to have no effect, check
+the spelling and case before assuming a firmware bug -- <code>Fdc.transport</code>
+and <code>FDC.Transport</code> both produce silently-ignored entries.</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/2/2026, 5:36:29 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.abda19b8.js" defer></script><script src="/assets/js/33.52794f7f.js" defer></script>
+  </body>
+</html>

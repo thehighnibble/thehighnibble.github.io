@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SDH.COM User Manual | The High Nibble</title>
+    <meta name="description" content="">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-JVDLCQSGXK"></script>
+  <script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JVDLCQSGXK');</script>
+  <script type="module" src="https://unpkg.com/esp-web-tools@9.2.0/dist/web/install-button.js?module"></script>
+    
+    <link rel="preload" href="/assets/css/0.styles.e5a2f529.css" as="style"><link rel="preload" href="/assets/js/app.abda19b8.js" as="script"><link rel="preload" href="/assets/js/36.c2ceca80.js" as="script"><link rel="prefetch" href="/assets/js/10.7401911e.js"><link rel="prefetch" href="/assets/js/11.a2ebd31b.js"><link rel="prefetch" href="/assets/js/12.108ff4ce.js"><link rel="prefetch" href="/assets/js/13.446365aa.js"><link rel="prefetch" href="/assets/js/14.7fdd1f85.js"><link rel="prefetch" href="/assets/js/15.1dbfd5a1.js"><link rel="prefetch" href="/assets/js/16.bb30e5da.js"><link rel="prefetch" href="/assets/js/17.431bbb35.js"><link rel="prefetch" href="/assets/js/18.13b03459.js"><link rel="prefetch" href="/assets/js/19.2a041cff.js"><link rel="prefetch" href="/assets/js/2.bb685c55.js"><link rel="prefetch" href="/assets/js/20.b28c3ec1.js"><link rel="prefetch" href="/assets/js/21.205e4038.js"><link rel="prefetch" href="/assets/js/22.d9f8076e.js"><link rel="prefetch" href="/assets/js/23.130f685c.js"><link rel="prefetch" href="/assets/js/24.6f69a074.js"><link rel="prefetch" href="/assets/js/25.98001104.js"><link rel="prefetch" href="/assets/js/26.d75a4b9a.js"><link rel="prefetch" href="/assets/js/27.d63ad0e7.js"><link rel="prefetch" href="/assets/js/28.0b72a242.js"><link rel="prefetch" href="/assets/js/29.520b4aeb.js"><link rel="prefetch" href="/assets/js/3.7e63d622.js"><link rel="prefetch" href="/assets/js/30.1d567b9a.js"><link rel="prefetch" href="/assets/js/31.8440cf5e.js"><link rel="prefetch" href="/assets/js/32.03696955.js"><link rel="prefetch" href="/assets/js/33.52794f7f.js"><link rel="prefetch" href="/assets/js/34.c1d1837c.js"><link rel="prefetch" href="/assets/js/35.42a63d9e.js"><link rel="prefetch" href="/assets/js/37.69676fc2.js"><link rel="prefetch" href="/assets/js/38.74afb808.js"><link rel="prefetch" href="/assets/js/39.f1aae372.js"><link rel="prefetch" href="/assets/js/4.8e9414b8.js"><link rel="prefetch" href="/assets/js/5.96d04688.js"><link rel="prefetch" href="/assets/js/6.55da8841.js"><link rel="prefetch" href="/assets/js/7.b6065cb1.js"><link rel="prefetch" href="/assets/js/8.7b8a139e.js"><link rel="prefetch" href="/assets/js/9.53b5178a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e5a2f529.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">The High Nibble</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/imsai8080/" class="nav-link">IMSAI 8080</a></div><div class="nav-item"><a href="/cromemcoZ1/" class="nav-link">Cromemco Z-1</a></div><div class="nav-item"><a href="/vt132/" class="nav-link">VT132</a></div><div class="nav-item"><a href="/s132/" class="nav-link">S-132</a></div><div class="nav-item"><a href="/sdh100/" class="nav-link router-link-active">SDH-100</a></div><div class="nav-item"><a href="https://github.com/orgs/thehighnibble/discussions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Forum
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/thehighnibble/firmware" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/imsai8080/" class="nav-link">IMSAI 8080</a></div><div class="nav-item"><a href="/cromemcoZ1/" class="nav-link">Cromemco Z-1</a></div><div class="nav-item"><a href="/vt132/" class="nav-link">VT132</a></div><div class="nav-item"><a href="/s132/" class="nav-link">S-132</a></div><div class="nav-item"><a href="/sdh100/" class="nav-link router-link-active">SDH-100</a></div><div class="nav-item"><a href="https://github.com/orgs/thehighnibble/discussions" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Forum
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/thehighnibble/firmware" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>SDH.COM User Manual</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/sdh100/sdh-com-manual/#invocation" class="sidebar-link">Invocation</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/sdh100/sdh-com-manual/#help" class="sidebar-link">Help</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#this-help" class="sidebar-link">? -- this help</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#configuration-transfer" class="sidebar-link">Configuration transfer</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#gc-get-boot-conf" class="sidebar-link">GC -- Get boot.Conf</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#pc-put-boot-conf" class="sidebar-link">PC -- Put boot.Conf</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#disk-management" class="sidebar-link">Disk management</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#sd-show-disk-map" class="sidebar-link">SD -- Show Disk map</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#ld-list-disk-library" class="sidebar-link">LD -- List Disk library</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#md-mount-disk" class="sidebar-link">MD -- Mount Disk</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#ed-eject-drive" class="sidebar-link">ED -- Eject Drive</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#information-and-diagnostics" class="sidebar-link">Information and diagnostics</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#si-show-sdh-100-info" class="sidebar-link">SI -- Show SDH-100 Info</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#se-show-environment" class="sidebar-link">SE -- Show Environment</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#sl-show-boot-log" class="sidebar-link">SL -- Show boot Log</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#sm-show-memory-map" class="sidebar-link">SM -- Show Memory map</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#shadow-ram" class="sidebar-link">Shadow RAM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#vs-verify-shadow-ram" class="sidebar-link">VS -- Verify Shadow RAM</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#rs-reset-resync-shadow-ram" class="sidebar-link">RS -- Reset/Resync Shadow RAM</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#real-time-clock" class="sidebar-link">Real-time clock</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#sr-show-rtc" class="sidebar-link">SR -- Show RTC</a></li><li class="sidebar-sub-header"><a href="/sdh100/sdh-com-manual/#ur-update-rtc" class="sidebar-link">UR -- Update RTC</a></li></ul></li><li><a href="/sdh100/sdh-com-manual/#common-errors" class="sidebar-link">Common errors</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="sdh-com-user-manual"><a href="#sdh-com-user-manual" class="header-anchor">#</a> SDH.COM User Manual</h1> <p><code>SDH.COM</code> is a CP/M utility that talks to the SDH-100 firmware. It
+runs on the S-100 CPU like any other <code>.COM</code> program but instead of
+doing its work in CP/M, it hands the request to the SDH-100 and
+streams the result back to the console. Use it to mount and eject
+floppy images, transfer the live <code>boot.conf</code>, inspect the system
+memory map, view the boot log, and check or set the on-board real-
+time clock.</p> <p>The utility is single-shot: each invocation parses one command line,
+executes one sub-command, prints the result, and returns to CP/M.
+There is no interactive prompt.</p> <h2 id="invocation"><a href="#invocation" class="header-anchor">#</a> Invocation</h2> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH &lt;sub-command&gt; [arguments]
+</code></pre></div><p><code>SDH</code> with no arguments or with an unrecognised keyword returns:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH
+Unknown sub-command.
+A&gt;
+</code></pre></div><p>CP/M folds the command tail to upper-case before passing it to
+<code>SDH.COM</code>, so you can type the keywords and arguments in any case
+and they reach the firmware as upper-case. All keywords are exactly
+two characters except for <code>?</code>. Arguments are separated by spaces;
+tabs work the same as spaces.</p> <p><code>SDH.COM</code> lives on whichever CP/M drive you copied it to and is
+typically kept on the system drive <code>A:</code>. It depends only on the
+SDH-100 firmware -- it makes no use of any specific BIOS or CP/M
+extension and runs unchanged on any disk image that boots CP/M on
+the S-100 bus.</p> <h2 id="help"><a href="#help" class="header-anchor">#</a> Help</h2> <h3 id="this-help"><a href="#this-help" class="header-anchor">#</a> ? -- this help</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH ?
+</code></pre></div><p>Lists every sub-command the firmware accepts in this build. The
+output reflects compile-time options: the <code>SD</code>/<code>LD</code>/<code>MD</code>/<code>ED</code> block
+appears only when the IMSAI FIF floppy controller is included, and
+<code>SR</code>/<code>UR</code> appear only when the on-board real-time clock is
+included.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH ?
+Available sub-commands:
+  ? : this help
+  GC : Get boot.Conf
+  PC : Put boot.Conf
+  SD : Show Disk map
+  LD : List Disk library
+  MD : Mount Disk &lt;A|B|C|D&gt; diskimage.dsk
+  ED : Eject Drive &lt;A|B|C|D&gt;
+  SI : Show SDH-100 Info
+  SE : Show Environment
+  SL : Show boot Log
+  SM : Show Memory map
+  VS : Verify Shadow RAM
+  RS : Reset/Resync Shadow RAM
+  SR : Show RTC
+  UR : Update RTC YYYY/MM/DD hh:mm:ss
+A&gt;
+</code></pre></div><p>The <code>?</code> listing is generated live from the firmware's command table,
+so it is always the canonical reference for the current build.</p> <h2 id="configuration-transfer"><a href="#configuration-transfer" class="header-anchor">#</a> Configuration transfer</h2> <h3 id="gc-get-boot-conf"><a href="#gc-get-boot-conf" class="header-anchor">#</a> GC -- Get boot.Conf</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH GC
+</code></pre></div><p>Copies the live <code>/CONF/boot.conf</code> file from the SDH-100's microSD
+card into the current CP/M drive as <code>BOOT.CFG</code>. Newlines are
+converted to CP/M's CR-LF convention so the resulting file opens
+cleanly in WordStar, ED, or any other CP/M editor. If a <code>BOOT.CFG</code>
+already exists on the current drive it is overwritten.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH GC
+Done.
+A&gt;DIR BOOT.CFG
+A: BOOT     CFG
+A&gt;
+</code></pre></div><p><code>GC</code> does not modify <code>boot.conf</code> on the SD card -- it is a one-way
+copy from the SDH-100 to CP/M.</p> <h3 id="pc-put-boot-conf"><a href="#pc-put-boot-conf" class="header-anchor">#</a> PC -- Put boot.Conf</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH PC
+</code></pre></div><p>Reads <code>BOOT.CFG</code> from the current CP/M drive and writes it back to
+the SDH-100 as <code>/CONF/boot.conf</code>, replacing the existing file. CP/M
+CR-LF newlines are converted back to single LFs as the firmware
+prefers them.</p> <div class="tip custom-block"><p class="custom-block-title">New config takes effect on next boot</p> <p>The new configuration takes effect on the next boot of the SDH-100;
+the running system continues to use the values it loaded at
+start-up.</p></div> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH PC
+Done.
+A&gt;
+</code></pre></div><p><code>PC</code> is the standard way to edit configuration without taking the
+SD card out: pull the file with <code>GC</code>, edit it under CP/M, then push
+it back with <code>PC</code>. See the <code>boot.conf</code> configuration guide for
+directive details.</p> <h2 id="disk-management"><a href="#disk-management" class="header-anchor">#</a> Disk management</h2> <p>These four sub-commands appear only when the firmware is built with
+the IMSAI FIF floppy controller. If your <code>?</code> listing does not show
+them, the FIF emulator is not enabled.</p> <h3 id="sd-show-disk-map"><a href="#sd-show-disk-map" class="header-anchor">#</a> SD -- Show Disk map</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SD
+</code></pre></div><p>Lists each emulated floppy drive and the image file currently
+mounted in it. Empty drives appear with no filename after the <code>=</code>.
+A leading <code>&gt;</code> on the image name marks it as served by the attached
+FDC server rather than read from the local <code>/DISKS/</code> directory.
+The output reflects the live runtime state.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SD
+DSK:A: = cpm22.dsk
+DSK:B: = &gt;wordstar.dsk
+DSK:C: = &gt;A.fdc
+DSK:D: =
+A&gt;
+</code></pre></div><h3 id="ld-list-disk-library"><a href="#ld-list-disk-library" class="header-anchor">#</a> LD -- List Disk library</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH LD
+</code></pre></div><p>Lists every disk image available to the system. The local
+<code>/DISKS/</code> directory on the SDH-100's microSD card holds <code>.dsk</code>
+image files; if an FDC server is attached over USB or UART, its
+catalogue of <code>.dsk</code> and <code>.unpacked</code> images is appended to the
+list. Each remote entry is shown with a leading <code>&gt;</code>. If a physical
+floppy disk controller is wired through the FDC server, its two
+hardware drives appear as <code>&gt;A.fdc</code> and <code>&gt;B.fdc</code>.</p> <p>A local-only example (no FDC attached):</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH LD
+cpm22.dsk
+utilities.dsk
+A&gt;
+</code></pre></div><p>With an FDC server attached and a physical floppy controller wired
+to it:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH LD
+cpm22.dsk
+utilities.dsk
+&gt;wordstar.dsk
+&gt;turbo.unpacked
+&gt;A.fdc
+&gt;B.fdc
+A&gt;
+</code></pre></div><p>The leading <code>&gt;</code> is part of the name as far as <code>MD</code> is concerned --
+pass it through verbatim to mount a remote image.</p> <h3 id="md-mount-disk"><a href="#md-mount-disk" class="header-anchor">#</a> MD -- Mount Disk</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH MD &lt;A|B|C|D&gt; diskimage.dsk
+</code></pre></div><p>Mounts a disk image into the named drive. Both arguments are
+required; the drive letter must be A, B, C, or D, and the image
+name is the filename as it appears in the <code>LD</code> listing. A bare
+filename refers to a local image in <code>/DISKS/</code>; an FDC-served image
+must be passed with its leading <code>&gt;</code> exactly as <code>LD</code> shows it.</p> <p>A successful mount prints:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH MD A cpm22.dsk
+Drive DSK:A: mounted successfully.
+A&gt;
+</code></pre></div><p>The new mapping is written to <code>disk.map</code> on the SD card so it
+survives a reboot. Remote (FDC-served) mounts are tracked at the
+FDC server end and are not persisted in the local <code>disk.map</code>.</p> <p>The error messages are specific:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH MD A
+Usage: MD &lt;A|B|C|D&gt; diskimage.dsk
+A&gt;SDH MD E cpm22.dsk
+Invalid disk letter. Use A, B, C, or D.
+A&gt;SDH MD A no-such-image.dsk
+Disk image: no-such-image.dsk not valid.
+A&gt;SDH MD A cpm22.dsk
+Drive DSK:A: is not empty.
+A&gt;SDH MD B cpm22.dsk
+Disk image: cpm22.dsk already inserted in another drive.
+</code></pre></div><p><code>Drive DSK:X: is not empty.</code> means there is already an image in
+that drive -- eject it with <code>ED</code> first. <code>Disk image: ... already inserted in another drive.</code> means the same image file is currently
+mounted somewhere else; CP/M expects each image to appear in at
+most one drive at a time.</p> <h3 id="ed-eject-drive"><a href="#ed-eject-drive" class="header-anchor">#</a> ED -- Eject Drive</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH ED &lt;A|B|C|D&gt;
+</code></pre></div><p>Ejects whatever is in the named drive. The drive letter is required
+and follows the same rules as <code>MD</code>. The change is written to
+<code>disk.map</code> and persists across reboots.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH ED B
+Drive DSK:B: ejected successfully.
+A&gt;
+</code></pre></div><p>If the drive is already empty:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH ED B
+Drive DSK:B: is already empty.
+A&gt;
+</code></pre></div><h2 id="information-and-diagnostics"><a href="#information-and-diagnostics" class="header-anchor">#</a> Information and diagnostics</h2> <h3 id="si-show-sdh-100-info"><a href="#si-show-sdh-100-info" class="header-anchor">#</a> SI -- Show SDH-100 Info</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SI
+</code></pre></div><p>Prints firmware version, board name, system clock, on-board
+temperature, and stack and heap usage. Use this to confirm what
+firmware is running and whether the system is healthy. Stack high-
+water marks are useful for spotting builds that are getting close
+to running out of stack on either core.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SI
+SDH-100 - Software Defined Hardware for the S-100 bus (RP2350B)
+Binary: s100 ; Version: 0.18.0
+Board: pico2
+System Clock Frequency: 384.0 MHz
+Board temperature:      32.4 C (raw: 1234)
+Core0 stack size:       16384
+Core0 stack HWM:        1024
+Core1 stack size:       4096
+Core1 stack HWM:        2048
+Heap size:              262144
+Heap free:              198432
+A&gt;
+</code></pre></div><h3 id="se-show-environment"><a href="#se-show-environment" class="header-anchor">#</a> SE -- Show Environment</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SE
+</code></pre></div><p>Lists every key-value pair the firmware loaded from <code>boot.conf</code> at
+boot, two leading spaces per line. This is the authoritative view
+of what configuration the running system is actually using -- in
+particular, it shows you what the parser saw, which is more useful
+than re-reading the source <code>boot.conf</code> if you suspect a typo or
+case error.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SE
+  UART1=115200,cs8
+  HARDDISK=blank
+  ROM_LOAD=memon80.hex
+  RAM_MAP=AUTO
+  RAM_SET=0x00
+  MEM_TEST=RUN
+  BOOT_JUMP=0xF800
+  FDC.transport=USB
+  LPT.iobase=default
+  LPT.device=S132
+  ...
+A&gt;
+</code></pre></div><p>The list contains every directive the parser accepted, including
+ones that were ignored by the consumer (for example, a typo that
+the parser stored but no subsystem ever read).</p> <h3 id="sl-show-boot-log"><a href="#sl-show-boot-log" class="header-anchor">#</a> SL -- Show boot Log</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SL
+</code></pre></div><p>Streams the captured boot-time log out to the CP/M console. This is
+the same log that goes to UART0, the S-132 console, and the USB MON
+channel during start-up; <code>SL</code> lets you read it after boot without
+having to capture it on the host side.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SL
+... [full boot log content] ...
+A&gt;
+</code></pre></div><h3 id="sm-show-memory-map"><a href="#sm-show-memory-map" class="header-anchor">#</a> SM -- Show Memory map</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SM
+</code></pre></div><p>Prints the page-by-page memory map: one character per 256-byte
+page, 32 pages per row, 8 rows total covering all 64 KB. The legend
+header explains the codes:</p> <ul><li><code>R</code> -- emulated RAM provided by the SDH-100.</li> <li><code>O</code> -- emulated ROM provided by the SDH-100.</li> <li><code>r</code> -- shadow tracking real physical RAM on the S-100 bus.</li> <li><code>X</code> -- clash: physical RAM exists where the SDH-100 mapped a page
+(rendered in red on a colour-capable terminal).</li> <li><code>.</code> -- empty (no memory at this page).</li></ul> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SM
+Memory map: R=RAM, O=ROM, r=Shadow, X=Clash, .=empty
+        0000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        2000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        4000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        6000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        8000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        A000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        C000: RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR
+        E000: RRRR RRRR RRRR RRRR OOOO OOOO OOOO OOOO
+A&gt;
+</code></pre></div><p>The address printed at the start of each row is the first byte of
+that row, not the page number.</p> <h2 id="shadow-ram"><a href="#shadow-ram" class="header-anchor">#</a> Shadow RAM</h2> <p>The SDH-100 keeps a local &quot;shadow&quot; copy of every page of RAM it
+has provided to the CPU. The shadow is what services CPU reads from
+emulated RAM; the firmware also uses it for monitor commands that
+do not need to arbitrate the bus. These two sub-commands let you
+verify or refresh that shadow against the physical SRAM the CPU has
+been writing to.</p> <h3 id="vs-verify-shadow-ram"><a href="#vs-verify-shadow-ram" class="header-anchor">#</a> VS -- Verify Shadow RAM</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH VS
+</code></pre></div><p>Reads every shadow-mapped page from physical SRAM and compares it
+against the firmware shadow. Prints the address and the differing
+bytes for every mismatch, then <code>Finished.</code>. A clean run shows only
+the start and finish lines.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH VS
+Scanning shadow RAM...
+Finished.
+A&gt;
+</code></pre></div><p>If the shadow has drifted -- for example, after a stack-corruption
+incident or a DMA glitch -- mismatches appear:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH VS
+Scanning shadow RAM...
+ 0123: AB != CD
+ 0124: 00 != FF
+Finished.
+A&gt;
+</code></pre></div><p>The first byte is the firmware's shadow value, the second is the
+value just read from physical SRAM. <code>VS</code> is read-only -- it
+diagnoses but does not fix.</p> <h3 id="rs-reset-resync-shadow-ram"><a href="#rs-reset-resync-shadow-ram" class="header-anchor">#</a> RS -- Reset/Resync Shadow RAM</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH RS
+</code></pre></div><p>Walks every shadow-mapped page and overwrites the firmware shadow
+with the value just read from physical SRAM. After this, a <code>VS</code> run
+should be silent. Use this when you have used <code>VS</code> to confirm a
+drift and want the shadow to match what the CPU actually has in
+SRAM.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH RS
+Resetting/resyncing shadow RAM...
+Finished.
+A&gt;
+</code></pre></div><p><code>RS</code> does not write anything to physical SRAM -- it only updates the
+firmware's local copy. The CPU's view of memory is untouched.</p> <h2 id="real-time-clock"><a href="#real-time-clock" class="header-anchor">#</a> Real-time clock</h2> <p>These two sub-commands appear only when the firmware is built with
+the on-board DS3231 real-time clock.</p> <h3 id="sr-show-rtc"><a href="#sr-show-rtc" class="header-anchor">#</a> SR -- Show RTC</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH SR
+</code></pre></div><p>Prints both the hardware RTC reading and the firmware's POSIX
+system time on two lines. If the RTC chip is not detected on the
+I2C bus the first line is replaced with <code>RTC NOT FOUND</code>.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH SR
+RTC: Sun, 2026/04/29 14:30:00
+SYSTEM TIME: Sun Apr 29 14:30:00 2026
+A&gt;
+</code></pre></div><p>The two lines should normally agree; if they drift, the system
+time has been adjusted at runtime (for example by an NTP client)
+without writing back to the hardware -- run <code>UR</code> to put the
+hardware in sync.</p> <h3 id="ur-update-rtc"><a href="#ur-update-rtc" class="header-anchor">#</a> UR -- Update RTC</h3> <div class="language- extra-class"><pre class="language-text"><code>SDH UR YYYY/MM/DD hh:mm:ss
+</code></pre></div><p>Writes the supplied date and time to the DS3231 hardware register
+and updates the firmware's system clock to match. The two arguments
+are mandatory and must use slashes for the date and colons for the
+time. The firmware reads the new time back and prints it as a
+confirmation.</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH UR 2026/04/29 14:30:00
+New RTC time: Sun, 29/04/26 14:30:00
+A&gt;
+</code></pre></div><p>If the arguments are missing or malformed:</p> <div class="language- extra-class"><pre class="language-text"><code>A&gt;SDH UR 2026/04/29
+Usage: sdh ur YYYY/MM/DD hh:mm:ss
+A&gt;
+</code></pre></div><p>If the RTC chip is not present, <code>UR</code> prints <code>RTC NOT FOUND</code> and
+makes no change.</p> <h2 id="common-errors"><a href="#common-errors" class="header-anchor">#</a> Common errors</h2> <div class="language- extra-class"><pre class="language-text"><code>Unknown sub-command.
+</code></pre></div><p>You typed a keyword the firmware does not recognise. Run <code>SDH ?</code>
+to see what the current build supports.</p> <div class="language- extra-class"><pre class="language-text"><code>Failed to open file
+</code></pre></div><p>A sub-command needed to open a file on the SDH-100 SD card and
+could not. The most common cause is a missing <code>/CONF/boot.conf</code>
+during <code>GC</code>, or insufficient space on the card during <code>PC</code>. Check
+the SD card from the host over USB MSC to confirm what is there.</p> <div class="language- extra-class"><pre class="language-text"><code>Out of memory
+</code></pre></div><p>The firmware could not allocate the ~5 KB working buffer it needs
+to process a sub-command. The system is under memory pressure;
+reset the board.</p> <div class="language- extra-class"><pre class="language-text"><code>No file opened.
+</code></pre></div><p>An internal sequencing error -- usually means a previous command
+left state in an unexpected place. Reset the board and retry.</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/2/2026, 5:36:29 PM</span></div></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.abda19b8.js" defer></script><script src="/assets/js/36.c2ceca80.js" defer></script>
+  </body>
+</html>
